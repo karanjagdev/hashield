@@ -1,0 +1,11 @@
+	ACMD_DEF(reloadgrfintegrity),
+	ACMD_DEF(reloadharmony),
+	ACMD_DEF(showautoban),
+	ACMD_DEF(liftautoban),
+	ACMD_DEF(netinfo),
+	ACMD_DEF(macban),
+	ACMD_DEF(liftmacban),
+	ACMD_DEF(showmacban),
+	ACMD_DEF(checkhotpatch),
+	ACMD_DEF(runhotpatch),
+
