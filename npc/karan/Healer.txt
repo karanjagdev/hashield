@@ -30,7 +30,7 @@ sc_end SC_HALLUCINATION11;
 
 
 morocc,159,96,5	duplicate(Buff Master)	Buff Master#h1-2	834
-prontera,158,187,4	duplicate(Buff Master)	Buff Master#h1-3	834
+prontera,147,171,4	duplicate(Buff Master)	Buff Master#h1-3	834
 geffen,121,61,5	duplicate(Buff Master)	Buff Master#h1-4	834
 umbala,94,162,5	duplicate(Buff Master)	Buff Master#h1-5	834
 payon,147,237,5	duplicate(Buff Master)	Buff Master#h1-6	834
