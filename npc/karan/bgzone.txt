@@ -1,0 +1,58 @@
+//Entering Beginner Zone
+
+new_1-1,57,113,4	script	Beginner Zone	109,{
+
+mes "Hello "+strcharinfo(0)+"";
+mes "What can I do for you?";
+next;
+menu "Warp me to training room",B_room,"Warp me to capital city",ok,"Nothing, Just exploring things",fine;
+OnPCLoginEvent:
+	if(Class == 0 || Class == 4001)	{
+
+	mes "Would you like to go to the Beginner Zone?";
+	if(select("Yes", "No") == 1) goto B_room;
+	}
+	close;
+
+B_room:
+	if(Class == 0 || Class == 4001)	{
+	warp "force_1-1" ,25,24;
+	} 
+	else {
+	mes "Only Novice and High Novice Can Enter This Room";
+	}
+	close;
+ ok:
+	warp "prontera" ,156,180;
+	savepoint "prontera",156,180;
+	close;
+fine:
+	mes "Happy To Help You ^_^";
+	close;
+}
+
+//The Exit to Amatsu
+
+force_1-1.gat,25,26,3	script	Exit	729,{
+	mes "What do you want?";
+	next;
+	menu "Warp to capital",ok,"Nothing",fine;
+ok:
+	warp "prontera" ,156,180;
+	savepoint "prontera",156,180;
+	close;
+fine:
+	mes "Happy Leveling ^_^";
+	close;
+	
+}
+force_1-1,9,9,42,42	monster	poring	1002,50,0,0,0
+force_1-1,9,9,42,42	monster	Drops	1113,50,0,0,0
+force_1-1,9,9,42,42	monster	Poporing	1031,50,0,0,0
+force_1-1,9,9,42,42	monster	Marin	1242,10,0,0,0
+
+//mapflag
+force_1-1	mapflag	nowarp
+force_1-1	mapflag	nowarpto
+force_1-1	mapflag	noteleport
+force_1-1	mapflag	nomobloot
