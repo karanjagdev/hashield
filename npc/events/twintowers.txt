@@ -60,7 +60,7 @@ prontera.gat,146,92,4	script	Twin Towers#tt1::Twin-Towers	813,{
 	mes "[Twin Towers]";
 	mes "Come on! Where do you wish to go?";
 	mes "Just let us know you desired destination and we will send your there!";
-	menu "Hidden Temple", HiddenTemple,"Orc Dungeon",OrcDungeon,"Ant Hell",AntHell,"Mjolnir Waste Pit",MjolnirWastePit,"Sphinx",Sphinx,"Glast Heim",GlastHeim,"Comodo",Comodo;
+	menu "Hidden Temple", HiddenTemple,"Orc Dungeon",OrcDungeon,"Ant Hell",AntHell,"Mjolnir Waste Pit",MjolnirWastePit,"Sphinx",Sphinx,"Glast Heim",GlastHeim,"Comodo",L_COMODO;
 		HiddenTemple:
 			warp "prt_fild01.gat",136,368;
 			close;
@@ -79,7 +79,7 @@ prontera.gat,146,92,4	script	Twin Towers#tt1::Twin-Towers	813,{
 		GlastHeim:
 			warp "gef_fild06",45,304;
 			close;
-		Comodo:
+		L_COMODO:
 			warp "cmd_fild01",30,317;
 			close;
 }

@@ -23,19 +23,19 @@
 //= 1.7 On reborn reset some Job Quest Vars and Reset Girls Counter [Lupus]
 //= 1.8 Added Taekwondo classes check [Lupus]
 //= 1.9 Added support for Job NPC Fase pics, sorrected one dialogue stuff [Lupus]
-//= 2.0 Removed callfunc Is_####_Class in favor of baseClass [Silentdragon]
+//= 2.0 Removed callfunc Is_####_Class in favor of BaseClass [Silentdragon]
 //= 2.0b Fixed. TODO: add new Quest Skills [Lupus]
 //============================================================ 
 
 
 // -== Warp's needed! ==-
 valkyrie.gat,48,73,0	warp	valk01	1,1,valkyrie.gat,48,64,0
-valkyrie.gat,48,66,0	warp	valk01	1,1,valkyrie.gat,48,75,0
+valkyrie.gat,48,66,0	warp	valk01#1	1,1,valkyrie.gat,48,75,0
 
 // -== Book of Ymir (Heavens Door) ==-
 yuno_in02.gat,93,207,0	script	Book of Ymir	111,{
 	mes "[Book of Ymir]";
-	if(Upper==2 || baseClass == Job_Taekwon) goto L_BABY; //don't allow Taekwondo classes, Baby Classes
+	if(Upper==2 || BaseClass == Job_Taekwon) goto L_BABY; //don't allow Taekwondo classes, Baby Classes
 	if(valkyrie_Q == 1) goto L_FADED;
 	if(valkyrie_Q == 2) goto L_START;
 L_BABY:
@@ -160,7 +160,7 @@ yuno_in02.gat,90,77,4	script	Researcher	744,{
 valkyrie.gat,48,86,6	script	Valkyrie	811,{
 	mes "[Valhallana]";
 	if(BaseJob == 23) goto L_SN;
-	if(baseClass == Job_Taekwon ) goto L_TAEKWON; //sent back any Taekwondo classes
+	if(BaseClass == Job_Taekwon ) goto L_TAEKWON; //sent back any Taekwondo classes
 	if(Upper == 2 ) goto L_BABY;
 	if(Upper > 0 ) goto L_ALREADY;
 	if(BaseLevel >= 99 && JobLevel >= 50 && BaseJob >= 7) goto L_CHANGE;
@@ -216,10 +216,10 @@ L_CHANGE:
 	next;
 	mes "[Valhallana]";
 	if(Zeny || Weight) goto L_ZENYITEMS;
-	if(checkcart(0)) goto L_CART;
-	if(checkfalcon(0)) goto L_FALCON;
-	if(checkriding(0)) goto L_PECO;
-	if(skillpoint > 0) goto L_SKILLPNTS;
+	if(checkcart()) goto L_CART;
+	if(checkfalcon()) goto L_FALCON;
+	if(checkriding()) goto L_PECO;
+	if(SkillPoint > 0) goto L_SKILLPNTS;
 
 	mes "Let's start your reincarnation ceremony...";
 	next;
@@ -254,7 +254,7 @@ L_CHANGE:
 	next;
 	if(ADVJOB == Job_Assassin + 4001 || ADVJOB == Job_Rogue + 4001 ) goto L_Mor;
 	if(ADVJOB == Job_Blacksmith + 4001 || ADVJOB == Job_Alchem + 4001 ) goto L_Alb;
-	if(ADVJOB == Job_Hunter + 4001 || ADVJOB == Job_Bard + 4001 || ADVJOB == Job_Dancer + 4001 ) goto L_Pay;
+	if(ADVJOB == Job_Hunter + 4001 || ADVJOB == Job_Bard + 4001 || ADVJOB == Job_Dancer + 4001 ) goto L_PAY;
 	if(ADVJOB == Job_Knight + 4001 || ADVJOB == Job_Crusader + 4001 ) goto L_Izl;
 	if(ADVJOB == Job_Priest + 4001 || ADVJOB == Job_Monk + 4001 ) goto L_Pro;
 	if(ADVJOB == Job_Wizard + 4001 || ADVJOB == Job_Sage + 4001 ) goto L_Gef;
@@ -274,7 +274,7 @@ L_Alb:
 	warp "alberta.gat",116,57;
 	close;
 
-L_Pay:
+L_PAY:
 	savepoint "payon.gat",155,90;
 	warp "payon.gat",155,90;
 	close;
@@ -342,10 +342,10 @@ function	script	F_ToHigh	{
 L_GETHIGH:
 	mes "["+getarg(8)+"]";
 	if(JobLevel < 10) goto L_NOTREADY;
-	if(checkcart(0)) goto L_CART;
-	if(checkfalcon(0)) goto L_FALCON;
-	if(checkriding(0)) goto L_PECO;
-	if(skillpoint > 0) goto L_SKILLPNTS;
+	if(checkcart()) goto L_CART;
+	if(checkfalcon()) goto L_FALCON;
+	if(checkriding()) goto L_PECO;
+	if(SkillPoint > 0) goto L_SKILLPNTS;
 
 	mes "Hello there, "+strcharinfo(0)+"!";
 	mes "You've made a brave choice in coming here to be reborn and stepping forth into the advanced ranks.";
@@ -432,10 +432,10 @@ function	script	F_Rebirth	{
 
 L_GET3RD:
 	if(JobLevel < 45) goto L_NOTREADY;
-	if(checkcart(0)) goto L_CART;
-	if(checkfalcon(0)) goto L_FALCON;
-	if(checkriding(0)) goto L_PECO;
-	if(skillpoint > 0) goto L_SKILLPNTS;
+	if(checkcart()) goto L_CART;
+	if(checkfalcon()) goto L_FALCON;
+	if(checkriding()) goto L_PECO;
+	if(SkillPoint > 0) goto L_SKILLPNTS;
 
 	mes "Congratulations!";
 	mes "You have trained well. Now stroll here as a "+getarg(3)+"!";

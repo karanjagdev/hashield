@@ -189,7 +189,7 @@ L_END:
  	close;
 }
 
-pay_arche.gat,85,30,2	script	Guide	708,{
+pay_arche.gat,85,30,2	script	Guide#1	708,{
 	cutin "pay_soldier",2;
 	mes "[Payon Guide]";
 	mes "Welcome to the";

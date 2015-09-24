@@ -1,21 +1,20 @@
-//===== eAthena Script ======================================= 
+//===== Hercules Script ======================================
 //= Dead Branch (+Bloody Branch) Quest
-//===== By: ================================================== 
+//===== By: ==================================================
 //= GM-Yevon
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.1
 //===== Compatible With: ===================================== 
-//= eAthena 0.5.2 +
-//===== Description: ========================================= 
+//= Hercules
+//===== Description: =========================================
 // Simple item trade-in quest, a person can get a Dead Branch
 // by simply providing the items: Log x3 (7201), Wooden Heart x1 (7189), 
 // Trunk x5 (1019), and Wooden Gnarl x1 (7222).
-//===== Additional Comments: ================================= 
-//= Fully working.
+//===== Additional Comments: =================================
 //= 1.1 Optimized, added Bloody Branch with 0.01% chance [Lupus]
 //============================================================
 
-niflheim.gat,204,179,3	script	Mister Mobry	121,{
+niflheim,204,179,3	script	Mister Mobry	121,{
 
 	mes "[Mister Mobry]";
 	mes "Trees possess spirits you know...";

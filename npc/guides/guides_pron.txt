@@ -263,7 +263,7 @@ prt_maze02.gat,100,69,4	script	Guard	105,{
 	mes "Naturally, Nobody came back on the hoof so I am not sure whether it really exists or not... well, Do as you want, dude.  I'm not your mother.";
 	close;
 }
-prt_maze02.gat,110,69,4	script	Guard	105,{
+prt_maze02.gat,110,69,4	script	Guard#1	105,{
 	mes "[Guard]";
 	mes "Phew...That geek who went inside last time never returned either.";
 	mes "I tried to stop him so many times but he never took me seriously.  He told me he needed herbs.";
