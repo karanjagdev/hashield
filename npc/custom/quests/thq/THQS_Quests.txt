@@ -1,27 +1,31 @@
-//===== Hercules Script ======================================
-//= Treasure Hunter Quests
-//===== By: ==================================================
+//===== Athena Script =====================================
+//= Treasure Hunter Script
+//===== Converted By ======================================
 //= Fredzilla
-//===== Current Version: =====================================
-//= 1.6
-//===== Compatible With: =====================================
-//= Hercules
-//===== Description: =========================================
+//= Original
+///////////////////////////////////////////////////////////
+//                 Treasure Hunter Quests                //
+//                      By: Ezekial                      //
+//                 for the use on nRO run by Newbe5      //
+//                   revised By Warlock                  //
+///////////////////////////////////////////////////////////
+//===== Version ===========================================
+//= 1.2
+//===== Compatible With ===================================
+//= eAthena 1.0
+//===== Description =======================================
 //= Start for Treasure hunter quests
-//===== Additional Comments: =================================
-//= Event_THQS - Used to check if you have already registered
+//===== Comments ==========================================
+//= Event_THQS - Used to check if you have already registerd
 //= #Treasure_Token - used to keep track of tokens
 //= 1.0 - Straight conversionof Aegis NPC file
 //= 1.2 some bugfixes, typos [Lupus]
-//= 1.3 Removed Duplicates [Silent]
-//= 1.4 Further removed duplicates. [L0ne_W0lf]
-//= 1.5 Fixed name collision with 'Little Girl' in cities/lutie.txt [Ai4rei]
-//= 1.6 Changed "Caral" coordinates because moc_fild04 no longer exists. [Euphy]
-//============================================================
+//////////////////////////////////////////////////////////
+
 
 ///////Job list 1///////
 //1-1
-mjolnir_09,187,189,6	script	Old Man	107,{
+mjolnir_09.gat,187,189,6	script	Old Man	107,{
 	if (one_qset==1) goto N_QuestStart;
 	mes "[Old Man]";
 	mes "Eh! Can't and old man walk in peace anymore?!";
@@ -39,28 +43,24 @@ N_QuestStart:
 	close;
 }
 //1-2;
-pay_arche,86,129,6	script	Archer	732,{
+pay_arche.gat,86,129,6	script	Archer	732,{
 	if (one_qset == 2) goto N_QuestStart;
 	mes "[Kieth]";
 	mes "Sorry can't talk, I'm a busy man, I'm waiting for my package.";
 	close;
 N_QuestStart:
 	mes "[Kieth]";
-	if (countitem(1072) < 1) {
-		mes "Weren't you supposed to deliver me a box? Where is it?";
-		close;
-	}
 	mes "Ahh, you must be from the Treasure Hunter Agensy. Do you have my bow??";
 	mes " ";
 	mes "Ahh, good,thank you for your time. Take this Treasure Token.";
-	delitem 1072,1;
 	set one_qset,0;
 	set On_Quest,0;
+	delitem 1072,1;
 	set #Treasure_Token,#Treasure_Token+1;
 	close;
 }
 //1-3
-prt_fild06,37,192,6	script	Farmer	125,{
+prt_fild06.gat,37,192,6	script	Farmer	125,{
 	if (one_qset == 3 && countitem(909) > 19 && countitem(955) > 19 && countitem(914) > 19 && countitem(705) > 19) goto N_QuestComp;
 	if (one_qset==3) goto N_QuestStart;
 	mes "[Billy-Bob]";
@@ -72,13 +72,13 @@ N_QuestComp:
 	mes "Well those bugs can bugger off...";
 	mes " ";
 	mes "Well here take these 2 Treasure Tokens.";
+	set one_qset,0;
+	set #Treasure_Token,#Treasure_Token+2;
+	set On_Quest,0;
 	delitem 909,20;
 	delitem 955,20;
 	delitem 914,20;
 	delitem 705,20;
-	set one_qset,0;
-	set #Treasure_Token,#Treasure_Token+2;
-	set On_Quest,0;
 	close;
 N_QuestStart:
 	mes "[Billy-Bob]";
@@ -87,7 +87,7 @@ N_QuestStart:
 	close;
 }
 //1-4
-prontera,264,353,6	script	Old Lady#thq	103,{
+prontera.gat,264,353,6	script	Old Lady	103,{
 	if (one_qset == 4 && countitem(934) > 14) goto N_QuestComp;
 	if (one_qset == 4) goto N_QuestStart;
 	mes "[Old Lady]";
@@ -99,8 +99,8 @@ N_QuestComp:
 	next;
 	mes "[Old Lady]";
 	mes "Thank you sooo much here have these 3 Treasure Tokens.";
-	delitem 934,15;
 	set #Treasure_Token,#Treasure_Token+3;
+	delitem 934,15;
 	set one_qset,0;
 	set On_Quest,0;
 	close;
@@ -116,7 +116,7 @@ N_QuestStart:
 }
 ///////Job list 2///////
 //2-1;
-morocc,59,109,6	script	Erika	700,{
+morocc.gat,59,109,6	script	Erika	700,{
 	if (two_qset == 1 && countitem(1072) > 0) goto N_QuestComp;
 	if (two_qset == 1) goto N_QuestStart;
 	mes "[Erika]";
@@ -151,7 +151,7 @@ N_QuestStart:
 	close;
 }
 //2-2;
-in_moc_16,15,30,6	script	Jeramiah	730,{
+in_moc_16.gat,15,30,6	script	Jeramiah	730,{
 	if (two_qset == 2 && countitem(1998) > 0) goto N_QuestComp;
 	if (two_qset == 2) goto N_QuestStart;
 	mes "[Jeramiah]";
@@ -162,9 +162,9 @@ N_QuestComp:
 	mes "Ahh hello, you must be from the Treasure Hunter Guild.";
 	mes "Do you have my Jur? Ahh good good. Thank you.";
 	mes "Here have this Treasure Hunter Token.";
-	delitem 1998,1;
 	set two_qset,0;
 	set On_Quest,0;
+	delitem 1998,1;
 	set #Treasure_Token,#Treasure_Token+1;
 	close;
 N_QuestStart:
@@ -174,7 +174,7 @@ N_QuestStart:
 	close;
 }
 //2-3;
-prt_fild07,316,263,6	script	Marsh Man	84,{
+prt_fild07.gat,316,263,6	script	Marsh Man	84,{
 	if (two_qset == 3 && countitem(518) > 19) goto N_QuestComp;
 	if (two_qset == 3) goto N_QuestStart;
 	mes "[Lenith]";
@@ -199,7 +199,7 @@ N_QuestStart:
 	close;
 }
 //2-4;
-payon,161,72,6	script	Molly	714,{
+payon.gat,161,72,6	script	Molly	714,{
 	if (two_qset == 4 && countitem(7005) > 0) goto N_QuestComp;
 	if (two_qset == 4) goto N_QuestStart;
 	mes "[Molly]";
@@ -211,10 +211,10 @@ N_QuestComp:
 	mes " ";
 	mes "I knew you looked strong, I have no idea how you could have killed that monster though.";
 	mes "thank you so much, here have these 3 Guild Tokens as a reward.";
-	delitem 7005,1;
 	set two_qset,0;
 	set On_Quest,0;
 	set #Treasure_Token,#Treasure_Token+3;
+	delitem 7005,1;
 	close;
 N_QuestStart:
 	mes "[Molly]";
@@ -229,7 +229,7 @@ N_QuestStart:
 }
 ///////Job list 3///////
 //3-1;
-moc_fild04,208,322,6	script	Clark	65,{
+moc_fild04.gat,208,322,6	script	Clark	65,{
 	if (three_qset == 1 && countitem(1040) > 29) goto N_QuestComp;
 	if (three_qset == 1) goto N_QuestStart;
 	mes "[Clark]";
@@ -241,8 +241,8 @@ N_QuestComp:
 	mes " ";
 	mes "I hope that this hole will go away 1 day, and I might have another quest for you in the future.";
 	mes "here take these 2 Treasure Tokens.";
-	delitem 1040,30;
 	set #Treasure_Token,#Treasure_Token+2;
+	delitem 1040,30;
 	set three_qset,0;
 	set On_Quest,0;
 	close;
@@ -258,7 +258,7 @@ N_QuestStart:
 	close;
 }
 //3-2;
-yuno_fild01,186,162,6	script	Flank	73,{
+yuno_fild01.gat,186,162,6	script	Flank	73,{
 	if (three_qset == 2 && countitem(1082) > 0) goto N_QuestComp;
 	if (three_qset == 2) goto N_QuestStart;
 	mes "[Flank]";
@@ -271,8 +271,8 @@ N_QuestComp:
 	mes "[Flank]";
 	mes "Thanks";
 	mes "Have this Treasure Token";
-	delitem 1082,1;
 	set three_qset,0;
+	delitem 1082,1;
 	set #Treasure_Token,#Treasure_Token+1;
 	set On_Quest,0;
 	close;
@@ -283,7 +283,7 @@ N_QuestStart:
 	close;
 }
 //3-3 Goes to 7-3 using callfunc
-prt_sewb1,120,245,6	script	Sewer Managment Knight	705,{
+prt_sewb1.gat,120,245,6	script	Sewer Managment Knight	705,{
 	if (three_qset == 3 && countitem(955) > 149) goto N_QuestComp;
 	if (three_qset == 3) goto N_QuestStart;
 	if (seven_qset == 3) goto N_QuestStart2;
@@ -311,7 +311,7 @@ N_QuestStart2:
 	close;
 }
 //3-4
-mjolnir_02,87,357,6	script	Man#01	51,{
+mjolnir_02.gat,87,357,6	script	Man	51,{
 	if (three_qset == 4 && countitem(1041) > 49) goto N_QuestComp;
 	if (three_qset == 4) goto N_QuestStart;
 	mes "[Rudolfo]";
@@ -323,9 +323,9 @@ N_QuestComp:
 	mes "I had my doughts but thank you for your help.";
 	mes " ";
 	mes "Here have these 4 Treasure Tokens.";
-	delitem 1041,50;
 	set three_qset,0;
 	set On_Quest,0;
+	delitem 1041,50;
 	set #Treasure_Token,#Treasure_Token+4;
 	close;
 N_QuestStart:
@@ -339,7 +339,7 @@ N_QuestStart:
 }
 ///////Job list 4///////
 //4-1;
-pay_arche,45,138,6	script	Flora	724,{
+pay_arche.gat,45,138,6	script	Flora	724,{
 	if (four_qset == 1 && countitem(957) > 49) goto N_QuestComp;
 	if (four_qset == 1) goto N_QuestStart;
 	mes "[Flora]";
@@ -349,11 +349,11 @@ N_QuestComp:
 	mes "[Flora]";
 	mes "Welcome back, good job you did it. (I wonder if that Flaming Bastard is still alive)";
 	mes "Well I hope that cut down a bit on the monsters and here have these 2 Tokens.";
-	delitem 957,50;
 	set #Treasure_Token,#Treasure_Token+2;
+	delitem 957,50;
 	set four_qset,0;
 	set On_Quest,0;
-	killmonster "pay_dun00","Flora::OnMobDead";
+	killmonster "pay_dun00.gat","kaho";
 	close;
 N_QuestStart:
 	mes "[Flora]";
@@ -366,14 +366,12 @@ N_QuestStart:
 	mes "[Flora]";
 	mes "Good Luck";
 	mes "Remember I need 50 Nail's";
-	monster "pay_dun00",0,0,"Flaming Bastard",1072,1,"Flora::OnMobDead";
-	monster "pay_dun00",0,0,"Flaming Bastard",1072,1,"Flora::OnMobDead";
+	monster "pay_dun00.gat",0,0,"Flaming Bastard",1072,1,"kaho";
+	monster "pay_dun00.gat",0,0,"Flaming Bastard",1072,1,"kaho";
 	close;
-OnMobDead:
-	end;
 }
 //4-2;
-yuno,45,138,6	script	Zed	735,{
+yuno.gat,45,138,6	script	Zed	735,{
 	if (four_qset == 2 && countitem(1999) > 0) goto N_QuestComp;
 	if (four_qset == 2) goto N_QuestStart;
 	mes "[Zed]";
@@ -387,9 +385,9 @@ N_QuestComp:
 	next;
 	mes "[Zed]";
 	mes "Well you can take this crapy Treausre Token.";
-	delitem 1999,1;
 	set On_Quest,0;
 	set four_qset,0;
+	delitem 1999,1;
 	set #Treasure_Token,#Treasure_Token+1;
 	close;
 N_QuestStart:
@@ -398,7 +396,7 @@ N_QuestStart:
 	close;
 }
 //4-3;
-prontera,176,204,6	script	Dassy	95,{
+prontera.gat,176,204,6	script	Dassy	95,{
 	if (four_qset == 3 && countitem(711) > 19) goto N_QuestComp;
 	if (four_qset == 3) goto N_QuestStart;
 	mes "[Dassy]";
@@ -409,9 +407,9 @@ N_QuestComp:
 	mes "Yes! Now my pet will not starve!";
 	mes "Thank you so much!";
 	mes "Have this Treasure Token.";
-	delitem 711,20;
 	set On_Quest,0;
 	set four_qset,0;
+	delitem 711,20;
 	set #Treasure_Token,#Treasure_Token+1;
 	close;
 N_QuestStart:
@@ -424,7 +422,7 @@ N_QuestStart:
 	close;
 }
 //4-4;
-prt_gld,157,99,6	script	Czhore	752,{
+prt_gld.gat,157,99,6	script	Czhore	752,{
 	if (four_qset == 4 && countitem(714) > 0) goto N_QuestComp;
 	if (four_qset == 4) goto N_QuestStart;
 	mes "[Czhore]";
@@ -440,10 +438,10 @@ N_QuestComp:
 	mes "[Czhore]";
 	mes "Here have these 2 Treasure Tokens.";
 	mes "And some of my old treasure...";
-	delitem 714,1;
-	monster "prt_gld",155,99,"Old Man's Treasure",1324,1;
+	monster "prt_gld.gat",155,99,"Old Man's Treasure",1324,1,"treasure";
 	set four_qset,0;
 	set On_Quest,0;
+	delitem 714,1;
 	set #Treasure_Token,#Treasure_Token+2;
 	close;
 N_QuestStart:
@@ -457,7 +455,7 @@ N_QuestStart:
 }
 ///////Job list 5///////
 //5-1;
-prt_maze01,18,184,6	script	Lithin#01	752,{
+prt_maze01.gat,18,184,6	script	Lithin	752,{
 	if (five_qset == 1 && countitem(1028) > 14) goto N_QuestComp;
 	if (five_qset == 1) goto N_QuestStart;
 	mes "[Lithin]";
@@ -469,10 +467,10 @@ N_QuestComp:
 	mes "Oh thank you so much, but they will be back...";
 	next;
 	mes "Take these 2 Treasure Tokens";
-	delitem 1028,15;
 	set five_qset,0;
 	set On_Quest,0;
 	set #Treasure_Token,#Treasure_Token+2;
+	delitem 1028,15;
 	close;
 N_QuestStart:
 	mes "[Lithin]";
@@ -484,7 +482,7 @@ N_QuestStart:
 	close;
 }
 //5-2 goes to 6-2 using callfunc;
-moc_ruins,75,167,6	script	Lithin#02	87,{
+moc_ruins.gat,75,167,6	script	Lithin	87,{
 	if (five_qset == 2 && countitem(932) > 29) goto N_QuestComp;
 	if (five_qset == 2) goto N_QuestStart;
 	if (six_qset == 2) goto N_QuestStart2;
@@ -496,10 +494,10 @@ N_QuestComp:
 	mes "Much thanks I have for you.";
 	next;
 	mes "Take with you these 2 Treasure Token's.";
-	delitem 932,30;
 	set #Treasure_Token,#Treasure_Token+2;
 	set five_qset,0;
 	set On_Quest,0;
+	delitem 932,30;
 	close;
 N_QuestStart:
 	mes "[Strange Man]";
@@ -512,7 +510,7 @@ N_QuestStart2:
 	callfunc "six_qset2";
 }
 //5-3;
-geffen,57,130,6	script	Blonde Girl	724,{
+geffen.gat,57,130,6	script	Blonde Girl	724,{
 	if (five_qset == 3 && countitem(744) > 0) goto N_QuestComp;
 	if (five_qset == 3) goto N_QuestStart;
 	mes "[Blonde Girl]";
@@ -536,7 +534,7 @@ N_QuestStart:
 	close;
 }
 //5-4;
-gef_tower,49,27,6	script	Wizard#01	735,{
+gef_tower.gat,49,27,6	script	Wizard	735,{
 	if (five_qset == 4 && countitem(1059) > 49) goto N_QuestComp;
 	if (five_qset == 4) goto N_QuestStart;
 	mes "[Wizard]";
@@ -548,15 +546,15 @@ N_QuestComp:
 	next;
 	mes "[Wizard]";
 	mes "Here take these 4 Treasure Tokens.";
-	delitem 1059,50;
 	set five_qset,0;
 	set On_Quest,0;
+	delitem 1059,50;
 	set #Treasure_Token,#Treasure_Token+4;
 	close;
 N_QuestStart:
 	mes "[Wizard]";
 	mes "Hello, the reason why I brought you here was because of a long time ago I made a friend, which happened to be a Whipser.";
-	mes "He told me that he was always bullied by the other ghosts down there and I haven't seen him in a while.";
+	mes "He told me that he was always bullied by the other ghosts down there and I havent seen him in a while.";
 	mes "Thinking of the worse case here, I want vengance!";
 	mes " ";
 	mes "Bring me 50 Fabrics!";
@@ -564,7 +562,7 @@ N_QuestStart:
 }
 ///////Job list 6///////
 //6-1;
-moc_prydb1,47,132,6	script	Thief	48,{
+moc_prydb1.gat,47,132,6	script	Thief	48,{
 	if (six_qset == 1 && countitem(1083) > 0) goto N_QuestComp;
 	if (six_qset == 1) goto N_QuestStart;
 	mes "[Thief]";
@@ -576,8 +574,8 @@ N_QuestComp:
 	next;
 	mes "[Thief]";
 	mes "Here take this Treasure Token as a reward.";
-	delitem 1083,1;
 	set six_qset,0;
+	delitem 1083,1;
 	set On_Quest,0;
 	set #Treasure_Token,#Treasure_Token+1;
 	close;
@@ -603,14 +601,14 @@ N_QuestComp2:
 	next;
 	mes "[Strange Man]";
 	mes "Take with you these 3 tokens.";
-	delitem 930,30;
 	set #Treasure_Token,#Treasure_Token+3;
+	delitem 930,30;
 	set On_Quest,0;
 	set six_qset,0;
 	close;
 }
 //6-3;
-xmas,144,136,6	script	Chirach	48,{
+xmas.gat,144,136,6	script	Chirach	48,{
 	if (six_qset == 3 && countitem(1083) > 0) goto N_QuestComp;
 	if (six_qset == 3) goto N_QuestStart;
 	mes "[Chirach]";
@@ -622,8 +620,8 @@ N_QuestComp:
 	next;
 	mes "[Chirach]";
 	mes "Here take this Treasure Token as a reward.";
-	delitem 1083,1;
 	set six_qset,0;
+	delitem 1083,1;
 	set On_Quest,0;
 	set #Treasure_Token,#Treasure_Token+1;
 	close;
@@ -633,7 +631,7 @@ N_QuestStart:
 	close;
 }
 //6-4;
-gef_tower,52,87,6	script	Wizard#02	735,{
+gef_tower.gat,52,87,6	script	Wizard	735,{
 	if (six_qset == 4 && countitem(944) > 19) goto N_QuestComp;
 	if (six_qset == 4) goto N_QuestStart;
 	mes "[Zuuzuu]";
@@ -644,16 +642,16 @@ N_QuestComp:
 	mes "Thank you for helping me.";
 	next;
 	mes "Here take these 4 Treasure Tokens.";
-	delitem 944,20;
 	set six_qset,0;
 	set On_Quest,0;
+	delitem 944,20;
 	set #Treasure_Token,#Treasure_Token+4;
 	next;
 	mes "[Zuuzuu]";
 	mes "Oh dear god!!!";
 	mes "One of those evil mosters has followed you up here, Kill it, Kill it!!!";
 	next;
-	monster "gef_tower",42,89,"Evil Nightmare",1061,1;
+	monster "gef_tower.gat",42,89,"Evil Nightmare",1061,1,"nightsum";
 	close;
 N_QuestStart:
 	mes "[Zuuzuu]";
@@ -665,7 +663,7 @@ N_QuestStart:
 }
 ///////Job list 7///////
 //7-1 goes to 8-1 using callfunc;
-prontera,123,208,6	script	Little Girl#thq	717,{
+prontera.gat,123,208,6	script	Little Girl	717,{
 	if (seven_qset == 1 && countitem(531) > 4) goto N_QuestComp;
 	if (seven_qset == 1) goto N_QuestStart;
 	if (eight_qset == 1) goto N_QuestStart2;
@@ -678,9 +676,9 @@ N_QuestComp:
 	next;
 	mes "[Girl]";
 	mes "Have these 1 Treasure Tokens.";
-	delitem 531,5;
 	set seven_qset,0;
 	set On_Quest,0;
+	delitem 531,5;
 	set #Treasure_Token,#Treasure_Token+1;
 	close;
 N_QuestStart:
@@ -692,7 +690,7 @@ N_QuestStart2:
 	callfunc "eight_qset1";
 }
 //7-2;
-alberta,101,84,6	script	Charles	48,{
+alberta.gat,101,84,6	script	Charles	48,{
 	if (seven_qset == 2 && countitem(1082) > 0) goto N_QuestComp;
 	if (seven_qset == 2) goto N_QuestStart;
 	mes "[Charles]";
@@ -704,8 +702,8 @@ N_QuestComp:
 	next;
 	mes "[Charles]";
 	mes "Here take this Treasure Token as a reward.";
-	delitem 1082,1;
 	set seven_qset,0;
+	delitem 1082,1;
 	set On_Quest,0;
 	set #Treasure_Token,#Treasure_Token+1;
 	close;
@@ -728,14 +726,14 @@ N_QuestComp2:
 	next;
 	mes "[Sewer Managment]";
 	mes "Here take these 4 Treasure Tokens.";
-	delitem 969,1;
 	set seven_qset,0;
 	set On_Quest,0;
+	delitem 969,1;
 	set #Treasure_Token,#Treasure_Token+4;
 	close;
 }
 //7-4;
-alb2trea,94,102,6	script	Scarlet	725,{
+alb2trea.gat,94,102,6	script	Scarlet	725,{
 	if (seven_qset == 4 && countitem(1127) > 0) goto N_QuestComp;
 	if (seven_qset == 4) goto N_QuestStart;
 	mes "[Scarlet]";
@@ -747,9 +745,9 @@ N_QuestComp:
 	next;
 	mes "[Scarlet]";
 	mes "Here take these 4 Treasure Tokens.";
-	delitem 1127,1;
 	set seven_qset,0;
 	set On_Quest,0;
+	delitem 1127,1;
 	set #Treasure_Token,#Treasure_Token+4;
 	close;
 N_QuestStart:
@@ -773,14 +771,14 @@ N_QuestComp2:
 	next;
 	mes "[Girl]";
 	mes "Have these 1 Treasure Tokens.";
-	delitem 532,5;
 	set eight_qset,0;
 	set On_Quest,0;
+	delitem 532,5;
 	set #Treasure_Token,#Treasure_Token+1;
 	close;
 }
 //8-2;
-morocc,165,55,6	script	Klye	48,{
+morocc.gat,165,55,6	script	Klye	48,{
 	if (eight_qset == 2 && countitem(1081) > 0) goto N_QuestComp;
 	if (eight_qset == 2) goto N_QuestStart;
 	mes "[Klye]";
@@ -792,8 +790,8 @@ N_QuestComp:
 	next;
 	mes "[Klye]";
 	mes "Here take this Treasure Token as a reward.";
-	delitem 1081,1;
 	set eight_qset,0;
+	delitem 1081,1;
 	set On_Quest,0;
 	set #Treasure_Token,#Treasure_Token+1;
 	close;
@@ -804,7 +802,7 @@ N_QuestStart:
 
 }
 //8-3;
-prt_maze02,103,86,6	script	Zack	751,{
+prt_maze02.gat,103,86,6	script	Zack	751,{
 	if (eight_qset == 3 && countitem(923) > 0) goto N_QuestComp;
 	if (eight_qset == 3) goto N_QuestStart;
 	mes "[Zack]";
@@ -816,9 +814,9 @@ N_QuestComp:
 	next;
 	mes "[Zack]";
 	mes "Here take these 5 Treasure Tokens.";
-	delitem 923,1;
 	set eight_qset,0;
 	set On_Quest,0;
+	delitem 923,1;
 	set #Treasure_Token,#Treasure_Token+5;
 	close;
 N_QuestStart:
@@ -830,7 +828,7 @@ N_QuestStart:
 	close;
 }
 //8-4;
-payon,136,129,6	script	Flower	703,{
+payon.gat,136,129,6	script	Flower	703,{
 	if (eight_qset == 4 && countitem(746) > 9) goto N_QuestComp;
 	if (eight_qset == 4) goto N_QuestStart;
 	mes "[Flower]";
@@ -842,9 +840,9 @@ N_QuestComp:
 	next;
 	mes "[Flower]";
 	mes "Here take these 2 Treasure Tokens.";
-	delitem 746,10;
 	set eight_qset,0;
 	set On_Quest,0;
+	delitem 746,10;
 	set #Treasure_Token,#Treasure_Token+2;
 	close;
 N_QuestStart:
@@ -856,7 +854,7 @@ N_QuestStart:
 }
 ///////Job list 9///////
 //9-1;
-geffen_in,168,124,6	script	Mage	48,{
+geffen_in.gat,168,124,6	script	Mage	48,{
 	if (nine_qset == 1 && countitem(1082) > 0) goto N_QuestComp;
 	if (nine_qset == 1) goto N_QuestStart;
 	mes "[Mage]";
@@ -868,8 +866,8 @@ N_QuestComp:
 	next;
 	mes "[Mage]";
 	mes "Here take this Treasure Token as a reward.";
-	delitem 1082,1;
 	set nine_qset,0;
+	delitem 1082,1;
 	set On_Quest,0;
 	set #Treasure_Token,#Treasure_Token+1;
 	close;
@@ -879,7 +877,7 @@ N_QuestStart:
 	close;
 }
 //9-2;
-pay_arche,98,74,6	script	School Girl	703,{
+pay_arche.gat,98,74,6	script	School Girl	703,{
 	if (nine_qset == 2 && countitem(1020) > 19) goto N_QuestComp;
 	if (nine_qset == 2) goto N_QuestStart;
 	mes "[School Girl]";
@@ -891,9 +889,9 @@ N_QuestComp:
 	next;
 	mes "[School Girl]";
 	mes "Here take these 4 Treasure Tokens.";
-	delitem 1020,20;
 	set nine_qset,0;
 	set On_Quest,0;
+	delitem 1020,20;
 	set #Treasure_Token,#Treasure_Token+4;
 	close;
 N_QuestStart:
@@ -907,7 +905,7 @@ N_QuestStart:
 	close;
 }
 //9-3
-payon_in02,19,33,6	script	Jack	740,{
+payon_in02.gat,19,33,6	script	Jack	740,{
 	if (nine_qset == 3 && countitem(1022) > 0) goto N_QuestComp;
 	if (nine_qset == 3) goto N_QuestStart;
 	if (nine_qset == 4) goto N_QuestStart2;
@@ -920,9 +918,9 @@ N_QuestComp:
 	next;
 	mes "[Jack]";
 	mes "Here take these 4 Treasure Tokens.";
-	delitem 1022,1;
 	set nine_qset,0;
 	set On_Quest,0;
+	delitem 1022,1;
 	set #Treasure_Token,#Treasure_Token+4;
 	close;
 N_QuestStart:
@@ -945,15 +943,15 @@ N_QuestComp2:
 	next;
 	mes "[Jack]";
 	mes "Here take these 3 Treasure Tokens.";
-	delitem 901,40;
 	set nine_qset,0;
 	set On_Quest,0;
+	delitem 901,40;
 	set #Treasure_Token,#Treasure_Token+3;
 	close;
 }
 ///////Job list 10///////
 //10-1
-morocc,193,51,6	script	Kreg	48,{
+morocc.gat,193,51,6	script	Kreg	48,{
 	if (ten_qset == 1 && countitem(1082) > 0) goto N_QuestComp;
 	if (ten_qset == 1) goto N_QuestStart;
 	mes "[Kreg]";
@@ -965,8 +963,8 @@ N_QuestComp:
 	next;
 	mes "[Kreg]";
 	mes "Here take this Treasure Token as a reward.";
-	delitem 1082,1;
 	set ten_qset,0;
+	delitem 1082,1;
 	set On_Quest,0;
 	set #Treasure_Token,#Treasure_Token+1;
 	close;
@@ -976,7 +974,7 @@ N_QuestStart:
 	close;
 }
 //10-2;
-pay_fild10,145,252,6	script	Man#02	122,{
+pay_fild10.gat,145,252,6	script	Man	122,{
 	if (ten_qset == 2 && countitem(1029) > 0) goto N_QuestComp;
 	if (ten_qset == 2) goto N_QuestStart;
 	mes "[Man]";
@@ -988,9 +986,9 @@ N_QuestComp:
 	next;
 	mes "[Man]";
 	mes "Here take these 4 Treasure Tokens.";
-	delitem 1029,1;
 	set ten_qset,0;
 	set On_Quest,0;
+	delitem 1029,1;
 	set #Treasure_Token,#Treasure_Token+4;
 	close;
 N_QuestStart:
@@ -1001,7 +999,7 @@ N_QuestStart:
 	close;
 }
 //10-3;
-cmd_fild08,328,349,4	script	Caral	119,{
+moc_fild04.gat,193,51,6	script	Caral	119,{
 	if (ten_qset == 3 && countitem(1015) > 0) goto N_QuestComp;
 	if (ten_qset == 3) goto N_QuestStart;
 	mes "[Caral]";
@@ -1013,9 +1011,9 @@ N_QuestComp:
 	next;
 	mes "[Caral]";
 	mes "Here take these 4 Treasure Tokens.";
-	delitem 1015,1;
 	set ten_qset,0;
 	set On_Quest,0;
+	delitem 1015,1;
 	set #Treasure_Token,#Treasure_Token+4;
 	close;
 N_QuestStart:
@@ -1026,7 +1024,7 @@ N_QuestStart:
 	close;
 }
 //10-4
-moc_fild15,250,251,6	script	Jeni	727,{
+moc_fild15.gat,250,251,6	script	Jeni	727,{
 	if (ten_qset == 4 && countitem(1096) > 0) goto N_QuestComp;
 	if (ten_qset == 4) goto N_QuestStart;
 	mes "[Jeni]";
@@ -1038,9 +1036,9 @@ N_QuestComp:
 	next;
 	mes "[Jeni]";
 	mes "Here take these 3 Treasure Tokens.";
-	delitem 1096,1;
 	set ten_qset,0;
 	set On_Quest,0;
+	delitem 1096,1;
 	set #Treasure_Token,#Treasure_Token+3;
 	close;
 N_QuestStart:

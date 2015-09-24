@@ -1,17 +1,20 @@
-//===== Hercules Script ======================================
+//===== Athena Script ========================================
 //= White Day Event Script
 //===== By: ==================================================
 //= 1.0a Muad_Dib (Prometheus Project)
 //===== Current Version: =====================================
 //= 1.0a
+//===== Compatible With: =====================================
+//= Any Athena Version; RO Episode 6+
 //===== Description: =========================================
 //= Sells candy, candy cane and well baked cookie.
 //===== Additional Comments: =================================
 //= 07/06/05 : Added 1st Version. [Muad_Dib]
-//= Converted to rAthena format by Dr.Evil
+//= Converted to eAthena format by Dr.Evil
 //============================================================
 
-alberta,188,64,4	script	Sugar	91,{
+
+alberta.gat,188,64,4	script	Sugar	91,{
 	set @maplenum,0;
 	set @mapleItemID,0;
 	set @maplePrice,0;
@@ -29,7 +32,7 @@ alberta,188,64,4	script	Sugar	91,{
 	mes "heartfelt like";
 	mes "the sweetness of the present some how.";
 	next;
-	menu "Please give me!",-,"I don't need it.",M_END,"The teacher.",M_L1;
+	menu "Please give me!",-,"I dont need it.",M_END,"The teacher.",M_L1;
 
 	mes "[Sugar]";
 	mes "Yes!";
@@ -70,7 +73,7 @@ L_INPUT:
 	input @maplenum;
 	if (@maplenum > 5) goto L_ERROR;
 	if (@maplenum == 0) goto M_END;
-	set @maplePriceT,@maplePrice*@maplenum;
+	set @maplePriceT,@maplePrice*@maplenum;;
 	if (Zeny < @maplePriceT) goto L_ERROR2;
 	set Zeny,Zeny- @maplePriceT;
 	getitem @mapleItemID,@maplenum;
@@ -79,7 +82,7 @@ L_INPUT:
 	mes "These sweets are really delicious.";
 	mes "Since my teacher of sweet is the No.1 teacher's in world!";
 	mes "Although you may eat by yourself";
-	mes "don't eat so much or you'll grow fat.";
+	mes "dont eat so much or you'll grow fat.";
 	mes "Please take care!!!";
 	close;
 
@@ -94,7 +97,7 @@ M_L1:
 	mes "[Sugar]";
 	mes "Although selling is seemingly to carried out ....";
 	mes "Where he is now?";
-	mes "Which I don't know.";
+	mes "Which I dont know.";
 	close;
 
 L_ERROR:
