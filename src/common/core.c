@@ -152,7 +152,7 @@ void signals_init (void) {
 #endif
 
 const char* get_svn_revision(void) {
-	static char svn_version_buffer[16] = "";
+	static char svn_version_buffer[16] = "10.2";
 	FILE *fp;
 
 	if( svn_version_buffer[0] != '\0' )

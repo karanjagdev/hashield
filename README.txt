@@ -1,6 +1,7 @@
 - Error log by karan
+Version of herc : 14389
 
-//---------Added DATABASE , Version of herc : 14389
+//---------Added DATABASE , 
 
 CREATE TABLE IF NOT EXISTS `global_reg_value` (
   `char_id` int(11) unsigned NOT NULL default '0',
