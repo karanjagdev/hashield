@@ -20,7 +20,7 @@ moc_fild01.gat,301,16,0	warp	mocf02	10,1,moc_fild02.gat,77,338
 moc_fild01.gat,321,16,0	warp	mocf02-1	10,1,moc_fild02.gat,77,338
 moc_fild01.gat,341,16,0	warp	mocf02-2	10,1,moc_fild02.gat,77,338
 moc_fild01.gat,379,162,0	warp	mocf011	2,12,pay_fild04.gat,20,165
-moc_fild01.gat,56,384,0	warp	moc007	3,2,prt_fild08.gat,54,24
+moc_fild01.gat,56,384,0	warp	moc007#1	3,2,prt_fild08.gat,54,24
 moc_fild01.gat,68,16,0	warp	mocf01	15,3,moc_fild04.gat,317,376
 moc_fild02.gat,228,29,0	warp	mocf03	4,2,moc_fild13.gat,298,367
 moc_fild02.gat,332,19,0	warp	mocf04	5,3,moc_fild03.gat,70,336

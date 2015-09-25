@@ -122,8 +122,8 @@ M_Menu:
 }
 
 // South ------------------------------------------
-geffen.gat,118,62,0	duplicate(Gef_Guide)	Guide#2	705
+geffen.gat,118,62,0	duplicate(Gef_Guide)	Guide#2-1	705
 // East -----------------------------------------------------
-geffen.gat,203,116,2	duplicate(Gef_Guide)	Guide#3	705
+geffen.gat,203,116,2	duplicate(Gef_Guide)	Guide#3-1	705
 // West ----------------------------------------------
-geffen.gat,37,123,5	duplicate(Gef_Guide)	Guide#4	705
+geffen.gat,37,123,5	duplicate(Gef_Guide)	Guide#4-1	705

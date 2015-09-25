@@ -250,10 +250,10 @@ prontera.gat,160,330,4	script	Guard#1::Prt_Guard	105,{
 	close;
 }
 
-prontera.gat,229,104,5	duplicate(Prt_Guard)	Guard#2	105
-prontera.gat,223,98,8	duplicate(Prt_Guard)	Guard#3	105
-prontera.gat,52,344,5	duplicate(Prt_Guard)	Guard#4	105
-prontera.gat,47,339,5	duplicate(Prt_Guard)	Guard#5	105
+prontera.gat,229,104,5	duplicate(Prt_Guard)	GuardP#2-1	105
+prontera.gat,223,98,8	duplicate(Prt_Guard)	GuardP#3-2	105
+prontera.gat,52,344,5	duplicate(Prt_Guard)	GuardP#4-3	105
+prontera.gat,47,339,5	duplicate(Prt_Guard)	GuardP#5-4	105
 
 
 //---------------------------------------------------------------------------------------- Prontera Maze ----------------------------------------------------------------------------------\\

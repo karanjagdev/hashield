@@ -29,7 +29,7 @@ ama_in02.gat,127,163,0	warp	warp1980	1,1,ama_in02.gat,220,161
 ama_in02.gat,195,44,0	warp	warp1973	1,1,ama_in02.gat,65,40
 ama_in02.gat,215,150,0	warp	warp1978	1,1,ama_in02.gat,59,156
 ama_in02.gat,222,161,0	warp	warp1979	1,1,ama_in02.gat,130,163
-ama_in02.gat,227,45,0	warp	warp1973	1,1,amatsu.gat,88,235
+ama_in02.gat,227,45,0	warp	warp1973#1	1,1,amatsu.gat,88,235
 ama_in02.gat,56,44,0	warp	warp1975	1,1,ama_in02.gat,59,144
 ama_in02.gat,59,142,0	warp	warp1976	1,1,ama_in02.gat,56,41
 ama_in02.gat,59,159,0	warp	warp1977	1,1,ama_in02.gat,215,152

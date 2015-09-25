@@ -39,7 +39,7 @@ mjolnir_07.gat,17,77,0	warp	mjol11-1	2,4,mjolnir_06.gat,380,74
 mjolnir_07.gat,214,383,0	warp	mjol04-1	4,2,mjolnir_03.gat,212,20
 mjolnir_07.gat,383,233,0	warp	mjol12	2,4,mjolnir_08.gat,33,234
 mjolnir_07.gat,383,362,0	warp	mjol13	2,4,mjolnir_08.gat,32,346
-mjolnir_08.gat,159,373,0	warp	mjol06	1,1,mjolnir_04.gat,160,49
+mjolnir_08.gat,159,373,0	warp	mjol06#1	1,1,mjolnir_04.gat,160,49
 mjolnir_08.gat,185,28,0	warp	mjol14	17,2,mjolnir_09.gat,196,364
 mjolnir_08.gat,29,346,0	warp	mjol13-1	2,4,mjolnir_07.gat,380,362
 mjolnir_08.gat,30,234,0	warp	mjol12-1	2,4,mjolnir_07.gat,380,233

@@ -261,7 +261,7 @@ yuno_in02,88,164,5	script	Metheus Sylphe#Library	742,{
 	close;
 }
 
-yuno_in02,93,207,1	script	Book of Ymir	111,{
+yuno_in02,93,207,1	script	Book of Ymir#1	111,{
 	if (ADVJOB != 0 || Upper == 1) {
 		mes "[The Book of Ymir]";
 		mes "...The entrance to the Hall of Honor is open to anyone who has moved forward into their next life. It is there to help heroes decide what they want to do, and can lead them to anywhere in this world.";
@@ -347,7 +347,7 @@ yuno_in02,93,207,1	script	Book of Ymir	111,{
 	close;
 }
 
-yuno_in05,49,43,1	script	Heart of Ymir	111,{
+yuno_in05,49,43,1	script	Heart of Ymir#1	111,{
 	if (Baselevel > 98 && JobLevel > 49 && Class >= Job_Knight && Class <= Job_Crusader2) {
 		if (valkyrie_Q == 2) warp "valkyrie",48,8;
 	}
@@ -402,6 +402,6 @@ S_WarpChar:
 
 // Warps
 //============================================================ 
-valkyrie,48,73,0	warp	valk01#1	1,1,valkyrie,48,64
+valkyrie,48,73,0	warp	valk01#1-1	1,1,valkyrie,48,64
 valkyrie,48,66,0	warp	valk01#2	1,1,valkyrie,48,75
 

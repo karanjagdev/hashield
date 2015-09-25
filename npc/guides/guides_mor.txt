@@ -109,8 +109,8 @@ M_Menu:
 }
 
 // South --------------------------------------------
-morocc.gat,162,97,6	duplicate(Mor_Guide)	Guide#2	707
+morocc.gat,162,97,6	duplicate(Mor_Guide)	GuideM#2-1	707
 // West --------------------------------------------
-morocc.gat,28,161,6	duplicate(Mor_Guide)	Guide#3	707
+morocc.gat,28,161,6	duplicate(Mor_Guide)	GuideM#3-2	707
 // East  --------------------------------------------
-morocc.gat,294,203,9	duplicate(Mor_Guide)	Guide#4	707
+morocc.gat,294,203,9	duplicate(Mor_Guide)	GuideM#4-3	707

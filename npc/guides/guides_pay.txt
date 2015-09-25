@@ -18,7 +18,7 @@
 //============================================================
 
 
-payon.gat,162,67,4	script	Guide	708,{
+payon.gat,162,67,4	script	Guide#p1	708,{
 	cutin "pay_soldier",2;
 	mes "[Payon Guide]";
 	mes "Welcome to the";
