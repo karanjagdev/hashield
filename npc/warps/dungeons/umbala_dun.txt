@@ -25,9 +25,9 @@ um_dun02.gat,177,38,0	warp	umba0023	1,1,um_dun02.gat,166,38
 um_dun02.gat,216,77,0	warp	umba0024	1,1,um_dun02.gat,217,88
 um_dun02.gat,216,84,0	warp	umba0025	1,1,um_dun02.gat,214,74
 um_dun02.gat,222,259,0	warp	umba0026	1,1,um_dun02.gat,234,255
-um_dun02.gat,231,255,0	warp	umba0027	1,1,um_dun02.gat,219,260
-um_dun02.gat,25,244,0	warp	umba0028	1,1,um_dun02.gat,35,251
-um_dun02.gat,33,249,0	warp	umba0029	1,1,um_dun02.gat,23,242
-um_dun02.gat,51,26,0	warp	umba0030	1,1,um_dun01.gat,153,201 
-um_dun02.gat,60,88,0	warp	umba0031	1,1,um_dun02.gat,66,77
-um_dun02.gat,63,80,0	warp	umba0032	1,1,um_dun02.gat,59,92
+um_dun02.gat,231,255,0	warp	umba0027#1	1,1,um_dun02.gat,219,260
+um_dun02.gat,25,244,0	warp	umba0028#1	1,1,um_dun02.gat,35,251
+um_dun02.gat,33,249,0	warp	umba0029#2	1,1,um_dun02.gat,23,242
+um_dun02.gat,51,26,0	warp	umba0030#1	1,1,um_dun01.gat,153,201 
+um_dun02.gat,60,88,0	warp	umba0031#1	1,1,um_dun02.gat,66,77
+um_dun02.gat,63,80,0	warp	umba0032#1	1,1,um_dun02.gat,59,92

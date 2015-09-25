@@ -234,13 +234,13 @@ L_END:
 }
 
 // East ----------------------------------------------------
-prontera.gat,282,208,2	duplicate(Prt_Guide)	Guide#2	105
+prontera.gat,282,208,2	duplicate(Prt_Guide)	GuideP#2	105
 //West --------------------------------------------------
-prontera.gat,29,200,6	duplicate(Prt_Guide)	Guide#3	105
+prontera.gat,29,200,6	duplicate(Prt_Guide)	GuideP#3	105
 // South -----------------------------------------------------
-prontera.gat,160,29,0	duplicate(Prt_Guide)	Guide#4	105
+prontera.gat,160,29,0	duplicate(Prt_Guide)	GuideP#4	105
 // North -----------------------------------------------
-prontera.gat,151,330,4	duplicate(Prt_Guide)	Guide#5	105
+prontera.gat,151,330,4	duplicate(Prt_Guide)	GuideP#5	105
 
 
 // Guard -----------------------------------------------------
