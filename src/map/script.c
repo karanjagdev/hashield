@@ -5883,97 +5883,87 @@ BUILDIN(checkweight2)
 	fail?script_pushint(st,0):script_pushint(st,1);
 	return true;
 }
+
 /*==========================================
-Added Script for Getitembound
  * getitem <item id>,<amount>{,<account ID>};
  * getitem "<item name>",<amount>{,<account ID>};
- *
- * getitembound <item id>,<amount>,<type>{,<account ID>};
- * getitembound "<item id>",<amount>,<type>{,<account ID>};
  *------------------------------------------*/
-BUILDIN(getitem) {
-	int nameid,amount,get_count,i,flag = 0, offset = 0;
+BUILDIN(getitem)
+{
+	int nameid,amount,get_count,i,flag = 0;
 	struct item it;
 	TBL_PC *sd;
+	struct script_data *data;
 	struct item_data *item_data;
-
-	if( script_isstringtype(st, 2) ) {
-		// "<item name>"
-		const char *name = script_getstr(st, 2);
-		if( (item_data = itemdb->search_name(name)) == NULL ) {
-			ShowError("buildin_%s: Nonexistant item %s requested.\n", script->getfuncname(st), name);
+	
+	data=script_getdata(st,2);
+	script->get_val(st,data);
+	if( data_isstring(data) )
+	{// "<item name>"
+		const char *name=script->conv_str(st,data);
+		if( (item_data = itemdb->search_name(name)) == NULL ){
+			ShowError("buildin_getitem: Nonexistant item %s requested.\n", name);
 			return false; //No item created.
 		}
 		nameid=item_data->nameid;
-	} else {
-		// <item id>
-		nameid = script_getnum(st, 2);
+	} else if( data_isint(data) ) {// <item id>
+		nameid=script->conv_num(st,data);
 		//Violet Box, Blue Box, etc - random item pick
 		if( nameid < 0 ) {
 			nameid = -nameid;
 			flag = 1;
 		}
-		if( nameid <= 0 || !(item_data = itemdb->exists(nameid)) ) {
-			ShowError("buildin_%s: Nonexistant item %d requested.\n", script->getfuncname(st), nameid);
+		if( nameid <= 0 || !(item_data = itemdb->exists(nameid)) ){
+			ShowError("buildin_getitem: Nonexistant item %d requested.\n", nameid);
 			return false; //No item created.
 		}
+	} else {
+		ShowError("buildin_getitem: invalid data type for argument #1 (%d).", data->type);
+		return false;
 	}
-
+	
 	// <amount>
 	if( (amount=script_getnum(st,3)) <= 0)
 		return true; //return if amount <=0, skip the useles iteration
-
+	
 	memset(&it,0,sizeof(it));
 	it.nameid=nameid;
-
 	if(!flag)
 		it.identify=1;
 	else
-		it.identify=itemdb->isidentified2(item_data);
-
-	if( !strcmp(script->getfuncname(st),"getitembound") ) {
-		int bound = script_getnum(st,4);
-		if( bound < IBT_MIN || bound > IBT_MAX ) { //Not a correct bound type
-			ShowError("script_getitembound: Not a correct bound type! Type=%d\n",bound);
-			return false;
-		}
-		if( item_data->type == IT_PETEGG || item_data->type == IT_PETARMOR ) {
-			ShowError("script_getitembound: can't bind a pet egg/armor!\n",bound);
-			return false;
-		}
-		it.bound = (unsigned char)bound;
-		offset += 1;
-	}
-
-	if( script_hasdata(st,4+offset) )
-		sd=map->id2sd(script_getnum(st,4+offset)); // <Account ID>
+		it.identify=itemdb_isidentified2(item_data);
+	
+	if( script_hasdata(st,4) )
+		sd=iMap->id2sd(script_getnum(st,4)); // <Account ID>
 	else
-		sd=script->rid2sd(st); // Attached player
-
+		sd=script_rid2sd(st); // Attached player
+	
 	if( sd == NULL ) // no target
 		return true;
-
+	
 	//Check if it's stackable.
-	if (!itemdb->isstackable(nameid))
+	if (!itemdb_isstackable(nameid))
 		get_count = 1;
 	else
 		get_count = amount;
-
-	for (i = 0; i < amount; i += get_count) {
+	
+	for (i = 0; i < amount; i += get_count)
+	{
 		// if not pet egg
-		if (!pet->create_egg(sd, nameid)) {
-			if ((flag = pc->additem(sd, &it, get_count, LOG_TYPE_SCRIPT))) {
+		if (!pet_create_egg(sd, nameid))
+		{
+			if ((flag = pc->additem(sd, &it, get_count, LOG_TYPE_SCRIPT)))
+			{
 				clif->additem(sd, 0, 0, flag);
 				if( pc->candrop(sd,&it) )
-					map->addflooritem(&it,get_count,sd->bl.m,sd->bl.x,sd->bl.y,0,0,0,0);
+					iMap->addflooritem(&it,get_count,sd->bl.m,sd->bl.x,sd->bl.y,0,0,0,0);
 			}
 		}
 	}
-
+	
 	return true;
 }
 
-/*==========================================
 /*==========================================
  *
  *------------------------------------------*/
