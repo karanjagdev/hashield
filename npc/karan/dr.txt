@@ -5,8 +5,8 @@
             end;
         }
         for ( .@i = 0; .@i < .size; .@i += 2 ) {
-            getitembound 11501,10,4;
-getitembound 11502,10,4;
+            getitem 11501,10,4;
+getitem 11502,10,4;
             #timer = gettimetick(2) + ( .time_interval * 86400 );
             end;
         }

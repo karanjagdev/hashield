@@ -12,9 +12,9 @@ OnPCLoginEvent:
 	
 B_item:
 mes "There you go!";
-getitembound 1084,30,4;
-getitembound 7059,30,4;
-getitembound 12221,30,4;
+getitem 1084,30,4;
+getitem 7059,30,4;
+getitem 12221,30,4;
 set done,1;
 close;
 }
