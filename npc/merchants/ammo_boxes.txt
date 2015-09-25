@@ -134,3 +134,4 @@ function	script	Func_Casing	{
 		close;
 	}
 }
+izlude,171,127,3	duplicate(mdk)	Magazine Dealer Kenny	83

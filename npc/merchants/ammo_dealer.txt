@@ -121,3 +121,4 @@ function	script	Bullet_Trade	{
 		close;
 	}
 }
+izlude,171,133,3	duplicate(bdt)	Bullet Dealer Tony#iz	86

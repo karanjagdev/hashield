@@ -12891,3 +12891,4 @@ morocc,116,39,3	script	Rogue Guild Agent#nd4	779,{
 		close;
 	}
 }
+izlude_in,110,64,3	duplicate(Dorian)	Dorian#izlude	878,2,2,

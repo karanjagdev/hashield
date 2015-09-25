@@ -217,5 +217,5 @@ M_End:
   close;
 }
 
-einbroch.gat,155,43,4	duplicate(Einbroch_Guide)	Guide#2	852
-einbroch.gat,162,317,4	duplicate(Einbroch_Guide)	Guide#3	852
+einbroch.gat,155,43,4	duplicate(Einbroch_Guide)	GuideE#2	852
+einbroch.gat,162,317,4	duplicate(Einbroch_Guide)	GuideE#3	852
