@@ -58,7 +58,7 @@ OnInit:
 }
 
 
-hu_fild05.gat,171,212,0 script Pillar 111,{
+hu_fild05.gat,171,212,0	script	Pillar	111,{
 	mes "[Ancient Voice]";
 	mes "Leave the island?";
 	next;
