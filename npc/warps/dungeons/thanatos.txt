@@ -88,7 +88,7 @@ tha_t11.gat,93,36,0	warp	tha_t10	1,1,tha_t10.gat,91,130
 tha_t12.gat,16,160,0	warp	tha_t11	1,1,tha_t11.gat,16,160
 
 //Thana_step
-thana_step.gat,12,73,0 warp thana_step1 1,1,tha_t12.gat,128,58
+thana_step.gat,12,73,0	warp	thana_step1	1,1,tha_t12.gat,128,58
 thana_step.gat,16,16,0 warp thana_step2 1,1,thana_step.gat,32,224
 thana_step.gat,30,224,0 warp thana_step3 1,1,thana_step.gat,19,16
 thana_step.gat,32,166,0 warp thana_step4 1,1,thana_step.gat,184,74

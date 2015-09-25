@@ -100,7 +100,7 @@ payon_in02.gat,82,45,0	warp	payonwarp060	2,2,pay_arche.gat,74,153
 // == Self Made Warps, No Screen Availble ==
 
 // -- Large West House --
-payon.gat,127,204,0		warp	payonwarp061	2,2,payon_in03.gat,81,19
+payon.gat,127,204,0	warp	payonwarp061	2,2,payon_in03.gat,81,19
 payon_in03.gat,85,19,0	warp	payonwarp062	2,2,payon.gat,131,204
 payon_in03.gat,74,18,0	warp	payonwarp063	2,2,payon_in03.gat,62,18
 payon_in03.gat,67,18,0	warp	payonwarp064	2,2,payon_in03.gat,78,18
