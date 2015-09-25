@@ -102,6 +102,7 @@ force_1-3.gat,179,109,0	warp	fc319	1,1,force_1-3.gat,179,132
 force_1-3.gat,179,128,0	warp	fc319-1	1,1,force_1-3.gat,179,105
 
 //Battle Ordeal Mode
+/*
 ordeal_1-1.gat,100,150,0	warp	ord11	1,1,ordeal_1-1.gat,128,150
 ordeal_1-1.gat,123,150,0	warp	ord11-1	1,1,ordeal_1-1.gat,95,150
 ordeal_1-1.gat,114,183,0	warp	ord12	1,1,ordeal_1-1.gat,135,163
@@ -246,6 +247,7 @@ ordeal_3-4.gat,153,180,0	warp	ord345	1,1,ordeal_3-4.gat,144,284
 ordeal_3-4.gat,172,135,0	warp	ord346	1,1,ordeal_3-4.gat,284,24
 ordeal_3-4.gat,172,172,0	warp	ord347	1,1,ordeal_3-4.gat,284,284
 ordeal_3-4.gat,180,154,0	warp	ord348	1,1,ordeal_3-4.gat,284,164
+**/
 //This map doesn't even exists. Is it ordeal_a02 or ordea_la00?
 //ordeal_a04.gat,128,154,0	warp	orda1	0,0,ordeal_a04.gat,24,154
 //ordeal_a04.gat,136,136,0	warp	orda2	0,0,ordeal_a04.gat,24,24
