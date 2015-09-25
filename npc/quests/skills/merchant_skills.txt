@@ -734,3 +734,4 @@ alberta,119,221,6	script	Charlron	107,{
 //= 	changed perm. variables to temp ones [Lupus]
 //= 1.4b Added missing 1 Banana Juice requirement to Cart Revolution [DracoRPG]
 //============================================================
+alberta,232,106,6	duplicate(Gershaun_alberta)	Gershaun	57

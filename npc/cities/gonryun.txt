@@ -420,3 +420,4 @@ gonryun,169,71,3	script	Guidev#gon	770,{
 //= 1.3a Removed temp NPC plugs due Broken Sword quest [Lupus]
 //= 1.4 Added missing NPC [KarLaeda]
 //============================================================
+alberta,245,69,3	duplicate(Kunlun_Envoy_gonryun)	Kunlun Envoy#gon	776
