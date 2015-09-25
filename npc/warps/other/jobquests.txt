@@ -34,12 +34,12 @@
 //new_1-2.gat,100,165,0	warp	new15-1	2,1,new_1-2.gat,100,119
 //new_1-2.gat,126,106,0	warp	new16	2,4,new_1-2.gat,160,171
 //new_1-2.gat,153,171,0	warp	new16-1	2,4,new_1-2.gat,123,106
-new_1-1.gat,148,112,0		warp	newwarp6001		2,2,new_1-2.gat,100,9
-new_1-2.gat,100,6,0 		warp	newwarp6002		2,2,new_1-1.gat,144,112
-new_1-2.gat,126,106,0		warp	newwarp6003		2,2,new_1-2.gat,160,171
-new_1-2.gat,156,171,0		warp	newwarp6004		2,2,new_1-2.gat,123,106
-new_1-2.gat,73,106,0		warp	newwarp6005		2,2,new_1-2.gat,41,172
-new_1-2.gat,46,172,0		warp	newwarp6006		2,2,new_1-2.gat,78,106
+new_1-1.gat,148,112,0	warp	newwarp6001		2,2,new_1-2.gat,100,9
+new_1-2.gat,100,6,0	warp	newwarp6002		2,2,new_1-1.gat,144,112
+new_1-2.gat,126,106,0	warp	newwarp6003		2,2,new_1-2.gat,160,171
+new_1-2.gat,156,171,0	warp	newwarp6004		2,2,new_1-2.gat,123,106
+new_1-2.gat,73,106,0	warp	newwarp6005		2,2,new_1-2.gat,41,172
+new_1-2.gat,46,172,0	warp	newwarp6006		2,2,new_1-2.gat,78,106
 new_1-3.gat,96,175,0	warp	new17	3,2,new_1-4.gat,100,14
 
 //==============================================================================
@@ -83,7 +83,7 @@ moc_fild16.gat,205,296,0	warp	16_to_guild	2,2,in_moc_16.gat,18,11
 //==============================================================================
 // Hunter
 //==============================================================================
-in_hunter.gat,100,15,0	warp 	jhun01	0,0,pay_fild10.gat,143,250
+in_hunter.gat,100,15,0	warp	jhun01	0,0,pay_fild10.gat,143,250
 
 
 
