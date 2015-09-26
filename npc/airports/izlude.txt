@@ -30,7 +30,7 @@
 				end;
 			}
 			if (Zeny >= 1200) {
-				set Zeny, Zeny - 1200;
+				Zeny -= 1200;
 				warp "airplane_01",244,58;
 				end;
 			}
@@ -47,4 +47,3 @@
 	mes "Have a good day~";
 	close;
 }
-izlude,206,55,3	duplicate(Airship_Staff_izlude)	Airship Staff#izlude	90
