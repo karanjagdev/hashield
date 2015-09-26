@@ -69,7 +69,7 @@
 30009,Helm_Of_Sparta,Helm_Of_Sparta,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,1024,,0,1,709,{sc_start SC_CASH_PLUSEXP,1800000,360000;},{},{sc_end SC_CASH_PLUSEXP;}
 30010,Hollow_Mask_Half,Hollow_Mask_Half,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,1024,,0,1,710,{sc_start SC_CASH_PLUSEXP,1800000,360000;},{},{sc_end SC_CASH_PLUSEXP;}
 30011,Ice_Dragon,Ice_Dragon,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,2048,,0,1,711,{sc_start SC_CASH_PLUSEXP,1800000,360000;},{},{sc_end SC_CASH_PLUSEXP;}
-30011,Kakashi_Head_Protector,Kakashi_Head_Protector,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,1024,,0,1,712,{sc_start SC_CASH_PLUSEXP,1800000,360000;},{},{sc_end SC_CASH_PLUSEXP;}
+30012,Kakashi_Head_Protector,Kakashi_Head_Protector,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,1024,,0,1,712,{sc_start SC_CASH_PLUSEXP,1800000,360000;},{},{sc_end SC_CASH_PLUSEXP;}
 30013,Kisuke_Hat,Kisuke_Hat,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,1024,,0,1,713,{sc_start SC_CASH_PLUSEXP,1800000,360000;},{},{sc_end SC_CASH_PLUSEXP;}
 30014,Light_Protector,Light_Protector,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,1024,,0,1,714,{sc_start SC_CASH_PLUSEXP,1800000,360000;},{},{sc_end SC_CASH_PLUSEXP;}
 30015,Luffy_Hat,Luffy_Hat,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,1024,,0,1,715,{sc_start SC_CASH_PLUSEXP,1800000,360000;},{},{sc_end SC_CASH_PLUSEXP;}
