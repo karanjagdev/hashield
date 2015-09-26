@@ -61,4 +61,4 @@
 //==================================================================
 //2338,Wedding_Dress,Wedding Dress,5,43000,,500,,0,,0,0xFFFFFFFE,7,0,16,,0,1,0,{},{ sc_start SC_WEDDING,-1,0; },{ sc_end SC_WEDDING; }
 //7170,Tuxedo,Tuxedo,5,43000,,10,,0,,0,0xFFFFFFFE,7,1,16,,0,1,0,{},{ sc_start SC_WEDDING,-1,0; },{ sc_end SC_WEDDING; }
-29253,akatsuki_hat,Akatsuki Hat,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,256,,0,1,2332,{sc_start SC_CASH_PLUSEXP,1800000;},{},{sc_end SC_CASH_PLUSEXP;}
+29253,akatsuki_hat,Akatsuki Hat,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,256,,0,1,16,{sc_start SC_CASH_PLUSEXP,1800000;},{},{sc_end SC_CASH_PLUSEXP;}
