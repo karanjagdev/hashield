@@ -1,0 +1,24 @@
+-	script	user_record	-1,{
+
+OnPCLoginEvent:
+				
+		if ($user_record < getusers(1)) { 
+		
+			set $user_record,getusers(1);
+			set $user_minute,gettime(2);
+			set $user_hour,gettime(3);
+			set $user_day,gettime(5);
+			set $user_month,gettime(6);
+			set $user_year,gettime(7);
+			announce "RAWR - We got a new user record..."+$user_record,0;
+			
+		}
+	end;
+	
+	
+OnWhisperGlobal:
+	dispbottom "Record: "+$user_record+" users";
+	dispbottom "On: "+$user_hour+":"+$user_minute+" "+$user_day+"."+$user_month+"."+$user_year;
+	end;
+		
+}

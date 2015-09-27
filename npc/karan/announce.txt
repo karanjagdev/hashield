@@ -1,0 +1,16 @@
+-	script	announce	-1,{
+OnInit:
+	while(1) {
+		announce "~ Welcome to Barba Ragnarok Online!!! , We are dedicated to provide orignal feel of ragnarok to all Ragna Players ~",bc_blue|bc_all;
+		sleep2 10000;
+		announce "~ Write a review on www.ratemyserver.net if you love Barba Ragnarok Online!~",bc_blue|bc_all;
+		sleep2 10000;
+		announce "~ Use the Forums if you have any problems ~",bc_blue|bc_all;
+		sleep2 10000;
+		announce "~ To Donate and get RoK Points visit our website. ~",bc_blue|bc_all;
+		sleep2 10000;
+		announce "Visit our forum for news, events, guides and much more! Go, go, go!",bc_blue|bc_all;
+		sleep2 3600000;
+	}
+
+}

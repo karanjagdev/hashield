@@ -1,0 +1,8 @@
+-	script	new_player_announce	-1,{
+OnPCLoginEvent:
+	if (Class==Job_Novice && BaseExp==0 && BaseLevel==1) {
+		announce strcharinfo(0) +" is a new member to Barba Ragnarok Online Family.Please welcome "+( Sex?"him":"her" )+"!",bc_all;
+		set BaseExp,1; // (no need to create a new variable)
+	}
+	end;
+}
