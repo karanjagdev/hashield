@@ -1,24 +1,25 @@
-//===== Hercules Script ======================================
+//===== rAthena Script ======================================= 
 //= Thief Class Tutorial and Job Specific Quest
-//===== By: ==================================================
+//===== By: ================================================== 
 //= Fix up by Jukka
-//===== Current Version: =====================================
-//= 1.5
-//===== Description: =========================================
-//= [Official Conversion]
-//= Thief training quest.
-//===== Additional Comments: =================================
+//===== Current Version: ===================================== 
+//= 1.4
+//===== Compatible With: ===================================== 
+//= rAthena SVN (Testet in Trunk 88xx)
+//===== Description: ========================================= 
+//=
+//===== Additional Comments: ================================= 
 //= 1.0 Fully working
 //= 1.1 optimized [Lupus]
+//=	TODO: Test, Add correct misceffects numbers
 //= 1.2 Fixed experience gains to match upcoming rate adjustments. [SinSloth]
 //= 1.3 Fixed a few minor mistakes [Playtester]
 //= 1.4 Misc. updates. [L0ne_W0lf]
-//= 1.5 Added Pre-Renewal support. [Euphy]
-//============================================================
+//============================================================ 
 
 // Thief Trainer
 //============================================================
-moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
+moc_ruins,66,164,4	script	Thief Trainer#T	84,{
 	mes "[Yierhan]";
 	if(Class == Job_Novice){
 		mes "Eh...?";
@@ -87,7 +88,7 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 				mes "[Yierhan]";
 				mes "So if you're feeling like the damage you're making is pretty weak, you might want more stat points in ^2F4F2FSTR^000000. How high your raise your own STR is really up to you.";
 				set tu_thief01, 1;
-				getexp 200,100;
+				getexp 20,10;
 				specialeffect2 EF_HIT5;
 				close;
 			case 2:
@@ -103,7 +104,7 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 				mes "Sure, ^23238EDEX^000000 and LUK can";
 				mes "also increase your attack damage, but they're insignificant compared to STR. I repeat: ^660000insignificant^000000.";
 				set tu_thief01, 1;
-				getexp 400,200;
+				getexp 40,20;
 				specialeffect2 EF_HIT5;
 				close;
 			case 3:
@@ -118,7 +119,7 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 				mes "[Yierhan]";
 				mes "So if you're feeling like the damage you're making is pretty weak, you might want more stat points in ^2F4F2FSTR^000000. How high your raise your own STR is really up to you.";
 				set tu_thief01, 1;
-				getexp 200,100;
+				getexp 20,10;
 				specialeffect2 EF_HIT5;
 				close;
 			}
@@ -228,7 +229,7 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 			mes "about any other skills,";
 			mes "I can explain real quick.";
 			set tu_thief01, 3;
-			getexp BaseLevel*30,BaseLevel*15;
+			getexp BaseLevel*3,BaseLevel*2;
 			specialeffect2 EF_HIT5;
 			close;
 		} else if(tu_thief01 == 3){
@@ -327,12 +328,24 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 					mes "Now that you're such an expert on skills, I want you to level up your skills and come back, got it?";
 					set tu_thief01, 4;
 					specialeffect2 EF_HIT5;
-					if(.@read_d) getexp 300,100;
-					if(.@read_f) getexp 300,100;
-					if(.@read_s) getexp 300,100;
-					if(.@read_p) getexp 300,100;
-					if(.@read_h) getexp 300,100;
-					if(.@read_r) getexp 300,100;
+					if(.@read_d){
+						getexp 30,10;
+					}
+					if(.@read_f){
+						getexp 30,10;
+					}
+					if(.@read_s){
+						getexp 30,10;
+					}
+					if(.@read_p){
+						getexp 30,10;
+					}
+					if(.@read_h){
+						getexp 30,10;
+					}
+					if(.@read_r){
+						getexp 30,10;
+					}
 					close;
 				}
 			}
@@ -349,7 +362,7 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 			set tu_thief01, 5;
 			savepoint "moc_ruins",80,164;
 			getitem 602,1; //Wing_Of_Butterfly
-			getexp 100,50;
+			getexp 10,5;
 			specialeffect2 EF_HIT5;
 			close2;
 			warp "moc_fild12",158,373;
@@ -407,7 +420,7 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 						mes "is pretty strong!";
 						set tu_thief01, 8;
 						getitem 1207,1; //Main_Gauche
-						getexp 1000,500;
+						getexp 100,50;
 						specialeffect2 EF_HIT5;
 						close;
 					case 2:
@@ -417,7 +430,7 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 						mes "Alright, you better get stronger the next time I see you. Oh, and you can have this stuff. You know, since you're so gangster and all.";
 						set tu_thief01, 7;
 						getitem 1207,1; //Main_Gauche
-						getexp 500,200;
+						getexp 50,20;
 						specialeffect2 EF_HIT5;
 						close;
 					}
@@ -434,19 +447,22 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 						mes "you so much, kid,";
 						mes "you can have this.";
 						mes "Take it, it's yours!";
-						break;
+						set tu_thief01, 7;
+						getitem 1207,1; //Main_Gauche
+						getexp 50,20;
+						specialeffect2 EF_HIT5;
+						close;
 					case 2:
 						mes "[Yierhan]";
 						mes "Good!";
 						mes "Less work for me!";
 						mes "Alright, you better get stronger the next time I see you. Oh, and you can have this stuff. You know, since you're so gangster and all.";
-						break;
+						set tu_thief01, 7;
+						getitem 1207,1; //Main_Gauche
+						getexp 50,20;
+						specialeffect2 EF_HIT5;
+						close;
 					}
-					set tu_thief01, 7;
-					getitem 1207,1; //Main_Gauche
-					getexp 500,200;
-					specialeffect2 EF_HIT5;
-					close;
 				}
 			}
 		} else if(tu_thief01 == 7){
@@ -487,7 +503,7 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 			mes "out, be real careful";
 			mes "other there, okay?";
 			set tu_thief01, 8;
-			getexp 200,100;
+			getexp 20,10;
 			specialeffect2 EF_HIT5;
 			close;
 		} else if(tu_thief01 == 8){
@@ -570,8 +586,8 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 				mes "Hey, this stuff is yours. Think of it as a reward for helping us out. Take care of yourself now~";
 				set tu_thief01, 27;
 				getitem 2307,1; //Mantle
-				Zeny += 5000;
-				getexp 8000,3000;
+				set Zeny, Zeny + 5000;
+				getexp 800,300;
 				close;
 			}
 		} else {
@@ -652,6 +668,7 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 				mes "[Yierhan]";
 				mes "Ah, gotcha. Well, that's understandable. I mean, these things take time, you know?";
 				close;
+				break;
 			case 2:
 				mes "[Yierhan]";
 				mes "Yeah...?";
@@ -659,6 +676,7 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 				mes "I guess these kinds of things require patience. And thinking.";
 				mes "You know, things I'm horrible at.";
 				close;
+				break;
 			case 3:
 				mes "[Yierhan]";
 				mes "Alright...!";
@@ -693,8 +711,8 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 				mes "[Yierhan]";
 				mes "Hey, this stuff is yours. Think of it as a reward for helping us out. Right, and I'll let Mana know you did a great job. Take care of yourself now~";
 				set tu_magician01, 27;
-				Zeny += 5000;
-				getexp 5000,2000;
+				set Zeny, Zeny + 5000;
+				getexp 500,200;
 				close;
 			}
 		} else {

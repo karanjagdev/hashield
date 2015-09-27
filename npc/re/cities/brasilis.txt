@@ -1,23 +1,21 @@
 //===== Hercules Script ======================================
 //= Brasilis Town
-//===== By: ==================================================
+//===== By: ================================================== 
 //= L0ne_W0lf
 //===== Current Version: =====================================
 //= 1.3
-//===== Description: =========================================
-//= [Official Conversion]
+//===== Description: ========================================= 
+//= [Aegis Conversion]
 //= Brasilis Town Script
-//===== Additional Comments: =================================
+//===== Additional Comments: ================================= 
 //= 1.0 First version. Transportation and Basic NPCs.
 //= 1.1 Fixed Zeny not being removed for payment. [Kisuka]
 //= 1.2 Updated dialog, added Ice Cream Maker. [L0ne_W0lf]
 //= 1.3 Moved Alberta NPC to pre-re/re paths. [Euphy]
-//============================================================
+//============================================================ 
 
-// Brasilis Transportation
-//============================================================
 /* Pre-Renewal coordinates: alberta,247,115,3 */
-alberta,246,82,3	script	Crewman#bra2	4W_SAILOR,{
+alberta,246,82,3	script	Crewman#bra2	100,{
 	mes "[Crewman]";
 	mes "Hey, have you heard of a place called Brasilis?";
 	mes "It's a tropical city that's hot like the desert but also rainy. It is a very mysterious place.";
@@ -31,7 +29,7 @@ alberta,246,82,3	script	Crewman#bra2	4W_SAILOR,{
 		if (Zeny > 9999) {
 			mes "[Crewman]";
 			mes "Cool~!! Let's go~!";
-			Zeny -= 10000;
+			set zeny,zeny-10000;
 			close2;
 			warp "brasilis",314,60;
 			end;
@@ -48,7 +46,7 @@ alberta,246,82,3	script	Crewman#bra2	4W_SAILOR,{
 	}
 }
 
-brasilis,316,57,3	script	Crewman#bra1	4W_SAILOR,{
+brasilis,316,57,3	script	Crewman#bra1	100,{
 	mes "[Crewman]";
 	mes "My ship is going to back to Alberta, do you want to join us?";
 	next;
@@ -69,38 +67,36 @@ brasilis,316,57,3	script	Crewman#bra1	4W_SAILOR,{
 	}
 }
 
-// Generic Brasilis NPCs
-//============================================================
-brasilis,155,165,3	script	Signpost#bra1	4_BULLETIN_BOARD2,{
+brasilis,155,165,3	script	Signpost#bra1	858,{
 	mes ":: Art Museum ::";
 	close;
 }
 
-brasilis,195,231,3	script	Signpost#bra2	4_BULLETIN_BOARD2,{
+brasilis,195,231,3	script	Signpost#bra2	858,{
 	mes ":: Verass Monument ::";
 	close;
 }
 
-brasilis,240,247,3	script	Signpost#bra3	4_BULLETIN_BOARD2,{
+brasilis,240,247,3	script	Signpost#bra3	858,{
 	mes ":: Market ::";
 	mes " ";
 	mes "- For your Potions and Weaponry -";
 	close;
 }
 
-brasilis,303,309,3	script	Signpost#bra4	4_BULLETIN_BOARD2,{
+brasilis,303,309,3	script	Signpost#bra4	858,{
 	mes ":: Jungle Cable ::";
 	mes "";
 	mes "- Not for the faint of heart -";
 	close;
 }
 
-brasilis,278,137,3	script	Signpost#bra5	4_BULLETIN_BOARD2,{
+brasilis,278,137,3	script	Signpost#bra5	858,{
 	mes ":: Brasilis Hotel ::";
 	close;
 }
 
-brasilis,137,77,5	script	Ice-Cream Maker	4_M_03,{
+brasilis,137,77,5	script	Ice-Cream Maker	85,{
 	mes "[Ice Cream Maker]";
 	mes "Come~come~";
 	mes "Ice cream is the perfect snack for a hot day~";
@@ -145,7 +141,7 @@ brasilis,137,77,5	script	Ice-Cream Maker	4_M_03,{
 			mes "Lighten your pack before buying this.";
 			close;
 		}
-		Zeny -= .@icecream_hap;
+		set zeny,zeny-.@icecream_hap;
 		getitem 536,.@input; //Ice_Cream
 		close;
 	case 2:

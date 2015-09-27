@@ -1,9 +1,11 @@
-//===== Hercules Script ======================================
+//===== rAthena Script =======================================
 //= Morroc Pyramid Nightmare Warp Script
 //===== By: ==================================================
 //= Euphy
 //===== Current Version: =====================================
 //= 1.0
+//===== Compatible With: =====================================
+//= rAthena SVN
 //===== Description: =========================================
 //= Warp Points for Morroc Pyramid Nightmare Mode
 //===== Additional Comments: =================================

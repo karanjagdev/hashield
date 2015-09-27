@@ -1,9 +1,11 @@
-//===== Hercules Script ======================================
+//===== rAthena Script =======================================
 //= Morroc Guides
 //===== By: ==================================================
 //= kobra_k88; L0ne_W0lf
 //===== Current Version: =====================================
 //= 1.4a
+//===== Compatible With: =====================================
+//= rAthena SVN
 //===== Description: =========================================
 //= [Official Conversion]
 //= Guides for the City of Morroc
@@ -16,7 +18,7 @@
 //	-Thanks to $ephiroth.
 //============================================================
 
-morocc,153,286,6	script	Guide#moc::MocGuide	4_M_MOC_SOLDIER,{
+morocc,153,286,6	script	Guide#moc::MocGuide	707,{
 	cutin "moc_soldier",2;
 	mes "[Morroc Guide]";
 	mes "Welcome to Morroc,";
@@ -159,4 +161,4 @@ morocc,153,286,6	script	Guide#moc::MocGuide	4_M_MOC_SOLDIER,{
 	end;
 }
 
-morocc,54,97,0	duplicate(MocGuide)	Guide#2moc	4_M_MOC_SOLDIER
+morocc,54,97,0	duplicate(MocGuide)	Guide#2moc	707

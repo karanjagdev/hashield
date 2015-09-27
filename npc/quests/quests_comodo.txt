@@ -1,11 +1,13 @@
-//===== Hercules Script ======================================
+//===== rAthena Script ======================================= 
 //= Quest NPCs related to Comodo
-//===== By: ==================================================
+//===== By: ================================================== 
 //= kobra_k88; L0ne_W0lf
-//===== Current Version: =====================================
+//===== Current Version: ===================================== 
 //= 1.5b
-//===== Description: =========================================
-//= Headgear Quests 1 [Official Conversion]:
+//===== Compatible With: ===================================== 
+//= rAthena SVN
+//===== Description: ========================================= 
+//= Headgear Quests 1 [Aegis Conversion]:
 //= - 'Cross Hat', 'Bulb Hairband'
 //= - 'Striped Hairband', 'Blue Hairband'
 //= Headgear Quests 2:
@@ -16,7 +18,7 @@
 //= - Part 2: Found in Quests_Yuno.txt
 //= - Part 3: Found in Doomed_Swords.txt
 //= - Variable in use: dmdswrd_Q (Max 45)
-//===== Additional Comments: =================================
+//===== Additional Comments: ================================= 
 //= 1.1 Fixed exploits [Lupus]
 //= 1.2 Added more quest from cities/comodo.txt [Evera]
 //= 1.2a missing label [Lupus]
@@ -26,12 +28,12 @@
 //= 1.5a Fixed a bad countitem. (bugreport:840) [Samuray22]
 //= 1.5b Fixed stripped hairband and blue hairband checking the wrong amount of items, bugreport:1674 [Brainstorm]
 //= 1.6 Updated headgear quest NPCs. [L0ne_W0lf]
-//============================================================
+//============================================================ 
 
 // Headgear Quests 1
 // Cross Hat, Bulb Hairband, Striped Hairband, Blue Hairband
-//============================================================
-comodo,228,159,3	script	Hair Ornament Girl	8_F_GIRL,{
+//============================================================ 
+comodo,228,159,3	script	Hair Ornament Girl	700,{
 	mes "[Hair Ornament Girl]";
 	if (Sex == 1) {
 		mes "Oh, hello!";
@@ -227,8 +229,8 @@ comodo,228,159,3	script	Hair Ornament Girl	8_F_GIRL,{
 
 // Headgear Quests 2
 // 'Mine Helmet', 'Parcel Hat', 'Money Loser's Grief', 'Phantom of the Opera Mask'
-//============================================================
-comodo,273,137,4	script	Traveler#head	4_F_GON,{
+//============================================================ 
+comodo,273,137,4	script	Traveler#head	702,{
 	mes "[Isac Mari]";
 	mes "I travel around the world, and collect many interesting stories from people. Sometimes they teach me how to make special items.";
 	next;
@@ -470,8 +472,8 @@ comodo,273,137,4	script	Traveler#head	4_F_GON,{
 }
 
 // Doomed Swords - Comodo Portion. (Continued in Juno)
-//============================================================
-comodo,206,310,4	script	Campground Boy#cmd	4_M_BIBI,{
+//============================================================ 
+comodo,206,310,4	script	Campground Boy#cmd	704,{
 	switch (dmdswrd_Q) {
 	case 0:
 		mes "[Rochito]";
@@ -631,7 +633,7 @@ comodo,206,310,4	script	Campground Boy#cmd	4_M_BIBI,{
 	close;
 }
 
-comodo,204,310,4	script	Camping Youth#cmd	1_M_YOUNGKNIGHT,{
+comodo,204,310,4	script	Camping Youth#cmd	65,{
 	switch (dmdswrd_Q) {
 	case 0:
 	case 1:
@@ -736,7 +738,7 @@ comodo,204,310,4	script	Camping Youth#cmd	1_M_YOUNGKNIGHT,{
 	close;
 }
 
-comodo,209,305,4	script	Camping Maiden#cmd	1_F_LIBRARYGIRL,{
+comodo,209,305,4	script	Camping Maiden#cmd	71,{
 	mes "[Emralhandas]";
 	mes "Rockha, let me pour";
 	mes "you another drink. We";
@@ -804,7 +806,7 @@ comodo,209,305,4	script	Camping Maiden#cmd	1_F_LIBRARYGIRL,{
 	close;
 }
 
-comodo,209,314,4	script	Campground Lad#cmd	4_M_KID1,{
+comodo,209,314,4	script	Campground Lad#cmd	706,{
 	switch (dmdswrd_Q) {
 	case 0:
 	case 1:
@@ -853,7 +855,7 @@ comodo,209,314,4	script	Campground Lad#cmd	4_M_KID1,{
 	close;
 }
 
-comodo,221,310,4	script	BBQ Boy#cmd	4_M_04,{
+comodo,221,310,4	script	BBQ Boy#cmd	86,{
 	mes "[Rinta]";
 	mes "I didn't mean to,";
 	mes "but I accidentally";
@@ -871,7 +873,7 @@ comodo,221,310,4	script	BBQ Boy#cmd	4_M_04,{
 	close;
 }
 
-comodo,218,309,4	script	BBQ Visitor#cmd	4_F_01,{
+comodo,218,309,4	script	BBQ Visitor#cmd	90,{
 	mes "[Razy]";
 	mes "Those people over there";
 	mes "are friends of the Village";
@@ -890,7 +892,7 @@ comodo,218,309,4	script	BBQ Visitor#cmd	4_F_01,{
 	close;
 }
 
-comodo,216,310,4	script	BBQ Papa#cmd::CmdFamily	1_M_04,{
+comodo,216,310,4	script	BBQ Papa#cmd::CmdFamily	50,{
 	mes "[BBQ Boy]";
 	mes "D-daddy! Is what those";
 	mes "people talking about true?";
@@ -937,11 +939,11 @@ comodo,216,310,4	script	BBQ Papa#cmd::CmdFamily	1_M_04,{
 	close;
 }
 
-comodo,215,307,4	duplicate(CmdFamily)	BBQ Mama#cmd	1_F_MERCHANT_02
+comodo,215,307,4	duplicate(CmdFamily)	BBQ Mama#cmd	74
 
-comodo,213,310,4	duplicate(CmdFamily)	BBQ Boy#cmd2	4_M_KID1
+comodo,213,310,4	duplicate(CmdFamily)	BBQ Boy#cmd2	706
 
-cmd_in02,32,140,4	script	Chief#cmd	1_M_03,{
+cmd_in02,32,140,4	script	Chief#cmd	49,{
 	if (dmdswrd_Q > 4) {
 		mes "[Tausupa]";
 		mes "Maybe you can't tell because";
@@ -1092,7 +1094,7 @@ cmd_in02,32,140,4	script	Chief#cmd	1_M_03,{
 	close;
 }
 
-comodo,88,97,4	script	Toruna#cmd	4_M_MANAGER,{
+comodo,88,97,4	script	Toruna#cmd	109,{
 	mes "[Toruna]";
 	mes "When I think about it,";
 	mes "there are many fascinating";
@@ -1227,7 +1229,7 @@ comodo,88,97,4	script	Toruna#cmd	4_M_MANAGER,{
 	close;
 }
 
-comodo,164,291,4	script	Rakusa#cmd	1_F_MERCHANT_01,{
+comodo,164,291,4	script	Rakusa#cmd	73,{
 	switch (dmdswrd_Q) {
 	case 6:
 		mes "[Rakusa]";
@@ -1276,7 +1278,7 @@ comodo,164,291,4	script	Rakusa#cmd	1_F_MERCHANT_01,{
 	close;
 }
 
-comodo,169,284,4	script	Kichiri#cmd	4W_M_02,{
+comodo,169,284,4	script	Kichiri#cmd	98,{
 	switch (dmdswrd_Q) {
 	case 7:
 		mes "[Kichiri]";
@@ -1324,7 +1326,7 @@ comodo,169,284,4	script	Kichiri#cmd	4W_M_02,{
 	close;
 }
 
-comodo,163,280,4	script	Magatu#cmd	1_M_JOBTESTER,{
+comodo,163,280,4	script	Magatu#cmd	55,{
 	switch (dmdswrd_Q) {
 	case 8:
 		mes "[Magatu]";
@@ -1385,7 +1387,7 @@ comodo,163,280,4	script	Magatu#cmd	1_M_JOBTESTER,{
 	close;
 }
 
-cmd_in02,189,99,4	script	Manzi#cmd	4_M_03,{
+cmd_in02,189,99,4	script	Manzi#cmd	85,{
 	switch (dmdswrd_Q) {
 	case 9:
 		mes "["+strcharinfo(0)+"]";
@@ -1472,7 +1474,7 @@ cmd_in02,189,99,4	script	Manzi#cmd	4_M_03,{
 	close;
 }
 
-comodo,187,153,4	script	Hullaris#cmd	4_F_GODEMOM,{
+comodo,187,153,4	script	Hullaris#cmd	701,{
 	switch (dmdswrd_Q) {
 	case 10:
 		mes "[Hullaris]";
@@ -1577,7 +1579,7 @@ comodo,187,153,4	script	Hullaris#cmd	4_F_GODEMOM,{
 		mes "Love together~";
 		mes "Love! Love!";
 		mes "Love togeth-hm?";
-		if (Sex) {
+		if (sex) {
 			mes "Boy, you're ruining";
 			mes "my groove! Now beat it!";
 		}
@@ -1707,7 +1709,7 @@ comodo,187,153,4	script	Hullaris#cmd	4_F_GODEMOM,{
 	close;
 }
 
-beach_dun3,30,220,4	script	Nigirboran#cmd	4_M_BIBI,{
+beach_dun3,30,220,4	script	Nigirboran#cmd	704,{
 	switch (dmdswrd_Q) {
 	case 11:
 		mes "[Nigirboran]";
@@ -1939,7 +1941,7 @@ beach_dun3,30,220,4	script	Nigirboran#cmd	4_M_BIBI,{
 	close;
 }
 
-aldebaran,44,53,4	script	Meteurengut#cmd	1_M_WIZARD,{
+aldebaran,44,53,4	script	Meteurengut#cmd	64,{
 	switch (dmdswrd_Q) {
 	case 14:
 		mes "[Meteurengut]";
@@ -2161,7 +2163,7 @@ aldebaran,44,53,4	script	Meteurengut#cmd	1_M_WIZARD,{
 	close;
 }
 
-morocc,201,30,4	script	Zaka#cmd	4W_M_03,{
+morocc,201,30,4	script	Zaka#cmd	99,{
 	switch (dmdswrd_Q) {
 	case 17:
 		mes "[Zaka]";
@@ -2375,7 +2377,7 @@ morocc,201,30,4	script	Zaka#cmd	4W_M_03,{
 	close;
 }
 
-comodo,232,87,4	script	Won#cmd	1_M_MOC_LORD,{
+comodo,232,87,4	script	Won#cmd	106,{
 	switch (dmdswrd_Q) {
 	case 22:
 		mes "[Won]";

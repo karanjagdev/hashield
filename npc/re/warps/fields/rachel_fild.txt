@@ -4,6 +4,8 @@
 //= Playtester
 //===== Current Version: =====================================
 //= 1.3
+//===== Compatible With: =====================================
+//= Hercules
 //===== Description: =========================================
 //= Warp Points for Rachel Field
 //===== Additional Comments: =================================

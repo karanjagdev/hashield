@@ -1,15 +1,17 @@
-//===== Hercules Script ======================================
+//===== rAthena Script ======================================= 
 //= Knight Job Quest
-//===== By: ==================================================
+//===== By: ================================================== 
 //= PGRO TEAM (Aegis).
 //= Converted by kobra_k88
 //= Further bugfixed and tested by Lupus
-//===== Current Version: =====================================
+//===== Current Version: ===================================== 
 //= 3.3
-//===== Description: =========================================
+//===== Compatible With: ===================================== 
+//= rAthena SVN
+//===== Description: ========================================= 
 //= [Official Conversion]
 //= Job Change quest for Knight class.
-//===== Additional Comments: =================================
+//===== Additional Comments: ================================= 
 //= 1.0 Fully working.  Please comment out any pre-existing warps for the
 //= test rooms in any other files so that the ones specified here can work.
 //= 1.1 Fixed a major bug.  Now using the initnpctimer command,
@@ -28,7 +30,7 @@
 //= 2.3 Several bugfixes with the help of Barron-Monster. [L0ne_W0lf]
 //= 2.4 Minor fixes to timer#knt. [L0ne_W0lf]
 //= 2.5 Fixes a small bug with making claymores. [L0ne_W0lf]
-//=     Corrected usages of killmonster and killmonsterall.
+//=	Corrected usages of killmonster and killmonsterall.
 //= 2.6 Corrected an improper areawarp destination. [L0ne_W0lf]
 //= 2.7 Deleted unused variables. [Samuray22]
 //= 2.7a Corrected a Typo error ";;". [Samuray22]
@@ -38,9 +40,9 @@
 //= 3.1 Modified the quest to renewal. [Vali] (Thanks to Muad_Dib for the necessary info).
 //= 3.2 More Renewal updates and some optimization. [Euphy]
 //= 3.3 Fixed missing changequest. [Joseph]
-//============================================================
+//============================================================ 
 
-prt_in,88,101,4	script	Chivalry Captain#knt	1_M_KNIGHTMASTER,{
+prt_in,88,101,4	script	Chivalry Captain#knt	56,{
 	mes "[Captain Herman]";
 	if (Upper == 1) {
 		mes "Hm? You're... What is it about you? I've been an honorable Knight for a long time, but I cannot understand this feeling I'm getting from you...";
@@ -371,7 +373,7 @@ prt_in,88,101,4	script	Chivalry Captain#knt	1_M_KNIGHTMASTER,{
 		mes "to Amy's opinion.";
 		next;
 		mes "[Lady Amy]";
-		if (Sex) {
+		if (sex) {
 			mes "Mmm~ He's so polite!";
 			mes "He'll grow to be a wonderful Knight. And he's got such cute widdle cheeeeks~ Hee hee!";
 		}
@@ -390,7 +392,7 @@ prt_in,88,101,4	script	Chivalry Captain#knt	1_M_KNIGHTMASTER,{
 		mes "your mind.";
 		next;
 		mes "[Sir Edmond]";
-		if (Sex) {
+		if (sex) {
 			mes "He seems a little rough, but something bright shines within him. With polish and refinement, his true value will shine forth";
 			mes "as the sun.";
 		}
@@ -464,7 +466,7 @@ L_Mission:
 	}
 }
 
-prt_in,75,107,4	script	Sir Andrew#knt	1_M_YOUNGKNIGHT,{
+prt_in,75,107,4	script	Sir Andrew#knt	65,{
 	mes "[Sir Andrew]";
 	if (BaseJob != Job_Swordman) {
 		if (BaseJob == Job_Knight) {
@@ -668,7 +670,7 @@ prt_in,75,107,4	script	Sir Andrew#knt	1_M_YOUNGKNIGHT,{
 	}
 }
 
-prt_in,71,91,0	script	Sir Siracuse#knt	1_M_YOUNGKNIGHT,{
+prt_in,71,91,0	script	Sir Siracuse#knt	65,{
 	mes "[Sir Siracuse]";
 	if (BaseJob != Job_Swordman) {
 		if (BaseJob == Job_Knight) {
@@ -692,7 +694,7 @@ prt_in,71,91,0	script	Sir Siracuse#knt	1_M_YOUNGKNIGHT,{
 			mes "If you catch any of the new guys acting in a way unbecoming of a Knight, scold them for me please?";
 			close;
 		}
-		else if (BaseClass == Job_Novice) {
+		else if (Baseclass == Job_Novice) {
 			mes "Oh?";
 			mes "What is a Novice";
 			mes "doing here?";
@@ -1053,7 +1055,7 @@ prt_in,71,91,0	script	Sir Siracuse#knt	1_M_YOUNGKNIGHT,{
 	}
 }
 
-prt_in,79,94,4	script	Sir Windsor#knt	4_M_JOB_KNIGHT1,{
+prt_in,79,94,4	script	Sir Windsor#knt	733,{
 	mes "[Sir Windsor]";
 	mes "...";
 	next;
@@ -1117,7 +1119,7 @@ prt_in,79,94,4	script	Sir Windsor#knt	4_M_JOB_KNIGHT1,{
 			mes "......";
 			next;
 			mes "[Sir Windsor]";
-			if (KNIGHT_Q == 6)
+			if (KNIGHT_Q == 6) 
 				mes "...Follow me.";
 			else {
 				mes "...Fine.";
@@ -1148,7 +1150,7 @@ prt_in,79,94,4	script	Sir Windsor#knt	4_M_JOB_KNIGHT1,{
 
 // Test 2 part 1
 //==========================================================
-job_knt,89,106,4	script	Knight Windsor#knt	4_M_JOB_KNIGHT1,{
+job_knt,89,106,4	script	Knight Windsor#knt	733,{
 	mes "[Sir Windsor]";
 	mes "...";
 	next;
@@ -1221,7 +1223,7 @@ job_knt,89,106,4	script	Knight Windsor#knt	4_M_JOB_KNIGHT1,{
 	}
 }
 
-job_knt,89,106,4	script	Windsor Benedict#knt	4_M_JOB_KNIGHT1,{
+job_knt,89,106,4	script	Windsor Benedict#knt	733,{
 	end;
 
 OnInit:
@@ -1443,7 +1445,7 @@ OnTimer182000:
 
 // Test 3 (Manners)
 //==========================================================
-prt_in,69,107,6	script	Lady Amy#knt	4_F_JOB_KNIGHT,{
+prt_in,69,107,6	script	Lady Amy#knt	728,{
 	mes "[Lady Amy]";
 	if (BaseJob != Job_Swordman) {
 		if (BaseJob == Job_Knight) {
@@ -1785,7 +1787,7 @@ prt_in,69,107,6	script	Lady Amy#knt	4_F_JOB_KNIGHT,{
 
 // Test 4 (patience)
 //==========================================================
-prt_in,70,99,6	script	Sir Edmond#knt	4_M_JOB_KNIGHT2,{
+prt_in,70,99,6	script	Sir Edmond#knt	734,{
 	mes "[Sir Edmond]";
 	if (BaseJob != Job_Swordman) {
 		if (BaseJob == Job_Knight) {
@@ -1938,7 +1940,7 @@ prt_in,70,99,6	script	Sir Edmond#knt	4_M_JOB_KNIGHT2,{
 	}
 }
 
-job_knt,1,1,1	script	Timer#knt	1_M_PAY_ELDER,{
+job_knt,1,1,1	script	Timer#knt	107,{
 OnTimer300000:
 	enablenpc "Warp#knt";
 	end;
@@ -1987,7 +1989,7 @@ OnMyMobDead:
 	end;
 }
 
-job_knt,145,57,1	script	Warp#knt	1_M_PAY_ELDER,22,22,{
+job_knt,145,57,1	script	Warp#knt	107,22,22,{
 OnInit:
 	disablenpc "Warp#knt";
 	end;
@@ -2000,7 +2002,7 @@ OnTouch:
 
 // Test 5, and creates Claymores for knights
 //==========================================================
-prt_in,87,92,4	script	Sir Gray#knt	2_M_SWORDMASTER,{
+prt_in,87,92,4	script	Sir Gray#knt	119,{
 	mes "[Sir Gray]";
 	if (BaseJob != Job_Swordman) {
 		if (BaseJob == Job_Knight) {
@@ -2026,7 +2028,8 @@ prt_in,87,92,4	script	Sir Gray#knt	2_M_SWORDMASTER,{
 				mes "1 ^3355FFSteel^000000 because of the Claymore's characteristics. If you like, I can create one for you. For the honor of the Prontera Chivalry!";
 				close;
 			case 2:
-				if (MaxWeight - Weight < 1800) {
+				set .@now_weight,MaxWeight-Weight;
+				if (.@now_weight < 1800) {
 					mes "[Sir Gray]";
 					mes "Oh no...";
 					mes "It seems that you are carrying too many things. You don't have enough space for a heavy Claymore in your inventory.";
@@ -2062,7 +2065,7 @@ prt_in,87,92,4	script	Sir Gray#knt	2_M_SWORDMASTER,{
 						mes "You attained a reliable item.";
 						mes "It'll be a good companion on your adventures.";
 						delitem 999,1; //Steel
-						Zeny -= 74000;
+						set Zeny, Zeny - 74000;
 						getitem 1163,1; //Claymore
 						close;
 					}

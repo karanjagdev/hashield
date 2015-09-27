@@ -1,17 +1,19 @@
-//===== Hercules Script ======================================
+//===== rAthena Script ======================================= 
 //= Crusader Skills Quests
-//===== By: ==================================================
+//===== By: ================================================== 
 //= Lupus, Reddozen
-//===== Current Version: =====================================
+//===== Current Version: ===================================== 
 //= 1.4
-//===== Description: =========================================
-//= [Official Conversion]
+//===== Compatible With: ===================================== 
+//= rAthena SVN
+//===== Description: ========================================= 
+//= [Aegis Conversion]
 //= Quests for skills: Shrink
-//===== Additional Comments: =================================
+//===== Additional Comments: ================================= 
 //= 1.4 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
 //============================================================
 
-geffen,110,117,3	script	Ford#11	4_M_CRU_OLD,{
+geffen,110,117,3	script	Ford#11	752,{
 	if (BaseJob == Job_Crusader) {
 		if (CRUS_SK == 8 && getskilllv("CR_SHRINK") == 0) {
 			mes "[Ford]";
@@ -275,7 +277,7 @@ geffen,110,117,3	script	Ford#11	4_M_CRU_OLD,{
 	}
 }
 
-gef_fild13,297,242,3	script	Soldier#277	4_M_CRU,{
+gef_fild13,297,242,3	script	Soldier#277	751,{
 	if (BaseJob == Job_Crusader) {
 		if (Upper == 1 && getskilllv("CR_SHRINK")) {
 			if (CRUS_SK == 8) {
@@ -424,7 +426,7 @@ gef_fild13,297,242,3	script	Soldier#277	4_M_CRU,{
 		}
 		else if (CRUS_SK == 5) {
 			mes "[Sloutii]";
-			if (Upper == 1) {
+			if (upper == 1) {
 				mes "Eeearrrgh--!";
 				mes "My l-legs! Everything";
 				mes "is starting to h-hurt!";
@@ -576,7 +578,7 @@ gef_fild13,297,242,3	script	Soldier#277	4_M_CRU,{
 	}
 }
 
-prt_church,87,127,3	script	Pastor#1011	4_M_SAGE_C,{
+prt_church,87,127,3	script	Pastor#1011	755,{
 	if (BaseJob == Job_Crusader) {
 		if (Upper == 1 && getskilllv("CR_SHRINK")) {
 			if (CRUS_SK == 8) {
@@ -809,15 +811,15 @@ prt_church,87,127,3	script	Pastor#1011	4_M_SAGE_C,{
 	}
 }
 
-//============================================================
+//============================================================ 
 // Old changelog
-//============================================================
+//============================================================ 
 //= 1.0 for fully working skills only [Lupus]
 //= 1.1 Added more new skill quests for more classes [Lupus]
 //= Somehow eA engine doesn't let you keep learn't skill V_V'
 //= 1.2 Added to correct locations, correct NPC's, fixed
 //= some of the items required and made them into real
-//= quests. [Reddozen]
+//= quests. [Reddozen] 
 //= 1.3 Fixed bugs and minor typos. Optimized [Lupus]
 //= 1.3a fixed an item ID typo, thx 2Spiritual Kid
 //= 1.3b Splitted into different files [DracoRPG]

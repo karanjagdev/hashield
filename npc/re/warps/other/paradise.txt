@@ -4,6 +4,8 @@
 //= Chilly
 //===== Current Version: =====================================
 //= 1.0
+//===== Compatible With: =====================================
+//= Hercules
 //===== Description: =========================================
 //= Warp Points for Paradise Group
 //===== Additional Comments: =================================

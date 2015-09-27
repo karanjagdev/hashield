@@ -1,9 +1,11 @@
-//===== Hercules Script ======================================
+//===== rAthena Script =======================================
 //= Eclage Quest NPCs
 //===== By: ==================================================
 //= Euphy
 //===== Current Version: =====================================
 //= 0.1
+//===== Compatible With: =====================================
+//= rAthena SVN
 //===== Description: =========================================
 //= Quest NPCs related to Eclage.
 //===== Additional Comments: =================================
@@ -67,7 +69,7 @@
 			mes "I'm afraid it's not enough. Sorry, but it can't be done for free~";
 			close;
 		}
-		Zeny -= .@price;
+		set Zeny, Zeny-.@price;
 	} else {
 		if (countitem(12636) < .@price) {
 			mes "[Teleport Cat]";
@@ -84,16 +86,16 @@
 	else if (compare(.@choice$,"Near Eclage")) warp "ecl_fild01",116,309;
 	close;
 }
-ecl_fild01,118,311,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.1	4_M_BOSSCAT
-bif_fild02,293,325,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.2	4_M_BOSSCAT
-spl_fild02,53,242,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.3	4_M_BOSSCAT
-mid_camp,207,234,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.4	4_M_BOSSCAT
-man_fild02,135,49,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.5	4_M_BOSSCAT
-dic_fild01,161,266,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.6	4_M_BOSSCAT
+ecl_fild01,118,311,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.1	421
+bif_fild02,293,325,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.2	421
+spl_fild02,53,242,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.3	421
+mid_camp,207,234,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.4	421
+man_fild02,135,49,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.5	421
+dic_fild01,161,266,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.6	421
 
 // Eclage's Entrance
 //============================================================
-ecl_fild01,97,322,0	script	#ep14_2Entrance	WARPNPC,3,3,{
+ecl_fild01,97,322,0	script	#ep14_2Entrance	45,3,3,{
 OnTouch:
 	if (ep14_2_enter < 3) {
 		mes "[Security Guard]";
@@ -105,7 +107,7 @@ OnTouch:
 	end;
 }
 
-ecl_fild01,94,322,5	script	Security Guard#ep14_2	4_M_FAIRYSOLDIER,{
+ecl_fild01,94,322,5	script	Security Guard#ep14_2	447,{
 	if (ep14_2_enter == 0) {
 		mes "[Security Guard]";
 		mes "All first-time visitors to Eclage must fill out the necessary forms here before entering.";
@@ -171,9 +173,9 @@ ecl_fild01,94,322,5	script	Security Guard#ep14_2	4_M_FAIRYSOLDIER,{
 		close;
 	}
 }
-ecl_fild01,100,323,3	duplicate(Security Guard#ep14_2)	Security Guard#ep14_2_2	4_M_FAIRYSOLDIER
+ecl_fild01,100,323,3	duplicate(Security Guard#ep14_2)	Security Guard#ep14_2_2	447
 
-ecl_fild01,111,320,2	script	Immigration Officer#ep1	4_M_FAIRYKID4,{
+ecl_fild01,111,320,2	script	Immigration Officer#ep1	445,{
 	if (ep14_2_enter == 0) {
 		mes "[Immigration Officer]";
 		mes "What do you need?";
@@ -340,7 +342,7 @@ ecl_fild01,111,320,2	script	Immigration Officer#ep1	4_M_FAIRYKID4,{
 
 // Oliver Wolf Hood
 //============================================================
-eclage,102,32,4	script	Fairy Carpenter#ep14_2	4_M_FAIRYKID2,{
+eclage,102,32,4	script	Fairy Carpenter#ep14_2	443,{
 	if (BaseLevel < 120) {
 		mes "[Fairy Carpenter]";
 		mes "The bridge is kind of broken so please be careful.";
@@ -464,7 +466,7 @@ OnTouch:
 */
 }
 
-eclage,283,275,4	script	Glaces#ep14_2	4_F_FAIRYKID3,{
+eclage,283,275,4	script	Glaces#ep14_2	438,{
 	mes "[Glaces]";
 	mes "Hm......";
 	mes "The guys are late.";
@@ -478,7 +480,7 @@ eclage,283,275,4	script	Glaces#ep14_2	4_F_FAIRYKID3,{
 	close;
 }
 
-eclage,266,216,4	script	Moreng#ep14_2	4_M_FAIRYKID3,{
+eclage,266,216,4	script	Moreng#ep14_2	444,{
 	mes "[Moreng]";
 	mes "Eclage is a really nice place to live.";
 	mes "The flowers are always in full bloom and the weather is always comfortable.";
@@ -493,34 +495,34 @@ eclage,266,216,4	script	Moreng#ep14_2	4_M_FAIRYKID3,{
 	close;
 }
 
-eclage,191,200,4	script	Yube#ep14_2	4_M_FAIRYKID5,{
+eclage,191,200,4	script	Yube#ep14_2	446,{
 	mes "- Shuffle shuffle -";
 	mes "He's working on something.";
 	mes "Let's not bother him.";
 	close;
 }
 
-eclage,292,265,0	script	#ep14_2Yube Entrance	WARPNPC,2,2,{
+eclage,292,265,0	script	#ep14_2Yube Entrance	45,2,2,{
 OnTouch:
 	mes "- Looks like the door is locked. -";
 	close;
 }
 
-eclage,265,166,4	script	Shul#ep14_2	4_M_FAIRYKID2,{
+eclage,265,166,4	script	Shul#ep14_2	443,{
 	mes "[Shul]";
 	mes "Laphine's put their lives on the line to make Yai beautiful.";
 	mes "I'm a Laphine myself but that kind of priority is difficult to understand.";
 	close;
 }
 
-eclage,137,169,4	script	Tato#ep14_2	4_F_FAIRYKID4,{
+eclage,137,169,4	script	Tato#ep14_2	439,{
 	mes "[Tato]";
 	mes "A friend of mine recently applied to the Splendide unit.";
 	mes "I heard Jotunheim is really cold. I hope he's doing well.";
 	close;
 }
 
-ecl_in01,60,71,4	script	Old Man#ep14_2	4_M_FAIRYKID2,{
+ecl_in01,60,71,4	script	Old Man#ep14_2	443,{
 	mes "[Old Man]";
 	mes "Hohoho~!";
 	next;
@@ -542,7 +544,7 @@ ecl_in01,60,71,4	script	Old Man#ep14_2	4_M_FAIRYKID2,{
 	close;
 }
 
-ecl_in01,44,53,4	script	Delivery Man#ep14_2	4_M_DOGTRAVELER,{
+ecl_in01,44,53,4	script	Delivery Man#ep14_2	513,{
 	mes "[Delivery Man]";
 	mes "Sigh...";
 	mes "I need to get going in order to make it on time.";
@@ -555,7 +557,7 @@ ecl_in01,44,53,4	script	Delivery Man#ep14_2	4_M_DOGTRAVELER,{
 	close;
 }
 
-ecl_in01,70,88,4	script	Sack Merchant#ep14_2	4_M_MERCAT1,{
+ecl_in01,70,88,4	script	Sack Merchant#ep14_2	495,{
 	mes "[Sack Merchant]";
 	mes "Meow?";
 	mes "Helloeow~";
@@ -565,14 +567,14 @@ ecl_in01,70,88,4	script	Sack Merchant#ep14_2	4_M_MERCAT1,{
 	close;
 }
 
-ecl_in01,73,51,4	script	Murah#ep14_2	4_M_FAIRYKID,{
+ecl_in01,73,51,4	script	Murah#ep14_2	442,{
 	mes "[Murah]";
 	mes "Hmm... What amazing present should I give?";
 	emotion e_flash;
 	close;
 }
 
-ecl_fild01,192,94,4	script	Golie#ep14_2	4_M_FAIRYKID,{
+ecl_fild01,192,94,4	script	Golie#ep14_2	442,{
 	mes "[Golie]";
 	mes "To grow Elder Willow trees,";
 	mes "since Spring, Peco Peco";
@@ -591,7 +593,7 @@ ecl_fild01,192,94,4	script	Golie#ep14_2	4_M_FAIRYKID,{
 	close;
 }
 
-ecl_fild01,97,315,4	script	Traveler#ep14_2	4_M_JOB_HUNTER,{
+ecl_fild01,97,315,4	script	Traveler#ep14_2	732,{
 	mes "[Traveler]";
 	mes "Who are you?";
 	mes "I've never seen you before.";
@@ -611,13 +613,13 @@ ecl_fild01,97,315,4	script	Traveler#ep14_2	4_M_JOB_HUNTER,{
 
 // Wanted to be Big and Beautiful
 //============================================================
-eclage,282,255,4	script	Wuhari#eclbig	4_M_FAIRYKID6,{
+eclage,282,255,4	script	Wuhari#eclbig	620,{
 	mes "[Wuhari]";
 	mes "Ah... Is there anyone with more experienced with this...";
 	close;
 }
 
-eclage,163,228,4	script	Goatie#eclbig	4_F_FAIRYKID3,{
+eclage,163,228,4	script	Goatie#eclbig	438,{
 	mes "[Goatie]";
 	mes "Have you ever been to the palace?";
 	mes "They say that it is so much more beautiful than our Yai's could ever be.";
@@ -627,7 +629,7 @@ eclage,163,228,4	script	Goatie#eclbig	4_F_FAIRYKID3,{
 	close;
 }
 
-eclage,170,195,4	script	Svery#eclbig	4_M_FAIRYKID2,{
+eclage,170,195,4	script	Svery#eclbig	443,{
 	mes "[Svery]";
 	mes "It's my wife's big wish to visit the palace.";
 	next;
@@ -637,7 +639,7 @@ eclage,170,195,4	script	Svery#eclbig	4_M_FAIRYKID2,{
 	close;
 }
 
-eclage,126,151,4	script	Pompe#eclbig	4_M_FAIRYKID3,{
+eclage,126,151,4	script	Pompe#eclbig	444,{
 	mes "[Pompe]";
 	mes "I saw it!";
 	next;
@@ -648,9 +650,9 @@ eclage,126,151,4	script	Pompe#eclbig	4_M_FAIRYKID3,{
 
 // Mystery Robbery Investigation
 //============================================================
-eclage,164,102,3	script	Cruyan#eclage	4_M_FAIRYKID,{}
+eclage,164,102,3	script	Cruyan#eclage	442,{}
 
-eclage,222,131,4	script	Wandering Merchant#ecla	1_M_SIGNMCNT,{
+eclage,222,131,4	script	Wandering Merchant#ecla	807,{
 	mes "[Wandering Merchant]";
 	mes "Go away kids~";
 	close;
@@ -658,7 +660,7 @@ eclage,222,131,4	script	Wandering Merchant#ecla	1_M_SIGNMCNT,{
 
 // Troublesome Fairie
 //============================================================
-ecl_in01,26,88,4	script	Cecilia#nk	4_F_FAIRYKID5,{
+ecl_in01,26,88,4	script	Cecilia#nk	440,{
 	mes "[Cecilia]";
 	mes "Mm...mm... what should I do...";
 	next;
@@ -666,13 +668,13 @@ ecl_in01,26,88,4	script	Cecilia#nk	4_F_FAIRYKID5,{
 	close;
 }
 
-ecl_in01,80,77,4	script	Dominic#nk	4_M_FAIRYKID4,{
+ecl_in01,80,77,4	script	Dominic#nk	445,{
 	mes "[Dominic]";
 	mes "I won't stop you from walking around in Eclage but, don't bother me you outsider!";
 	close;
 }
 
-ecl_in02,160,36,4	script	Eirinn#nk	4_F_FAIRYKID6,{
+ecl_in02,160,36,4	script	Eirinn#nk	441,{
 	mes "[Eirinn]";
 	mes "Oww, my stomach hurts!!";
 	mes "What are you looking at?";
@@ -682,18 +684,18 @@ ecl_in02,160,36,4	script	Eirinn#nk	4_F_FAIRYKID6,{
 	close;
 }
 
-ecl_in03,175,69,4	script	Bourbon#nk	4_M_FAIRYKID3,{
+ecl_in03,175,69,4	script	Bourbon#nk	444,{
 	mes "[Bourbon]";
 	mes "How strange. I've been losing my stuff recently like things I put in my pocket or even the things I put away properly.";
 	close;
 }
 
-ecl_in01,82,80,0	script	Monthly Eclage#pa0829	HIDDEN_NPC,{
+ecl_in01,82,80,0	script	Monthly Eclage#pa0829	111,{
 	mes "^000099I see a plain-looking journal. It seems to deal with third-rate gossip stories.^000000";
 	close;
 }
 
-ecl_in01,82,78,0	script	Magazine#01	HIDDEN_NPC,{
+ecl_in01,82,78,0	script	Magazine#01	111,{
 	mes "- I saw a book and stretched my hand out to reach for it. I think it's about Midgard. -";
 	next;
 	mes "[Dominic]";
@@ -702,14 +704,14 @@ ecl_in01,82,78,0	script	Magazine#01	HIDDEN_NPC,{
 	mes "Stay away from my bookshelves!";
 	close;
 }
-ecl_in01,82,79,0	duplicate(Magazine#01)	Magazine#02	HIDDEN_NPC
-ecl_in01,83,81,0	duplicate(Magazine#01)	Exploration of Midgard::ExplorationMidgard1	HIDDEN_NPC
-ecl_in01,82,84,0	duplicate(Magazine#01)	Exploration of Midgard::ExplorationMidgard2	HIDDEN_NPC
-ecl_in01,80,86,0	duplicate(Magazine#01)	Exploration of Midgard::ExplorationMidgard3	HIDDEN_NPC
+ecl_in01,82,79,0	duplicate(Magazine#01)	Magazine#02	111
+ecl_in01,83,81,0	duplicate(Magazine#01)	Exploration of Midgard::ExplorationMidgard1	111
+ecl_in01,82,84,0	duplicate(Magazine#01)	Exploration of Midgard::ExplorationMidgard2	111
+ecl_in01,80,86,0	duplicate(Magazine#01)	Exploration of Midgard::ExplorationMidgard3	111
 
 // Hiel's Workshop
 //============================================================
-eclage,155,91,4	script	#pa0829Hiel's Door10	2_BOARD2,{
+eclage,155,91,4	script	#pa0829Hiel's Door10	836,{
 	mes "[Notice]";
 	mes "Pan-galactic ultra genius engineer Hiel's strange and creepy workshop.";
 	mes "Normal Laphines, animals, and Saphas are prohibited.";
@@ -719,7 +721,7 @@ eclage,155,91,4	script	#pa0829Hiel's Door10	2_BOARD2,{
 	close;
 }
 
-ecl_in04,108,215,0	script	Supreme Electronic Rope	HIDDEN_NPC,{
+ecl_in04,108,215,0	script	Supreme Electronic Rope	111,{
 	mes "If you would like to go down, please press the bell~";
 	next;
 	if(select("Forget it.:Go down.") == 2)
@@ -727,12 +729,12 @@ ecl_in04,108,215,0	script	Supreme Electronic Rope	HIDDEN_NPC,{
 	close;
 }
 
-ecl_in04,105,216,0	script	Hiel's Workshop#pa0829	HIDDEN_NPC,{
+ecl_in04,105,216,0	script	Hiel's Workshop#pa0829	111,{
 	mes "^000099It's a workshop with lots of oddities.^000000";
 	close;
 }
 
-ecl_in04,109,215,2	script	Hiel#pa0829	4_M_FAIRYSCHOLAR,{
+ecl_in04,109,215,2	script	Hiel#pa0829	621,{
 	mes "[Hiel]";
 	mes "It is said that the leaves from home tree have the length X with the average m and standard deviation of 4. If P(m<X<a)=0.3413 ... (Mumble mumble)";
 	next;
@@ -790,7 +792,7 @@ function	script	F_Eclage_Traveler	{
 	return;
 }
 
-ecl_in01,32,52,4	script	Traveler Fome#tl01	4_F_DOGTRAVELER,3,3,{
+ecl_in01,32,52,4	script	Traveler Fome#tl01	515,3,3,{
 	if (ep14_2_tl == 0) {
 		if (checkquest(7411) == -1) {
 			mes "[Fome]";
@@ -918,7 +920,7 @@ OnTouch:
 	end;
 }
 
-ecl_in01,32,51,6	script	Traveler Litrip#tl02	4_M_DOGTRAVELER,{
+ecl_in01,32,51,6	script	Traveler Litrip#tl02	513,{
 	if (ep14_2_tl == 0) {
 		if (checkquest(7412) == -1) {
 			mes "[Litrip]";
@@ -1006,7 +1008,7 @@ ecl_in01,32,51,6	script	Traveler Litrip#tl02	4_M_DOGTRAVELER,{
 	}
 }
 
-ecl_in01,35,51,2	script	Traveler Chiba#tl03	4_M_DOGTRAVELER2,{
+ecl_in01,35,51,2	script	Traveler Chiba#tl03	514,{
 	if (ep14_2_tl == 0) {
 		if (checkquest(7413) == -1) {
 			mes "[Chiba]";
@@ -1094,7 +1096,7 @@ ecl_in01,35,51,2	script	Traveler Chiba#tl03	4_M_DOGTRAVELER2,{
 	}
 }
 
-ecl_in01,82,70,2	script	Eclage Guard#tl02	4_M_FAIRYSOLDIER,{
+ecl_in01,82,70,2	script	Eclage Guard#tl02	447,{
 	if (ep14_2_tl == 0) {
 		mes "[Eclage Guard]";
 		mes "Welcome to Eclage."; //custom
@@ -1287,7 +1289,7 @@ ecl_in01,82,70,2	script	Eclage Guard#tl02	4_M_FAIRYSOLDIER,{
 	}
 }
 
-ecl_in03,245,93,2	script	Chief of Staff#tl01	4_F_FAIRY,{
+ecl_in03,245,93,2	script	Chief of Staff#tl01	435,{
 	if (ep14_2_tl < 2) {
 		mes "[Chief of Staff]";
 		mes "Sorry, but no unauthorized entry is allowed here.";
@@ -1468,7 +1470,7 @@ ecl_in03,245,93,2	script	Chief of Staff#tl01	4_F_FAIRY,{
 	}
 }
 
-ecl_in03,41,90,2	script	Mayor Jun Kardui#tl01	4_M_FARIYKING,{
+ecl_in03,41,90,2	script	Mayor Jun Kardui#tl01	624,{
 	if (ep14_2_tl < 4) {
 		mes "[Kardui]";
 		mes "Mmm...";
@@ -1596,7 +1598,7 @@ ecl_in03,41,90,2	script	Mayor Jun Kardui#tl01	4_M_FARIYKING,{
 	}
 }
 
-ecl_in01,31,49,6	script	Eclage Guard#tl01	4_M_FAIRYSOLDIER,{
+ecl_in01,31,49,6	script	Eclage Guard#tl01	447,{
 	mes "[Eclage Guard]";
 	mes "Oh, I should hurry and go back to where I was.";
 	mes "Excuse me.";
@@ -1610,7 +1612,7 @@ OnEnable:
 	end;
 }
 
-ecl_fild01,205,86,4	script	Eclage Messenger Roy#tl	4_M_FAIRYSOLDIER2,{
+ecl_fild01,205,86,4	script	Eclage Messenger Roy#tl	461,{
 	if (ep14_2_tl < 5) {
 		mes "[Roy]";
 		mes "I can make it to Mora Village.";
@@ -1698,7 +1700,7 @@ ecl_fild01,205,86,4	script	Eclage Messenger Roy#tl	4_M_FAIRYSOLDIER2,{
 	}
 }
 
-eclage,112,40,4	script	Eclage Guard Leo#tl	4_M_FAIRYSOLDIER2,{
+eclage,112,40,4	script	Eclage Guard Leo#tl	461,{
 	if (ep14_2_tl < 5) {
 		mes "[Leo]";
 		mes "Welcome to Eclage, the capital of Laphines and a gateway to Alpheim.";
@@ -1780,42 +1782,42 @@ eclage,112,40,4	script	Eclage Guard Leo#tl	4_M_FAIRYSOLDIER2,{
 	}
 }
 
-ecl_in03,245,54,2	script	Working Laphine	4_F_FAIRYKID4,{	//Laphine on official duty#tl01
+ecl_in03,245,54,2	script	Working Laphine	439,{	//Laphine on official duty#tl01
 	mes "[Working Laphine]";
 	mes "This is the office area designated for official business.";
 	mes "You're not supposed to be here.";
 	close;
 }
 
-ecl_in03,244,57,4	script	Resting Laphine#tl01	4_F_FAIRYKID5,{
+ecl_in03,244,57,4	script	Resting Laphine#tl01	440,{
 	mes "Two Laphines from the upper class are talking about something.";
 	mes "One of them seems to be working and very annoyed.";
 	mes "As if they were aware of my stare, they waved me away with a show of irritation.";
 	close;
 }
 
-ecl_in02,98,32,2	script	Eclage Guard#tl1b	4_M_FAIRYSOLDIER2,{
+ecl_in02,98,32,2	script	Eclage Guard#tl1b	461,{
 	mes "[Eclage Guard]";
 	mes "This the prison where we put criminals.";
 	mes "No outsiders can enter.";
 	close;
 }
 
-eclage,274,294,4	script	Conversing Laphine	4_F_FAIRYKID,{	//Laphines in a conversation#tl02
+eclage,274,294,4	script	Conversing Laphine	436,{	//Laphines in a conversation#tl02
 	mes "A female Laphine and a male Laphine are talking about something.";
 	mes "But they stopped talking as soon as they saw me.";
 	mes "I think I've interrupted the conversation.";
 	close;
 }
 
-eclage,275,294,2	script	Eclage Resident#tl02	4_M_FAIRYKID4,{
+eclage,275,294,2	script	Eclage Resident#tl02	445,{
 	mes "[Male Laphine]";
 	mes "You're visiting Eclage?";
 	mes "I hope you have a good time here.";
 	close;
 }
 
-eclage,307,237,0	script	Normal Yai#tllb	CLEAR_NPC,{
+eclage,307,237,0	script	Normal Yai#tllb	844,{
 	mes "This is a Laphine's Yai.";
 	mes "The door is locked shut.";
 	cutin "avn_labo.bmp",4;
@@ -1826,7 +1828,7 @@ eclage,307,237,0	script	Normal Yai#tllb	CLEAR_NPC,{
 
 // Unknown
 //============================================================
-ecl_fild01,173,95,4	script	Diary Frog No. 30#worm	4_FROG,{
+ecl_fild01,173,95,4	script	Diary Frog No. 30#worm	614,{
 	mes "[Diary Frog No. 30]";
 	mes "As you can see, I am a broken Diary Frog.";
 	mes "Professor Worm threw me out really hard all the way out here.";
@@ -1834,4 +1836,4 @@ ecl_fild01,173,95,4	script	Diary Frog No. 30#worm	4_FROG,{
 	close;
 }
 
-eclage,156,56,0	script	Residence Entrance	CLEAR_NPC,{}
+eclage,156,56,0	script	Residence Entrance	844,{}

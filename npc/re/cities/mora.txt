@@ -1,31 +1,33 @@
 //===== Hercules Script ======================================
 //= Mora Village
-//===== By: ==================================================
+//===== By: ================================================== 
 //= Euphy
-//===== Current Version: =====================================
+//===== Current Version: ===================================== 
 //= 1.4
-//===== Description: =========================================
+//===== Compatible With: ===================================== 
+//= Hercules
+//===== Description: ========================================= 
 //= [Official Conversion]
 //= Mora Town Script
-//===== Additional Comments: =================================
+//===== Additional Comments: ================================= 
 //= 1.0 First version. [SuperHulk]
 //= 1.1 Translations to English. [Flaid]
 //= 1.1a Standardized. [Euphy]
 //= 1.2 Added new NPCs. [Flaid]
 //= 1.3 Replaced with full iRO town NPCs. [Euphy]
 //= 1.4 Updated to match the official scripts. [Euphy]
-//============================================================
+//============================================================ 
 
 // Set 1 :: mora_resident
 //============================================================
-mora,52,138,5	script	Mungmung#p	4_M_RAFLE_GR,{
+mora,52,138,5	script	Mungmung#p	516,{
 	mes "[Mungmung]";
 	mes "I'm not the innkeeper!";
 	mes "Why do people want to pay me when they see me?";
 	close;
 }
 
-mora,160,123,3	script	Nemnem#p	4_M_RAFLE_OLD,{
+mora,160,123,3	script	Nemnem#p	517,{
 	mes "[Nemnem]";
 	mes "My pain is getting worse and worse";
 	mes "since the crevice appeared in Bifrost.";
@@ -45,7 +47,7 @@ mora,160,123,3	script	Nemnem#p	4_M_RAFLE_OLD,{
 	}
 }
 
-mora,105,104,3	script	Boaster#podo	4_M_DOGTRAVELER2,{
+mora,105,104,3	script	Boaster#podo	514,{
 	mes "[Boaster]";
 	mes "So the situation";
 	mes "was at its worst.";
@@ -73,7 +75,7 @@ mora,105,104,3	script	Boaster#podo	4_M_DOGTRAVELER2,{
 	close;
 }
 
-mora,105,100,1	script	Rangrang#p	4_F_RAFLE_PK,{
+mora,105,100,1	script	Rangrang#p	518,{
 	mes "[Rangrang]";
 	mes "I've never heard such a boring and sad story.";
 	mes "I feel like crying!";
@@ -83,7 +85,7 @@ mora,105,100,1	script	Rangrang#p	4_F_RAFLE_PK,{
 /*
 // Disabled due to overlapping with RangRang,
 // and is not clickable on official servers.
-mora,105,100,1	script	Gurgur#p	4_M_RAFLE_GR,{
+mora,105,100,1	script	Gurgur#p	516,{
       mes "[Gurgur]";
       mes "He's been crying, falling asleep,";
       mes "and then waking up for 210 times now.";
@@ -93,7 +95,7 @@ mora,105,100,1	script	Gurgur#p	4_M_RAFLE_GR,{
 }
 */
 
-mora,99,100,7	script	Decoy#podo	4_F_DOGTRAVELER,{
+mora,99,100,7	script	Decoy#podo	515,{
 	mes "[A Decoy]";
 	mes "Oh~!";
 	mes "That's just so";
@@ -102,7 +104,7 @@ mora,99,100,7	script	Decoy#podo	4_F_DOGTRAVELER,{
 	close;
 }
 
-mora,98,104,5	script	Moved Raffle#podo	4_M_RAFLE_GR,{
+mora,98,104,5	script	Moved Raffle#podo	516,{
 	mes "[Moved Raffle]";
 	mes "This is sad, too sad!";
 	mes "I'm not sure why,";
@@ -111,7 +113,7 @@ mora,98,104,5	script	Moved Raffle#podo	4_M_RAFLE_GR,{
 	close;
 }
 
-mora,102,107,5	script	Relieved Raffle#podo	4_M_RAFLE_OLD,{
+mora,102,107,5	script	Relieved Raffle#podo	517,{
 	mes "[Relieved Raffle]";
 	mes "Wow~!";
 	mes "This is exciting.";
@@ -124,7 +126,7 @@ mora,102,107,5	script	Relieved Raffle#podo	4_M_RAFLE_OLD,{
 	close;
 }
 
-mora,101,107,5	script	Excited Raffle#podo	4_F_RAFLE_PK,{
+mora,101,107,5	script	Excited Raffle#podo	518,{
 	mes "[Excited Raffle]";
 	mes "Wow~";
 	mes "The story is no fun at all.";
@@ -135,34 +137,34 @@ mora,101,107,5	script	Excited Raffle#podo	4_F_RAFLE_PK,{
 	close;
 }
 
-mora,103,100,5	script	Impressed Raffle#podo	4_F_RAFLE_PK,{
+mora,103,100,5	script	Impressed Raffle#podo	518,{
 	mes "[Impressed Raffle]";
 	mes "Wow! Wow!";
 	close;
 }
 
-mora,123,94,7	script	Visitor to Mora#podo1	4_F_DOGTRAVELER,{
+mora,123,94,7	script	Visitor to Mora#podo1	515,{
 	mes "[Visitor to Mora]";
 	mes "I'm stuck here because of the crevice, which appeared out of nowhere.";
 	mes "Ha......";
 	close;
 }
 
-mora,155,72,3	script	Visitor to Mora#podo2	4_M_DOGTRAVELER,{
+mora,155,72,3	script	Visitor to Mora#podo2	513,{
 	mes "[Visitor to Mora]";
 	mes "Isn't this one cheerful village?";
 	mes "With Bifrost blocked like that, I'm thinking of settling here permanently.";
 	close;
 }
 
-mora,184,169,5	script	Worker#mo1	4_M_RAFLE_GR,{
+mora,184,169,5	script	Worker#mo1	516,{
 	mes "[Worker]";
 	mes "I heard that somebody made it out of the Labyrinth Forest alive.";
 	mes "Whoever it is, I want to meet this person myself.";
 	close;
 }
 
-mora,179,155,1	script	Novice Worker#mo	4_M_RAFLE_GR,{
+mora,179,155,1	script	Novice Worker#mo	516,{
 	mes "[Novice Worker]";
 	mes "I'll come out of the Labyrinth Forest and become a hero!";
 	next;
@@ -181,7 +183,7 @@ mora,179,155,1	script	Novice Worker#mo	4_M_RAFLE_GR,{
 	close;
 }
 
-mora,177,157,5	script	Indifferent Worker#mo	4_F_RAFLE_PK,{
+mora,177,157,5	script	Indifferent Worker#mo	518,{
 	mes "[Novice Worker]";
 	mes "I'll come out of the Labyrinth Forest and become a hero!";
 	next;
@@ -200,7 +202,7 @@ mora,177,157,5	script	Indifferent Worker#mo	4_F_RAFLE_PK,{
 	close;
 }
 
-mora,108,182,5	script	Worker#mo4	4_M_RAFLE_GR,{
+mora,108,182,5	script	Worker#mo4	516,{
 	mes "[Worker]";
 	mes "Stay clear of the Labyrinth Forest.";
 	mes "Don't ever dream of peeking in out of curiosity.";
@@ -210,7 +212,7 @@ mora,108,182,5	script	Worker#mo4	4_M_RAFLE_GR,{
 
 // Set 2 :: npc
 //============================================================
-mora,122,97,6	script	Relaxing Raffle#ep14_1	4_M_RAFLE_OLD,{
+mora,122,97,6	script	Relaxing Raffle#ep14_1	517,{
 	mes "[Relaxing Rafflesia]";
 	mes "The public bath in the center of the village is a symbol of Mora Village.";
 	next;
@@ -226,7 +228,7 @@ mora,122,97,6	script	Relaxing Raffle#ep14_1	4_M_RAFLE_OLD,{
 	close;
 }
 
-mora,174,171,0	script	Warehouse Worker#mo1	4_F_RAFLE_PK,{
+mora,174,171,0	script	Warehouse Worker#mo1	518,{
 	mes "[Shortffle]";
 	mes "I want to climb the ladder,";
 	mes "but my legs are too short to do that.";
@@ -237,7 +239,7 @@ mora,174,171,0	script	Warehouse Worker#mo1	4_F_RAFLE_PK,{
 	close;
 }
 
-mora,113,185,4	script	Reading Raffle#ep14_1	4_M_RAFLE_GR,{
+mora,113,185,4	script	Reading Raffle#ep14_1	516,{
 	mes "You see a Rafflesia";
 	mes "lost in reading.";
 	next;
@@ -327,7 +329,7 @@ mora,113,185,4	script	Reading Raffle#ep14_1	4_M_RAFLE_GR,{
 	}
 }
 
-mora,99,65,6	script	Banana Rafflesia#ep14_1	4_M_RAFLE_GR,{
+mora,99,65,6	script	Banana Rafflesia#ep14_1	516,{
 	mes "[Banana Rafflesia]";
 	mes "You want a banana?";
 	next;
@@ -347,7 +349,7 @@ mora,99,65,6	script	Banana Rafflesia#ep14_1	4_M_RAFLE_GR,{
 	}
 }
 
-mora,30,128,4	script	Relaxing Traveler#ep14_1	4_M_DOGTRAVELER2,{
+mora,30,128,4	script	Relaxing Traveler#ep14_1	514,{
 	mes "[Traveler]";
 	mes "The Mora Inn is famous";
 	mes "for its unusual pieces of furniture.";
@@ -361,7 +363,7 @@ mora,30,128,4	script	Relaxing Traveler#ep14_1	4_M_DOGTRAVELER2,{
 	close;
 }
 
-mora,130,96,4	script	Relaxing Traveler#ep14_2	4_M_DOGTRAVELER,{
+mora,130,96,4	script	Relaxing Traveler#ep14_2	513,{
 	mes "[Traveler]";
 	mes "The Rafflesia in Mora Village all look alike, so it's so confusing.";
 	mes "It's like looking at centuplets...";
@@ -374,7 +376,7 @@ mora,130,96,4	script	Relaxing Traveler#ep14_2	4_M_DOGTRAVELER,{
 	close;
 }
 
-mora,43,113,4	script	Wounded Rafflesia#ep14_1	4_M_RAFLE_OLD,{
+mora,43,113,4	script	Wounded Rafflesia#ep14_1	517,{
 	mes "[Wounded Raffle]";
 	mes "Ugghh... What was it";
 	mes "that was in the bath... Arrrghh...";
@@ -383,7 +385,7 @@ mora,43,113,4	script	Wounded Rafflesia#ep14_1	4_M_RAFLE_OLD,{
 	close;
 }
 
-mora,168,161,4	script	Warehouse Worker#mo2	4_M_DOGTRAVELER,{
+mora,168,161,4	script	Warehouse Worker#mo2	513,{
 	mes "[Lively]";
 	mes "The inn over there~";
 	mes "It should've been mine~";
@@ -404,7 +406,7 @@ mora,168,161,4	script	Warehouse Worker#mo2	4_M_DOGTRAVELER,{
 	close;
 }
 
-mora,175,161,6	script	Warehouse Worker#mo3	4_F_RAFLE_PK,{
+mora,175,161,6	script	Warehouse Worker#mo3	518,{
 	mes "[Kuorita]";
 	mes "Oh... this duck...";
 	next;
@@ -422,7 +424,7 @@ mora,175,161,6	script	Warehouse Worker#mo3	4_F_RAFLE_PK,{
 	close;
 }
 
-mora,140,186,3	script	Raffle Philosopher	4_M_RAFLE_OLD,{
+mora,140,186,3	script	Raffle Philosopher	517,{
 	mes "[Raffle Philosopher]";
 	mes "With a little token of appreciation, I will tell you a quote that will help you in your life.";
 	next;
@@ -453,7 +455,7 @@ mora,140,186,3	script	Raffle Philosopher	4_M_RAFLE_OLD,{
 	mes "[Raffle Philosopher]";
 	mes "The quote I'm going to tell you is...";
 	mes "Let's see... Wait a second.";
-	Zeny -= .@input;
+	set Zeny, Zeny-.@input;
 	next;
 	mes ". . . . . . . . .";
 	next;
@@ -1021,75 +1023,75 @@ mora,140,186,3	script	Raffle Philosopher	4_M_RAFLE_OLD,{
 	next;
 	mes "You feel somebody rummaging through your pockets before you pass out.";
 	if (Zeny >= 5000)
-		Zeny -= 5000;
+		set Zeny, Zeny-5000;
 	else
-		Zeny = 0;
+		set Zeny, 0;
 	close2;
 	percentheal -99,0;
 	warp "mora",31,132;
 	end;
 }
-mora,140,72,4	duplicate(#mora_traveler)	Traveler#ep14_1_1	4_M_DOGTRAVELER	//Upset Traveler
-mora,138,72,6	duplicate(#mora_traveler)	Traveler#ep14_1_2	4_M_DOGTRAVELER	//Traveler That Posed the Question
-mora,139,73,4	duplicate(#mora_traveler)	Traveler#ep14_1_3	4_M_DOGTRAVELER	//Traveler Trying to Stop the Fight
+mora,140,72,4	duplicate(#mora_traveler)	Traveler#ep14_1_1	513	//Upset Traveler
+mora,138,72,6	duplicate(#mora_traveler)	Traveler#ep14_1_2	513	//Traveler That Posed the Question
+mora,139,73,4	duplicate(#mora_traveler)	Traveler#ep14_1_3	513	//Traveler Trying to Stop the Fight
 
 // Set 3 :: tre
 //============================================================
-mora,132,185,5	script	Mora Villager#sleep5	4_F_RAFLE_PK,{
+mora,132,185,5	script	Mora Villager#sleep5	518,{
 	mes "[Mora Villager]";
 	mes "Phew~ Phew~";
 	close;
 }
 
-mora,133,185,5	script	Mora Villager#sleep2	4_M_RAFLE_VI,{
+mora,133,185,5	script	Mora Villager#sleep2	524,{
 	mes "[Mora Villager]";
 	mes "Snore...";
 	close;
 }
 
-mora,134,185,3	script	Mora Villager#sleep1	4_F_RAFLE_VI,{
+mora,134,185,3	script	Mora Villager#sleep1	525,{
 	mes "[Mora Villager]";
 	mes "Snort--";
 	close;
 }
 
-mora,132,184,5	script	Mora Villager#sleep6	4_M_RAFLE_OR,{
+mora,132,184,5	script	Mora Villager#sleep6	522,{
 	mes "[Mora Villager]";
 	mes "Snort--";
 	close;
 }
 
-mora,133,184,1	script	Mora Villager#sleep4	G_RAFFLESIA,{
+mora,133,184,1	script	Mora Villager#sleep4	1790,{
 	mes "[Mora Villager]";
 	mes "Moan...";
 	end;
 }
 
-mora,134,184,1	script	Mora Villager#sleep3	4_M_RAFLE_GR,{
+mora,134,184,1	script	Mora Villager#sleep3	516,{
 	mes "[Mora Villager]";
 	mes "Phew phew pheeew~";
 	close;
 }
 
-mora,132,183,7	script	Mora Villager#sleep7	4_M_RAFLE_VI,{
+mora,132,183,7	script	Mora Villager#sleep7	524,{
 	mes "[Mora Villager]";
 	mes "z Z";
 	close;
 }
 
-mora,133,183,7	script	Mora Villager#sleep8	4_F_RAFLE_PK,{
+mora,133,183,7	script	Mora Villager#sleep8	518,{
 	mes "[Mora Villager]";
 	mes "z Z";
 	end;
 }
 
-mora,134,183,1	script	Mora Villager#sleep9	4_M_RAFLE_OR,{
+mora,134,183,1	script	Mora Villager#sleep9	522,{
 	mes "[Mora Villager]";
 	mes "z Z";
 	close;
 }
 
-mora,43,127,3	script	Innkeeper#mora_inn	4_M_RAFLE_OR,{
+mora,43,127,3	script	Innkeeper#mora_inn	522,{
 	mes "[Innkeeper]";
 	mes "Oh~ looks like we have another adventurer.";
 	mes "Where are you from?";
@@ -1120,7 +1122,7 @@ mora,43,127,3	script	Innkeeper#mora_inn	4_M_RAFLE_OR,{
 			mes "[Innkeeper]";
 			mes "Make yourself at home.";
 			close2;
-			Zeny -= 5000;
+			set Zeny, Zeny-5000;
 			percentheal 100,100;
 			warp "mora",32,123;
 			end;
@@ -1163,7 +1165,7 @@ mora,43,127,3	script	Innkeeper#mora_inn	4_M_RAFLE_OR,{
 	}
 }
 
-mora,48,128,0	script	Drawer#mora_warehouse	HIDDEN_NPC,{
+mora,48,128,0	script	Drawer#mora_warehouse	111,{
 	if(basicskillcheck() && getskilllv("NV_BASIC") < 6) {
 		mes "- You don't remember how to open the warehouse. -";
 		close;
@@ -1176,7 +1178,7 @@ mora,48,128,0	script	Drawer#mora_warehouse	HIDDEN_NPC,{
 			mes "- You don't seem to have 100 zeny with you. -";
 			close;
 		}
-		Zeny -= 100;
+		set Zeny, Zeny-100;
 		openstorage;
 		close;
 	case 2:

@@ -1,5 +1,5 @@
 //===== Hercules Script ======================================
-//= Magazine Dealers
+//= Magazine Dealer Kenny
 //===== By: ==================================================
 //= rAthena Dev Team
 //===== Current Version: =====================================
@@ -16,9 +16,10 @@
 //= 1.5 Moved Izlude duplicate to pre-re/re paths. [Euphy]
 //============================================================
 
-alberta,118,157,3	script	Magazine Dealer Kenny::mdk	4_M_01,{
-	if (BaseJob == Job_Gunslinger) {
-		mes "[Kenny]";
+alberta,118,157,3	script	Magazine Dealer Tonny::mdk	83,{
+	set .n$, compare(strnpcinfo(1),"Tonny")?"[Tonny]":"[Kenny]";
+	if(BaseJob == Job_Gunslinger) {
+		mes .n$;
 		mes "Welcome to my Magazine Shop.";
 		mes "As you may know, large numbers";
 		mes "of bullets can be carried more";
@@ -35,7 +36,7 @@ alberta,118,157,3	script	Magazine Dealer Kenny::mdk	4_M_01,{
 		case 7: callfunc "Func_Casing",13202,12150; break;
 		case 8: callfunc "Func_Casing",13201,12151; break;
 		case 9:
-			mes "[Kenny]";
+			mes .n$;
 			mes "Well, if you ever find";
 			mes "that you have too many";
 			mes "bullets, come and see me.";
@@ -44,7 +45,7 @@ alberta,118,157,3	script	Magazine Dealer Kenny::mdk	4_M_01,{
 			close;
 		}
 	}
-	mes "[Kenny]";
+	mes .n$;
 	mes "Welcome to my shop.";
 	mes "Here, I provide Magazines";
 	mes "and Cartridges for Gunslingers.";
@@ -52,7 +53,7 @@ alberta,118,157,3	script	Magazine Dealer Kenny::mdk	4_M_01,{
 	mes "my services would be of any";
 	mes "use to you, adventurer.";
 	next;
-	mes "[Kenny]";
+	mes .n$;
 	mes "Eh, but if you happen to";
 	mes "know any Gunslingers, send";
 	mes "them my way. You can never";
@@ -61,18 +62,18 @@ alberta,118,157,3	script	Magazine Dealer Kenny::mdk	4_M_01,{
 }
 
 function	script	Func_Casing	{
-	mes "[Kenny]";
+	mes .n$;
 	mes "Now, you can trade";
 	mes "500 "+getitemname(getarg(0))+"s";
 	mes "and 500 zeny for 1 "+getitemname(getarg(1))+", so make sure";
 	mes "you have sufficient bullets";
 	mes "and zeny for this exchange.";
 	next;
-	mes "[Kenny]";
+	mes .n$;
 	mes "You can exchange 500 "+getitemname(getarg(0))+"s and 500 zeny";
 	mes "with 1 "+getitemname(getarg(1))+".";
 	next;
-	mes "[Kenny]";
+	mes .n$;
 	mes "Remember that I can't give";
 	mes "you more than 50 Magazines";
 	mes "at a time. Now please enter";
@@ -80,8 +81,8 @@ function	script	Func_Casing	{
 	mes "want to receive. If you want to cancel, then just enter ''0.''";
 	next;
 	input .@amount;
-	if (.@amount > 50 || .@amount == 0) {
-		mes "[Kenny]";
+	if(.@amount > 50 || .@amount == 0) {
+		mes .n$;
 		mes "Hey, I can't give you";
 		mes "that many Magazines.";
 		mes "Please try again, and";
@@ -92,7 +93,7 @@ function	script	Func_Casing	{
 	if (countitem(getarg(0)) >= (500*.@amount)) {
 		if (Zeny >= (500*.@amount)) {
 			if (checkweight(getarg(1),.@amount) == 0) {
-				mes "[Kenny]";
+				mes .n$;
 				mes "Hey, you've got a lot";
 				mes "of junk crammed in your";
 				mes "Inventory. Free up some";
@@ -101,19 +102,19 @@ function	script	Func_Casing	{
 				mes "some Magazines later, okay?";
 				close;
 			}else{
-				mes "[Kenny]";
+				mes .n$;
 				mes "Alright, here are";
 				mes "your Magazines. Thanks";
 				mes "for visiting my shop, and";
 				mes "I hope that you use all";
 				mes "of your ammo wisely.";
-				Zeny -= 500*.@amount;
+				set Zeny,Zeny-500*.@amount;
 				delitem getarg(0),500*.@amount;
 				getitem getarg(1),.@amount;
 				close;
 			}
-		} else {
-			mes "[Kenny]";
+		}else{
+			mes .n$;
 			mes "Sorry, but you don't";
 			mes "have enough zeny for";
 			mes "this Magazine exchange.";
@@ -122,8 +123,8 @@ function	script	Func_Casing	{
 			mes "some more money.";
 			close;
 		}
-	} else {
-		mes "[Kenny]";
+	}else{
+		mes .n$;
 		mes "Sorry, but you don't";
 		mes "have enough bullets for";
 		mes "this Magazine exchange.";

@@ -1,17 +1,19 @@
-//===== Hercules Script ======================================
+//===== rAthena Script ======================================= 
 //= RWC 2012 Enchants
-//===== By: ==================================================
+//===== By: ================================================== 
 //= Euphy
-//===== Current Version: =====================================
+//===== Current Version: ===================================== 
 //= 1.0
-//===== Description: =========================================
+//===== Compatible With: ===================================== 
+//= rAthena SVN
+//===== Description: ========================================= 
 //= [Official Conversion]
 //= Adds slots and enchantments to 2012 RWC Memory accessories.
-//===== Additional Comments: =================================
+//===== Additional Comments: ================================= 
 //= 1.0 First Version. [Euphy]
-//============================================================
+//============================================================ 
 
-prontera,147,61,3	script	Driller#pron	4_M_BARBER,{
+prontera,147,61,3	script	Driller#pron	87,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
 		mes "You're carrying too many items in your inventory. Visit Kafra storage and try again.";
@@ -80,7 +82,7 @@ prontera,147,61,3	script	Driller#pron	4_M_BARBER,{
 	}
 }
 
-prontera,147,59,3	script	Goldberg#pron	4_M_OILMAN,{
+prontera,147,59,3	script	Goldberg#pron	878,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
 		mes "You are carrying too many items. Come back after you have organized your inventory.";

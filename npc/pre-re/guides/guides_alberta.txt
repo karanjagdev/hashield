@@ -1,9 +1,11 @@
-//===== Hercules Script ======================================
+//===== rAthena Script =======================================
 //= Alberta Guides
 //===== By: ==================================================
 //= kobra_k88; L0ne_W0lf
 //===== Current Version: =====================================
 //= 1.5a
+//===== Compatible With: =====================================
+//= rAthena  SVN
 //===== Description: =========================================
 //= [Official Conversion]
 //= Guides for the city of Alberta
@@ -19,7 +21,7 @@
 //	-Thanks to $ephiroth.
 //============================================================
 
-alberta,23,238,4	script	Guide#alb::AlbGuide	8W_SOLDIER,{
+alberta,23,238,4	script	Guide#alb::AlbGuide	105,{
 	cutin "prt_soldier",2;
 	mes "[Alberta Guide]";
 	mes "Welcome to Alberta,";
@@ -154,4 +156,4 @@ alberta,23,238,4	script	Guide#alb::AlbGuide	8W_SOLDIER,{
 	end;
 }
 
-alberta,120,60,3	duplicate(AlbGuide)	Guide#2alb	8W_SOLDIER
+alberta,120,60,3	duplicate(AlbGuide)	Guide#2alb	105
