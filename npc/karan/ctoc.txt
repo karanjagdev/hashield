@@ -18,7 +18,8 @@
 //= Please give Credit if you use this!!!
 //===========================================================================================
 
-prontera,168,178,4	script	Points Viewer	86,{
+-	script	addcash	86,{
+OnWhisperGlobal:
 set $currency$,"Dollar";
 set .name$, "[^0080FFPoints Viewer^000000]";
 
