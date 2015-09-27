@@ -4,6 +4,8 @@
 //= TyrNemesis^
 //===== Current Version: =====================================
 //= 1.2a
+//===== Compatible With: =====================================
+//= Hercules Git
 //===== Description: =========================================
 //= Removes cards from equipped items.
 //===== Additional Comments: =================================
@@ -12,7 +14,7 @@
 //= 1.2a Added 'disable_items' command. [Euphy]
 //============================================================
 
-prt_in,28,73,4	script	Wise Old Woman#eAcustom	1_F_ORIENT_04,{
+prt_in,28,73,4	script	Wise Old Woman#eAcustom	78,{
 
 	set .zenycost,200000; // Set base cost in zeny of the card remover services
 	set .percardcost,25000; // set cost per card of the card remover services
@@ -50,7 +52,7 @@ prt_in,28,73,4	script	Wise Old Woman#eAcustom	1_F_ORIENT_04,{
 		}
 		set .@cardcount,getequipcardcnt(.@part);
 		
-		if (!checkweight(1202,(.@cardcount+1))) {
+		if (!checkweight(1202,(.@cardcount+1))) { 
 			mes "^3355FFJust a minute!";
 			mes "I can't offer any of my";
 			mes "services to you because";
@@ -67,7 +69,7 @@ prt_in,28,73,4	script	Wise Old Woman#eAcustom	1_F_ORIENT_04,{
 			mes "Very well. Return at once if you seek my services.";
 			close;
 		}
-		if((Zeny < (.zenycost+(.@cardcount * .percardcost))) || (countitem(1000) < 1) || (countitem(715) < 1)) {
+		if((zeny < (.zenycost+(.@cardcount * .percardcost))) || (countitem(1000) < 1) || (countitem(715) < 1)) {
 			mes "[Wise Old Woman]";
 			mes "You do not have all the items I require to work my magic, child. Come again when you do.";
 			close;
@@ -88,7 +90,7 @@ prt_in,28,73,4	script	Wise Old Woman#eAcustom	1_F_ORIENT_04,{
 		}
 		mes "[Wise Old Woman]";
 		mes "Very well. I shall begin.";
-		Zeny -= (.zenycost+(.@cardcount * .percardcost));
+		set zeny,zeny - (.zenycost+(.@cardcount * .percardcost));
 		delitem 1000,1;
 		delitem 715,1;
 		

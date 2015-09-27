@@ -4,6 +4,8 @@
 //= acky
 //===== Current Version: =====================================
 //= 1.2
+//===== Compatible With: =====================================
+//= Hercules
 //===== Description: =========================================
 //= Players train monsters and battle other players.
 //= Experience can be earned and monsters upgraded.
@@ -22,7 +24,7 @@
 //============================================================
 
 // Entrance //
-prontera,158,193,6	script	Monster Arena	4_F_GON,{
+prontera,158,193,6	script	Monster Arena	702,{
 	mes "[Monster Arena]";
 	mes "Would you like to enter the Monster Arena?";
 	mes "Currently ^FF0000" + getmapusers("gon_test") + "^000000 players";
@@ -96,7 +98,7 @@ function	script	monstersummon	{
 }
 
 // Referee //
--	script	monsterreferee	1_M_PUBMASTER,{
+-	script	monsterreferee	61,{
 	if (@fighting == 1) end;
 	if (@battle == 1) goto L_Start;
 	end;
@@ -193,11 +195,11 @@ L_Exit:
 	mes "Alright";
 	close;
 }
-gon_test,56,91,6	duplicate(monsterreferee)	Referee#01	1_M_PUBMASTER
+gon_test,56,91,6	duplicate(monsterreferee)	Referee#01	61
 
 
 // Usher //
-gon_test,58,94,6	script	Usher	4_M_04,{
+gon_test,58,94,6	script	Usher	86,{
 	set @marena,1;
 	mes "[Usher]";
 	mes "What would you like to do?";
@@ -274,7 +276,7 @@ L_Cancel:
 }
 
 // Monster Trainer //
-gon_test,52,103,6	script	Monster Trainer	4_M_BARBER,{
+gon_test,52,103,6	script	Monster Trainer	87,{
 	mes "[Monster Trainer]";
 	if (#monster != 0) goto L_Mon;
 
@@ -288,8 +290,8 @@ gon_test,52,103,6	script	Monster Trainer	4_M_BARBER,{
 	next;
 	menu "Yes",-,"No",L_Exit;
 
-	if (Zeny < 1000) goto L_NoZeny;
-	Zeny -= 1000;
+	if (zeny < 1000) goto L_NoZeny;
+	set zeny,zeny-1000;
 	set #monster,10;
 	mes "[Monster Trainer]";
 	mes "Congratulations!";
@@ -327,7 +329,7 @@ L_Sell:
 	if (@sellexp > #monpoints) goto L_NoExp;
 	set #monpoints,#monpoints-@sellexp;
 	set @sellearn,100*@sellexp; // Price of exp
-	Zeny += @sellearn;
+	set zeny,zeny+@sellearn;
 	mes "[Monster Trainer]";
 	mes "You earned ^0000FF" + @sellearn + "^000000z.";
 	close;
@@ -731,7 +733,7 @@ function	script	illegalkill	{
 }
 
 // Healer //
-gon_test,55,103,6	script	Nurse	4_F_01,{
+gon_test,55,103,6	script	Nurse	90,{
 	if (@battle == 1 || #heal == 0) goto L_NoHeal;
 	if (#heal == 1 && @healing < 100) goto L_Heal; //Total healing required
 	set @fighting,0;
@@ -752,14 +754,14 @@ L_NoHeal:
 }
 
 // Warps players //
-gon_test,57,86,5	script	Summon Pad 1::SummonPad	HIDDEN_NPC,2,2,{
+gon_test,57,86,5	script	Summon Pad 1::SummonPad	111,2,2,{
 	end;
 OnTouch:
 	set @marena,1;
 	warp "gon_test",57,99;
 }
-gon_test,43,87,5	duplicate(SummonPad)	Summon Pad 2	HIDDEN_NPC,2,2
-gon_test,72,87,5	duplicate(SummonPad)	Summon Pad 3	HIDDEN_NPC,2,2
+gon_test,43,87,5	duplicate(SummonPad)	Summon Pad 2	111,2,2
+gon_test,72,87,5	duplicate(SummonPad)	Summon Pad 3	111,2,2
 
 
 
@@ -767,7 +769,7 @@ gon_test,72,87,5	duplicate(SummonPad)	Summon Pad 3	HIDDEN_NPC,2,2
 gon_test	mapflag	noskill
 
 // Duel Arena //
-gon_test,58,103,5	script	Duel Master#01	4_F_03,{
+gon_test,58,103,5	script	Duel Master#01	92,{
 	if ($@duelist1$ == "") set @duel,0;
 	if ($@monster1 == "") set @duel,0;
 	set @marena,1;
@@ -859,7 +861,7 @@ L_NeedHeal:
 }
 
 // Duel Exit //
-gon_test,42,8,5	script	Duel Master#02	4_F_03,{
+gon_test,42,8,5	script	Duel Master#02	92,{
 	mes "[Duel Master]";
 	mes "Would you like to return?";
 	menu "Yes",L_Leave,"No",-;
@@ -891,5 +893,5 @@ L_Leave2:
 	goto L_Leave3;
 }
 
-gon_test,49,5,5	duplicate(SummonPad)	Summon Pad 4	HIDDEN_NPC,2,2
-gon_test,55,8,6	duplicate(monsterreferee)	Referee#02	1_M_PUBMASTER
+gon_test,49,5,5	duplicate(SummonPad)	Summon Pad 4	111,2,2
+gon_test,55,8,6	duplicate(monsterreferee)	Referee#02	61
