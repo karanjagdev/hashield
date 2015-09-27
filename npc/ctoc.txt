@@ -1,7 +1,96 @@
--	script	ctoc	-1,{
+//===== eAthena Script ======================================================================
+//= Donation System
+//===== Original By =========================================================================
+//= Hellflaem
+//===== Credit =========================================================================
+//= Hellflaem , Martin Angelov from tutorialzine.com
+//===== Current Version: ====================================================================
+//= 3.0
+//===== Compatible With: ====================================================================
+//= Any eAthena
+//===== Description: ========================================================================
+//= An Ingame Npc that can add Cash points to players online or offline.Also lets player view there cash points ingame.
+//= An Out of game fully auto php $ paypal IPN based donation system.
+//= Players donate for cash points at the donation center from you website.
+//= Lists player how have donated, there is an Admin page as well.
+//= Which lets admins add cash points to an account and list the last 5 donatons made.
+//===== Comments================================================================
+//= Please give Credit if you use this!!!
+//===========================================================================================
+
+prontera,168,178,4	script	Points Viewer	86,{
+set $currency$,"Dollar";
+set .name$, "[^0080FFPoints Viewer^000000]";
+
+mes .name$;
+if(getgmlevel() >= 99) {
+	mes "Hello "+strcharinfo(0);
+	mes "What can I help you with today?";
+	next;
+	if (select("Add Cash Points:Nothing") == 2) close;
+	mes .name$;
+	mes "Please remember if the player is online they will have to relog.";
+	next;
+	mes .name$;
+	mes "What is the ^FF0000Account Id?^000000 I should add the funds to?";
+	input @account_id;
+	next;
+	mes .name$;
+	mes "Now, what is the amount of ^FF0000Cash Points^000000 I should add?";
+	input @points_to_add;
+	next;
+	mes .name$;
+	mes "Please check if the following information is right:";
+	mes "Account Id: ^FF0000"+@account_id+"^000000";
+	mes "Cash Points to add: ^FF0000"+@points_to_add+" "+$currency$+"^000000";
+	next;
+	if (select("Yes:No") == 2) close;
+
+	mes .name$;
+mes "I have added ^FF0000"+@points_to_add+" "+$currency$+"^000000 to the Account Id. ^FF0000"+@account_id$+"^000000";
+	query_sql "INSERT INTO `cash_points` VALUES ('"+@account_id+"','"+@points_to_add+"')";
+	close;
+
+} else {
+
+	mes "Hello "+strcharinfo(0);
+	mes "And you have "+#CASHPOINTS+" Donation Points.";
+	close;
+}
+}
+-	script	CashPointsUpdater	-1,{
+
+// Every Time Player Logins
 OnPCLoginEvent:
-query_sql "SELECT balance FROM cp_credits WHERE account_id = " + getcharid( 3 ), .@balance;
-// Update User's Points
-    set #CASHPOINTS,(#CASHPOINTS + .@balance);
-	query_sql "UPDATE cp_credits SET balance = balance - " +  #CASHPOINTS + " WHERE account_id = " + getcharid( 3 );
+
+// Delete Result Array (If Any)
+// if (getarraysize(@points_to_add) >= 1) { deletearray @points_to_add,127; }
+
+// Query Database And See If There
+// Are Points Waiting To Be Added
+set @nb,query_sql("SELECT `points_to_add` FROM `cash_points` WHERE (`account_id` = "+ getcharid(3) +") LIMIT 1",
+        @points_to_add);
+
+// Proceed If A Result Row Is Found and
+// Check If Points To Add Is Greater Than or Equal To 1      
+if ((@nb == 1) && ((@points_to_add >= 1)))
+{
+    // Update User's Points
+    set #CASHPOINTS,(#CASHPOINTS + @points_to_add);
+        
+    // Update Cash Points Table  
+    set @nb,query_sql ("DELETE FROM `cash_points` WHERE (`account_id` = "+ getcharid(3) +") LIMIT 1");
+
+    // Let Player Know Points Updated
+    mes "^008000[ Server ]^000000";
+    mes " ";
+    mes "Your Donation Credit Points has been successfully updated. Your new balance is ...";
+    mes " ";
+    mes "Donation Credit Points : ^0000FF"+ #CASHPOINTS +"^000000";
+    close;
+}
+
+// The End
+end;
+
 }
