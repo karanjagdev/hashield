@@ -4,7 +4,7 @@ mes "How can I help you?";
 if(select("Yes", "No") == 1) goto L_warp;
 close2;
 L_warp:
-mes "Happy Shopping!!"
+mes "Happy Shopping!!";
 close2;
 warp "turbo_room",50,50;
 end;
