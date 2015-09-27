@@ -2,7 +2,7 @@ prontera,141,156,4	script	RoK Credits Shop	116,{
 
 mes "How can I help you?";
 if(select("Yes", "No") == 1) goto L_warp;
-close2;
+close;
 L_warp:
 mes "Happy Shopping!!";
 close2;
