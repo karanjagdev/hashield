@@ -1,24 +1,24 @@
 //===== Hercules Script ======================================
 //= Cool Event Corp. Staff
-//===== By: ================================================== 
+//===== By: ==================================================
 //= Gepard
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.5
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= Cool Event Corp. Staff (Save, Storage & Pushcart Service)
 //= in Arunafeltz Region.
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.0 First version, iRO Sakray X.4 [Gepard]
 //= 1.1 Optimized, fixed a conditional bug [Lupus]
 //= 1.1a Redo back. It wasn't a bug [Lupus]
 //= 1.2 Added Rachel Cool Event Corp. Staff [Playtester]
 //= 1.3 Added cutins, closed Kafra Password exploit
-//=	until we got a client/packet based password support [Lupus]
+//=     until we got a client/packet based password support [Lupus]
 //= 1.4 Added Veins Cool Event Corp. Staff. [L0ne_W0lf]
 //= 1.5 Cool Event Corp staff is now more iRO like. [L0ne_W0lf]
-//============================================================ 
+//============================================================
 
-hugel,88,168,4	script	Cool Event Corp. Staff::CoolEventCorpStaffHugel	874,{
+hugel,88,168,4	script	Cool Event Corp. Staff::CoolEventCorpStaffHugel	4_M_ZONDAMAN,{
 	cutin "zonda_01",2;
 	mes "[Cool Event Corp. Staff]";
 	mes "Welcome to Cool Event Corp.";
@@ -56,7 +56,7 @@ hugel,88,168,4	script	Cool Event Corp. Staff::CoolEventCorpStaffHugel	874,{
 			close2;
 			break;
 		}
-		set Zeny, Zeny - 40;
+		Zeny -= 40;
 		mes "Let me open your personal";
 		mes "storage for you right away.";
 		mes "Thanks for supporting Cool";
@@ -110,7 +110,7 @@ hugel,88,168,4	script	Cool Event Corp. Staff::CoolEventCorpStaffHugel	874,{
 				mes "Zeny to pay the Pushcart";
 				mes "rental fee of 800 Zeny.";
 			} else {
-				set Zeny, Zeny - 800;
+				Zeny -= 800;
 				setcart;
 			}
 		}
@@ -134,7 +134,7 @@ hugel,88,168,4	script	Cool Event Corp. Staff::CoolEventCorpStaffHugel	874,{
 	end;
 }
 
-rachel,109,138,5	script	Cool Event Corp. Staff::CoolEventCorpStaffRachel	874,{
+rachel,109,138,5	script	Cool Event Corp. Staff::CoolEventCorpStaffRachel	4_M_ZONDAMAN,{
 	cutin "zonda_01",2;
 	mes "[Cool Event Corp. Staff]";
 	mes "Welcome to Cool Event Corp.";
@@ -172,7 +172,7 @@ rachel,109,138,5	script	Cool Event Corp. Staff::CoolEventCorpStaffRachel	874,{
 			close2;
 			break;
 		}
-		set Zeny, Zeny - 40;
+		Zeny -= 40;
 		mes "Let me open your personal";
 		mes "storage for you right away.";
 		mes "Thanks for supporting Cool";
@@ -192,7 +192,7 @@ rachel,109,138,5	script	Cool Event Corp. Staff::CoolEventCorpStaffRachel	874,{
 					delitem 7060,1;
 				}
 				else {
-					set Zeny,Zeny-2200;
+					Zeny -= 2200;
 				}
 				warp "veins",205,101;
 				cutin "",255;
@@ -252,7 +252,7 @@ rachel,109,138,5	script	Cool Event Corp. Staff::CoolEventCorpStaffRachel	874,{
 				mes "Zeny to pay the Pushcart";
 				mes "rental fee of 800 Zeny.";
 			} else {
-				set Zeny, Zeny - 800;
+				Zeny -= 800;
 				setcart;
 			}
 		}
@@ -276,7 +276,7 @@ rachel,109,138,5	script	Cool Event Corp. Staff::CoolEventCorpStaffRachel	874,{
 	end;
 }
 
-veins,208,128,5	script	Cool Event Corp. Staff::CoolEventCorpStaffVeins	874,{
+veins,208,128,5	script	Cool Event Corp. Staff::CoolEventCorpStaffVeins	4_M_ZONDAMAN,{
 	cutin "zonda_01",2;
 	mes "[Cool Event Corp. Staff]";
 	mes "Welcome to Cool Event Corp.";
@@ -314,7 +314,7 @@ veins,208,128,5	script	Cool Event Corp. Staff::CoolEventCorpStaffVeins	874,{
 			close2;
 			break;
 		}
-		set Zeny, Zeny - 40;
+		Zeny -= 40;
 		mes "Let me open your personal";
 		mes "storage for you right away.";
 		mes "Thanks for supporting Cool";
@@ -334,7 +334,7 @@ veins,208,128,5	script	Cool Event Corp. Staff::CoolEventCorpStaffVeins	874,{
 					delitem 7060,1;
 				}
 				else {
-					set Zeny,Zeny-2200;
+					Zeny -= 2200;
 				}
 				warp "rachel",115,125;
 				cutin "",255;
@@ -395,7 +395,7 @@ veins,208,128,5	script	Cool Event Corp. Staff::CoolEventCorpStaffVeins	874,{
 				mes "rental fee of 800 Zeny.";
 				close2;
 			} else {
-				set Zeny, Zeny - 800;
+				Zeny -= 800;
 				setcart;
 			}
 		}
