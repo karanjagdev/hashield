@@ -1,0 +1,7 @@
+-	script	ctoc	-1,{
+OnPCLoginEvent:
+query_sql "SELECT balance FROM cp_credits WHERE account_id = " + getcharid( 3 ), .@balance;
+// Update User's Points
+    set #CASHPOINTS,(#CASHPOINTS + .@balance);
+	query_sql "UPDATE cp_credits SET balance = balance - " +  #CASHPOINTS + " WHERE account_id = " + getcharid( 3 );
+}
