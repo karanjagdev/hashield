@@ -57,7 +57,7 @@
 //==================================================================
 //2338,Wedding_Dress,Wedding Dress,5,43000,,500,,0,,0,0xFFFFFFFE,7,0,16,,0,1,0,{},{ sc_start SC_WEDDING,-1,0; },{ sc_end SC_WEDDING; }
 //7170,Tuxedo,Tuxedo,5,43000,,10,,0,,0,0xFFFFFFFE,7,1,16,,0,1,0,{},{ sc_start SC_WEDDING,-1,0; },{ sc_end SC_WEDDING; }
-30000,Akatsuki_Hat,Akatsuki_Hat,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,1024,,0,1,701,{sc_start SC_CASH_PLUSEXP,1800000,360000;},{},{sc_end SC_CASH_PLUSEXP;}
+30000,Akatsuki_Hat,Akatsuki_Hat,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,1024,,0,1,701,{sc_start SC_CASH_PLUSEXP,1800000,360000; if(!isequipped(12208)) sc_start SC_CASH_PLUSEXP,1800000,65;},{},{sc_end SC_CASH_PLUSEXP;}
 30001,Afro_Hair,Afro_Hair,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,1024,,0,1,700,{sc_start SC_CASH_PLUSEXP,1800000,360000;},{},{sc_end SC_CASH_PLUSEXP;}
 30002,Alucard_Hat,Alucard_Hat,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,1024,,0,1,702,{sc_start SC_CASH_PLUSEXP,1800000,360000;},{},{sc_end SC_CASH_PLUSEXP;}
 30003,Creed_Helm,Creed_Helm,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,1024,,0,1,703,{sc_start SC_CASH_PLUSEXP,1800000,360000;},{},{sc_end SC_CASH_PLUSEXP;}
