@@ -1733,22 +1733,6 @@ ACMD(go)
 		{ MAP_JAWAII,      249, 127 }, // 17=Jawaii
 		{ MAP_AYOTHAYA,    151, 117 }, // 18=Ayothaya
 		{ MAP_EINBROCH,     64, 200 }, // 19=Einbroch
-		{ MAP_LIGHTHALZEN, 158,  92 }, // 20=Lighthalzen
-		{ MAP_EINBECH,      70,  95 }, // 21=Einbech
-		{ MAP_HUGEL,        96, 145 }, // 22=Hugel
-		{ MAP_RACHEL,      130, 110 }, // 23=Rachel
-		{ MAP_VEINS,       216, 123 }, // 24=Veins
-		{ MAP_MOSCOVIA,    223, 184 }, // 25=Moscovia
-		{ MAP_MIDCAMP,     180, 240 }, // 26=Midgard Camp
-		{ MAP_MANUK,       282, 138 }, // 27=Manuk
-		{ MAP_SPLENDIDE,   197, 176 }, // 28=Splendide
-		{ MAP_BRASILIS,    182, 239 }, // 29=Brasilis
-		{ MAP_DICASTES,    198, 187 }, // 30=El Dicastes
-		{ MAP_MORA,         44, 151 }, // 31=Mora
-		{ MAP_DEWATA,      200, 180 }, // 32=Dewata
-		{ MAP_MALANGDO,    140, 114 }, // 33=Malangdo Island
-		{ MAP_MALAYA,      242, 211 }, // 34=Malaya Port
-		{ MAP_ECLAGE,      110,  39 }, // 35=Eclage
 	};
 	
 	nullpo_retr(-1, sd);

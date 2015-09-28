@@ -1149,7 +1149,7 @@ bool pc_authok(struct map_session_data *sd, int login_id2, time_t expiration_tim
 			if( git[0] != HERC_UNKNOWN_VER )
 				sprintf(buf,"Git Hash: %s", git);
 			else if( svn[0] != HERC_UNKNOWN_VER )
-				sprintf(buf,"SVN Revision: %s", svn);
+				sprintf(buf,"Episode : %s", svn);
 			else
 				sprintf(buf,"Unknown Version");
 			clif->message(sd->fd, buf);
