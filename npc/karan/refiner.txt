@@ -15,7 +15,7 @@
 //= 1.0.1 rAthena compatibility added [KirieZ]
 //= 1.1 Refine Level + Item Type secure item mode added [KirieZ]
 //============================================================
-prontera,145,194,4	script	Refiner	1_M_SMITH,{
+prontera,145,194,4	script	Refiner	116,{
 	function Refine; function CheckSecure; function GetSecureItem;
 	
 	if (getgroupid() < .UseMinLv)
