@@ -299,7 +299,6 @@ typedef enum sc_type {
 	SC_SUMMER,
 	SC_CASH_PLUSEXP,
 	SC_CASH_RECEIVEITEM,
-	SC_CASH_COSTUMEITEM,
 	SC_CASH_BOSS_ALARM,  //260
 	SC_CASH_DEATHPENALTY,
 	SC_CRITICALPERCENT,
@@ -667,6 +666,7 @@ typedef enum sc_type {
 	SC_MONSTER_TRANSFORM,
 	SC_ANGEL_PROTECT,
 	SC_ILLUSIONDOPING,
+	SC_CASH_COSTUMEITEM,
 	
 	SC_MAX, //Automatically updated max, used in for's to check we are within bounds.
 } sc_type;
