@@ -4224,6 +4224,7 @@ int pc_isUseitem(struct map_session_data *sd,int n)
 		case 12210: // Bubble Gum
 		case 12264: // Comp Bubble Gum
 			if( sd->sc.data[SC_CASH_RECEIVEITEM] )
+			else if( sd->sc.data[SC_CASH_COSTUMEITEM] )
 				return 0;
 			break;
 		case 12208: // Battle Manual
