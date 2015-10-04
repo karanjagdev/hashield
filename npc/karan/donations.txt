@@ -1,6 +1,6 @@
 prontera,164,167,4	script	RoK Credits Shop	116,{
 
-mes "Hello" +strcharinfo(0);
+mes "Hello " +strcharinfo(0);
 mes "Should I warp you to Shops?";
 if(select("Yes", "No") == 1) goto L_warp;
 close;
