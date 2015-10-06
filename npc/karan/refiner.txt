@@ -428,7 +428,7 @@ close2;
 		.UseSecureItems = false;		// Enables the use of items to protect 
 									// from fails (see .SecureItems array)
 									
-.UseChanceItems = false;		// Enables the use of items that increase 
+//.UseChanceItems = false;		// Enables the use of items that increase 
 									// the success chance (see .ChanceItems array)
 		
 		.MaxRefine = 10;	// The maximum refine
