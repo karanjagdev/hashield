@@ -31,7 +31,12 @@ prontera,145,194,4	script	Refiner	116,{
 	mes "I can refine all kinds of weapons, armor and equipment, so let me";
 	mes "know what you want me to refine.";
 	next;
-
+	menu "Do you want to use Refine Stone?",L_Stone,"No",L_Cnew;
+L_Stone:
+.UseChanceItems = false;
+goto L_Cnew;
+close2;
+	L_Cnew:
 	setarray .@position$[1], "Head","Body","Left hand","Right hand","Robe","Shoes","Accessory 1","Accessory 2","Head 2","Head 3";
 	set .@menu$, "";
 	for(.@i = 1; .@i <= 10; .@i++) {
@@ -420,10 +425,10 @@ prontera,145,194,4	script	Refiner	116,{
 		.DisplayRefineInfo = true;		// Should NPC display information about 
 									// refine (such as success chance)
 									
-		.UseSecureItems = true;		// Enables the use of items to protect 
+		.UseSecureItems = false;		// Enables the use of items to protect 
 									// from fails (see .SecureItems array)
 									
-		.UseChanceItems = true;		// Enables the use of items that increase 
+.UseChanceItems = false;		// Enables the use of items that increase 
 									// the success chance (see .ChanceItems array)
 		
 		.MaxRefine = 10;	// The maximum refine
