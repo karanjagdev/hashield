@@ -33,7 +33,7 @@ prontera,145,194,4	script	Refiner	116,{
 	next;
 	menu "Do you want to use Refine Stone?",L_Stone,"No",L_Cnew;
 	L_Stone:
-	set .UseChanceItems = true;
+	set .UseChanceItems,true;
 	goto L_Cnew;
 	close;
 	
@@ -522,7 +522,7 @@ prontera,145,194,4	script	Refiner	116,{
 		// ===============================
 		// 		Refine Chance Increase
 		// ===============================
-		if (.UseChanceItems)
+		if (.UseChanceItems == true)
 		{
 			// These settings are used only if .UseChanceItems is true.
 			
