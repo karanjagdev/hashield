@@ -14,6 +14,14 @@
 //Example:
 //1161,67,50 //Balmung: No drop, No trade, No Guild Store (1+2+64 =67),
 //only groups of group-level 50 and up can override the setting.
+//
+
+//---------gift item
+30055,503,100
+30056,503,100
+30057,503,100
+30058,503,100
+30059,503,100
 
 // Wedding Related items
 2634,507,100	// Wedding Ring

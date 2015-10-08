@@ -114,3 +114,10 @@
 30052,Zabuza's_Sword,Zabuza's_Sword,5,1000,,30,,2,,0,0xFFFFFFFF,7,2,2048,,0,1,753,{bonus2 bExpAddRace,0,15; bonus2 bExpAddRace,1,15;bonus2 bExpAddRace,2,15;bonus2 bExpAddRace,3,15;bonus2 bExpAddRace,4,15;bonus2 bExpAddRace,5,15;bonus2 bExpAddRace,6,15;bonus2 bExpAddRace,7,15;bonus2 bExpAddRace,8,15;bonus2 bExpAddRace,9,15;bonus2 bExpAddRace,10,15;bonus2 bExpAddRace,11,15; sc_start SC_CASH_COSTUMEITEM,-1,30;},{},{sc_end SC_CASH_COSTUMEITEM;}
 30053,Zetsu's_Mask,Zetsu's_Mask,5,1000,,30,,2,,0,0xFFFFFFFF,7,2,1024,,0,1,754,{bonus2 bExpAddRace,0,15; bonus2 bExpAddRace,1,15;bonus2 bExpAddRace,2,15;bonus2 bExpAddRace,3,15;bonus2 bExpAddRace,4,15;bonus2 bExpAddRace,5,15;bonus2 bExpAddRace,6,15;bonus2 bExpAddRace,7,15;bonus2 bExpAddRace,8,15;bonus2 bExpAddRace,9,15;bonus2 bExpAddRace,10,15;bonus2 bExpAddRace,11,15; sc_start SC_CASH_COSTUMEITEM,-1,30;},{},{sc_end SC_CASH_COSTUMEITEM;}
 30054,Swords_Of_Zoro,Swords_Of_Zoro,5,1000,,30,,2,,0,0xFFFFFFFF,7,2,2048,,0,1,755,{bonus2 bExpAddRace,0,15; bonus2 bExpAddRace,1,15;bonus2 bExpAddRace,2,15;bonus2 bExpAddRace,3,15;bonus2 bExpAddRace,4,15;bonus2 bExpAddRace,5,15;bonus2 bExpAddRace,6,15;bonus2 bExpAddRace,7,15;bonus2 bExpAddRace,8,15;bonus2 bExpAddRace,9,15;bonus2 bExpAddRace,10,15;bonus2 bExpAddRace,11,15; sc_start SC_CASH_COSTUMEITEM,-1,30;},{},{sc_end SC_CASH_COSTUMEITEM;}
+//--------USABLES
+30055,Gift_Kapra's_Pass,Gift Kafra Pass,3,0,,10,,,,,,,,,,,,,{},{},{}
+30056,Gift_Cargo_Free_Ticket,Gift Free Ticket for Kafra Storage,3,1,,0,,,,,,,,,,,,,{},{},{}
+30057,Gift_Megaphone,Gift Megaphone,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ input @megaphone$; announce strcharinfo(0) + ": " + @megaphone$,bc_all,0xFF0000; end; },{},{}
+30058,Gift_Light_White_Pot,Gift Light White Potion,0,1200,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(325,405),0; },{},{}
+30059,Gift_Light_Blue_Pot,Gift Light Blue Potion,0,5000,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 0,rand(40,60); },{},{}
+//------USABLES END

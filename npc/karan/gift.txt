@@ -12,10 +12,29 @@ OnPCLoginEvent:
 	
 B_item:
 mes "There you go!";
-getitembound 1084,30,4;
-getitembound 7059,30,4;
-getitembound 12221,30,4;
+getitem 30055,30;
+getitem 30056,30;
+getitem 30057,30;
 set done,1;
 close;
 }
+}
+-	script	dailyr	-1,{
+    OnPCLoginEvent:
+        if ( gettimetick(2) < #timer ) {
+            dispbottom "You already claimed the daily login rewards";
+            end;
+        }
+        for ( .@i = 0; .@i < .size; .@i += 2 ) {
+            getitem 30059,10;
+getitem 30058,10;
+            #timer = gettimetick(2) + ( .time_interval * 86400 );
+            end;
+        }
+
+    OnInit:
+        .time_interval = 1; // n day(s)
+        setarray .Items[0],30058,10, 30059,10; // <item id>,<item amount>
+        .size = getarraysize(.Items);
+        end;
 }
