@@ -12,7 +12,7 @@ OnPCLoginEvent:
 	
 B_item:
 mes "There you go!";
-getitem 30055,30;
+getitem 30060,30;
 getitem 30056,30;
 getitem 30057,30;
 set done,1;
