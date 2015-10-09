@@ -1617,4 +1617,5 @@ function	script	noREF	{
 				7620, 15;	// Level 4
 		}
 	end;
+	}
 }
