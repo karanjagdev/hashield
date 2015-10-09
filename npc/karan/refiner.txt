@@ -34,7 +34,7 @@ close2;
 L_exp:
 mes "The Chance Item is a magice old enriched stones by my ancestors which enables me to increase your weapon refining chance by 15%";
 next;
-mes "However I cannot gaurantee 100% success rate each time, You see I have my limits."
+mes "However I cannot gaurantee 100% success rate each time, You see I have my limits.";
 close;
 
 function	script	yesREF	{
