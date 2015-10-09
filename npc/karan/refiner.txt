@@ -36,7 +36,7 @@ mes "The Chance Item is a magice old enriched stones by my ancestors which enabl
 next;
 mes "However I cannot gaurantee 100% success rate each time, You see I have my limits.";
 close;
-
+}
 function	script	yesREF	{
 	function Refine; function CheckSecure; function GetSecureItem;
 	
@@ -1618,4 +1618,3 @@ function	script	noREF	{
 		}
 	end;
 	}
-}
