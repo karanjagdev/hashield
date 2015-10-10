@@ -187,9 +187,9 @@ rachel,109,138,5	script	Cool Event Corp. Staff::CoolEventCorpStaffRachel	874,{
 		mes "your destination.";
 		next;
 		if (select("Veins -> 2200 z:Cancel") == 1) {
-			if ((countitem(7060) != 0) || (Zeny >= 2200)) {
-				if (countitem(7060) != 0) {
-					delitem 7060,1;
+			if ((countitem(30060) != 0) || (Zeny >= 2200)) {
+				if (countitem(30060) != 0) {
+					delitem 30060,1;
 				}
 				else {
 					set Zeny,Zeny-2200;
@@ -329,9 +329,9 @@ veins,208,128,5	script	Cool Event Corp. Staff::CoolEventCorpStaffVeins	874,{
 		mes "your destination.";
 		next;
 		if (select("Rachel -> 2200 z:Cancel") == 1) {
-			if ((countitem(7060) != 0) || (Zeny >= 2200)) {
-				if (countitem(7060) != 0) {
-					delitem 7060,1;
+			if ((countitem(30060) != 0) || (Zeny >= 2200)) {
+				if (countitem(30060) != 0) {
+					delitem 30060,1;
 				}
 				else {
 					set Zeny,Zeny-2200;
