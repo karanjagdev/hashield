@@ -34,6 +34,7 @@ prontera,147,171,4	duplicate(Buff Master)	Buff Master#h1-3	834
 geffen,121,61,5	duplicate(Buff Master)	Buff Master#h1-4	834
 umbala,94,162,5	duplicate(Buff Master)	Buff Master#h1-5	834
 payon,147,237,5	duplicate(Buff Master)	Buff Master#h1-6	834
+payon,188,106,5	duplicate(Buff Master)	Buff Master#h1-p	834
 alberta,185,144,5	duplicate(Buff Master)	Buff Master#h1-7	834
 aldebaran,134,123,5	duplicate(Buff Master)	Buff Master#h1-8	834
 xmas,149,136,5	duplicate(Buff Master)	Buff Master#h1-10	834
