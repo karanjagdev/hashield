@@ -14,7 +14,7 @@ B_item:
 mes "There you go!";
 getitem 30060,30;
 getitem 30056,30;
-getitem 30057,30;
+getitem 30057,2;
 set done,1;
 close;
 }
