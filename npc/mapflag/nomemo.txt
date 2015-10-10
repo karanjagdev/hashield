@@ -125,7 +125,6 @@ cmd_fild06	mapflag	nomemo
 cmd_fild07	mapflag	nomemo
 cmd_fild08	mapflag	nomemo
 cmd_fild09	mapflag	nomemo
-gef_fild02	mapflag	nomemo
 gef_fild03	mapflag	nomemo
 gef_fild06	mapflag	nomemo
 gef_fild08	mapflag	nomemo
@@ -133,11 +132,9 @@ gef_fild10	mapflag	nomemo
 gef_fild11	mapflag	nomemo
 gef_fild12	mapflag	nomemo
 gef_fild14	mapflag	nomemo
-glast_01	mapflag	nomemo
 hu_fild01	mapflag	nomemo
 hu_fild05	mapflag	nomemo
 izlu2dun	mapflag	nomemo
-mjolnir_01	mapflag	nomemo
 mjolnir_02	mapflag	nomemo
 mjolnir_03	mapflag	nomemo
 mjolnir_04	mapflag	nomemo
@@ -146,7 +143,6 @@ mjolnir_07	mapflag	nomemo
 mjolnir_08	mapflag	nomemo
 mjolnir_10	mapflag	nomemo
 mjolnir_11	mapflag	nomemo
-moc_fild01	mapflag	nomemo
 moc_fild02	mapflag	nomemo
 moc_fild03	mapflag	nomemo
 //moc_fild04	mapflag	nomemo
@@ -177,7 +173,6 @@ prt_fild09	mapflag	nomemo
 prt_fild10	mapflag	nomemo
 prt_fild11	mapflag	nomemo
 prt_monk	mapflag	nomemo
-um_fild01	mapflag	nomemo
 um_fild02	mapflag	nomemo
 um_fild03	mapflag	nomemo
 yuno_fild02	mapflag	nomemo
@@ -188,7 +183,6 @@ yuno_fild07	mapflag	nomemo
 yuno_fild08	mapflag	nomemo
 yuno_fild09	mapflag	nomemo
 yuno_fild10	mapflag	nomemo
-ra_fild01	mapflag	nomemo
 ra_fild02	mapflag	nomemo
 ra_fild03	mapflag	nomemo
 ra_fild04	mapflag	nomemo
