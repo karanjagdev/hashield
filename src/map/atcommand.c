@@ -6718,9 +6718,9 @@ ACMD(mobinfo)
 #endif
 			
 			if (item_data->slot)
-				sprintf(atcmd_output2, " - %s[%d]  %02.02f%%", item_data->jname, item_data->slot, (float)droprate / 100);
+				sprintf(atcmd_output2, " - %s[%d] ", item_data->jname, item_data->slot, (float)droprate / 100);
 			else
-				sprintf(atcmd_output2, " - %s  %02.02f%%", item_data->jname, (float)droprate / 100);
+				sprintf(atcmd_output2, " - %s  ", item_data->jname, (float)droprate / 100);
 			
 			strcat(atcmd_output, atcmd_output2);
 			
@@ -7270,7 +7270,7 @@ ACMD(whodrops)
 			
 			for (j=0; j < MAX_SEARCH && item_data->mob[j].chance > 0; j++)
 			{
-				sprintf(atcmd_output, "- %s (%02.02f%%)", mob_db(item_data->mob[j].id)->jname, item_data->mob[j].chance/100.);
+				sprintf(atcmd_output, "- %s", mob_db(item_data->mob[j].id)->jname, item_data->mob[j].chance/100.);
 				clif->message(fd, atcmd_output);
 			}
 		}
