@@ -45,3 +45,5 @@ yuno,152,186,5	duplicate(Buff Master)	Buff Master#h1-14	834
 niflheim,188,180,5	duplicate(Buff Master)	Buff Master#h1-15	834
 louyang,225,103,5	duplicate(Buff Master)	Buff Master#h1-16	834
 einbroch,72,199,4	duplicate(Buff Master)	Buff Master#h1-18	834
+jawaii,254,130,4	duplicate(Buff Master)	Buff Master#h1-19	834
+ayothaya,155,117,6	duplicate(Buff Master)	Buff Master#ayo	834

@@ -1726,8 +1726,8 @@ ACMD(go)
 		{ MAP_AMATSU,      198,  84 }, // 10=Amatsu
 		{ MAP_GONRYUN,     160, 120 }, // 11=Gonryun
 		{ MAP_UMBALA,       89, 157 }, // 12=Umbala
-		{ MAP_NIFLHEIM,     21, 153 }, // 13=Niflheim
-		{ MAP_LOUYANG,     217,  40 }, // 14=Louyang
+		{ MAP_NIFLHEIM,     200, 174 }, // 13=Niflheim
+		{ MAP_LOUYANG,     216,  96 }, // 14=Louyang
 		{ MAP_NOVICE,       53, 111 }, // 15=Training Grounds
 		{ MAP_JAIL,         23,  61 }, // 16=Prison
 		{ MAP_JAWAII,      249, 127 }, // 17=Jawaii
