@@ -1,9 +1,11 @@
 -	script	allow	-1,{
-
+attachnpctimer;
+initnpctimer;
 OnPCLoginEvent:
 if(getgmlevel()<2){
 mes "Sorry, Server is on maintenance.";
 mes "Please login after 2PM GMT +8 , MONDAY";
+OnTimer5000:
 atcommand "@kick "+strcharinfo(0);
 close;
 }
