@@ -5971,7 +5971,7 @@ int pc_gainexp(struct map_session_data *sd, struct block_list *src, unsigned int
 	if(sd->state.showexp) {
 		char output[256];
 		sprintf(output,
-			"Experience Gained Base:%u/Job:%u",base_exp,nextbp*(float)100,job_exp,nextjp*(float)100);
+			"Gained Base EXP : %u points/ Job EXP : %u points",base_exp,nextbp*(float)100,job_exp,nextjp*(float)100);
 		clif->disp_onlyself(sd,output,strlen(output));
 	}
 
