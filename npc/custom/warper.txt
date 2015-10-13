@@ -27,7 +27,8 @@ function Go; function Disp; function Pick; function Restrict;
 
 menu	"Last Warp ^777777["+lastwarp$+"]^000000",-,
 	" ~ Towns",Towns, " ~ Fields",Fields, " ~ Dungeons",Dungeons,
-	" ~ Guild Castles",Castles;
+	" ~ Guild Castles",Castles, " ~ Guild Dungeons",Guild_Dungeons,
+	" ~ Instances",Instances, " ~ Special Areas",Special;
 
 	if (lastwarp$ == "")
 		message strcharinfo(0),"You haven't warped anywhere yet.";
@@ -168,14 +169,14 @@ T36: Go("yuno",157,51);
 	Fields:
 // --------------------------------------------------
 menu	"Amatsu Fields",F1, "Ayothaya Fields",F2, "Bifrost Fields", F3,
-	 "Comodo Fields",F5,
-	 "Einbroch Fields",F8,
-	"Geffen Fields",F10, "Gonryun Fields",F11,
+	"Brasilis Fields",F4, "Comodo Fields",F5, "Dewata Fields",F6,
+	"Eclage Fields",F7, "Einbroch Fields",F8, "El Dicastes Fields",F9,
+	"Geffen Fields",F10, "Gonryun Fields",F11, "Hugel Fields",F12,
 	"Lighthalzen Fields",F13, "Louyang Field",F14, "Lutie Field",F15,
-	"Malaya Fields",F16, "Mjolnir Fields",F18,
-	"Niflheim Fields",F20, "Payon Forests",F21,
-	"Prontera Fields",F22, "Sograt Deserts",F24,
- "Umbala Fields",F26,
+	"Malaya Fields",F16, "Manuk Fields",F17, "Mjolnir Fields",F18,
+	"Moscovia Fields",F19, "Niflheim Fields",F20, "Payon Forests",F21,
+	"Prontera Fields",F22, "Rachel Fields",F23, "Sograt Deserts",F24,
+	"Splendide Fields",F25, "Umbala Fields",F26, "Veins Fields",F27,
 	"Yuno Fields",F28;
 
 F1: setarray @c[2],190,197;
@@ -253,16 +254,16 @@ F28: Restrict("Pre-RE",5,10);
 // --------------------------------------------------
 	Dungeons:
 // --------------------------------------------------
-menu	"Abyss Lakes",D1, "Amatsu Dungeon",D2, "Anthell",D3,"Ayothaya Dungeon",D4,
-	 "Beach Dungeon",D5,
-	"Byalan Dungeon",D8, "Clock Tower",D9,
-	"Coal Mines",D10, "Culvert",D11, "Cursed Abbey",D12,
+menu	"Abyss Lakes",D1, "Amatsu Dungeon",D2, "Anthell",D3,
+	"Ayothaya Dungeon",D4, "Beach Dungeon",D5, "Bio Labs",D6,
+	"Brasilis Dungeon",D7, "Byalan Dungeon",D8, "Clock Tower",D9,
+	"Coal Mines",D10, "Culvert",D11, "Cursed Abbey",D12, "Dewata Dungeon",D13,
 	"Einbroch Dungeon",D14, "Gefenia",D15, "Geffen Dungeon",D16,
-	"Glast Heim",D17, "Gonryun Dungeon",D18,
-	"Ice Dungeon",D20, "Louyang Dungeon",D23,
-	"Magma Dungeon",D24, "Malangdo Dungeon",D25,
-	"Odin Temple",D28, "Orc Dungeon",D29,
-	"Payon Dungeon",D30, "Pyramids",D31,
+	"Glast Heim",D17, "Gonryun Dungeon",D18, "Hidden Dungeon",D19,
+	"Ice Dungeon",D20, "Juperos",D21, "Kiel Dungeon",D22, "Louyang Dungeon",D23,
+	"Magma Dungeon",D24, "Malangdo Dungeon",D25, "Moscovia Dungeon",D26,
+	"Nidhogg's Dungeon",D27, "Odin Temple",D28, "Orc Dungeon",D29,
+	"Payon Dungeon",D30, "Pyramids",D31, "Rachel Sanctuary",D32,
 	"Scaraba Hole",D33, "Sphinx",D34, "Sunken Ship",D35, "Thanatos Tower",D36,
 	"Thor Volcano",D37, "Toy Factory",D38, "Turtle Dungeon",D39, "Umbala Dungeon",D40;
 
@@ -362,7 +363,7 @@ D40: Restrict("Pre-RE",1,2);
 	Castles:
 // --------------------------------------------------
 menu	"Aldebaran Castles",C1, "Geffen Castles",C2, "Payon Castles",C3,
-	"Prontera Castles";
+	"Prontera Castles",C4, "Arunafeltz Castles",C5, "Schwaltzvalt Castles",C6;
 
 C1: setarray @c[2],48,83,95,249,142,85,239,242,264,90;
 	Disp("Neuschwanstein:Hohenschwangau:Nuenberg:Wuerzburg:Rothenburg");
@@ -386,7 +387,7 @@ C6: setarray @c[2],293,100,288,252,97,196,137,90,71,315;
 // --------------------------------------------------
 	Guild_Dungeons:
 // --------------------------------------------------
-//menu	"Baldur",G1, "Luina",G2, "Valkyrie",G3, "Britoniah",G4,
+menu	"Baldur",G1, "Luina",G2, "Valkyrie",G3, "Britoniah",G4,
 	"Arunafeltz",G5, "Schwaltzvalt",G6;
 
 G1: Restrict("RE",2,3);
@@ -412,7 +413,7 @@ G6: Go("schg_dun01",200,124);
 	Instances:
 // --------------------------------------------------
 
-//menu	"Endless Tower",I1, "Hazy Forest",I2, "Malangdo Culvert",I3,
+menu	"Endless Tower",I1, "Hazy Forest",I2, "Malangdo Culvert",I3,
 	"Nidhoggur's Nest",I4, "Octopus Cave",I5, "Orc's Memory",I6, "Sealed Shrine",I7;
 
 I1: Go("e_tower",72,112);
@@ -429,7 +430,7 @@ I7: Go("monk_test",306,143);
 // --------------------------------------------------
 	Special:
 // --------------------------------------------------
-menu	"Auction Hall",S1, "Casino",S3,
+menu	"Auction Hall",S1, "Battlegrounds",S2, "Casino",S3, "Eden Group Headquarters",S4,
 	"Gonryun Arena",S5, "Izlude Arena",S6, "Monster Race Arena",S7, "Turbo Track",S8;
 
 S1: Go("auction_01",22,68);
