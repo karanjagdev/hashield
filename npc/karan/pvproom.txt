@@ -54,13 +54,13 @@ cutin "prt_soldier",2;
 	if (select("Yes!","No thanks.") == 2) close;
 		warp "guild_vs1",0,0;
 		announce strcharinfo(0) + "has entered the GvG High Grounds.",0;
-		announce "There are ["+getmapusers("guild_vs5")+"/30] players inside.",0;
+		announce "There are ["+getmapusers("guild_vs1")+"/30] players inside.",0;
 		end;
 	L_g2:
 		if (select("Yes!","No thanks.") == 2) close;
 		warp "guild_vs2",0,0;
 		announce strcharinfo(0) + " has entered the GvG Face Off..!",0;
-		announce "There are ["+getmapusers("guild_vs5")+"/30] players inside.",0;
+		announce "There are ["+getmapusers("guild_vs2")+"/30] players inside.",0;
 		end;
 
 	}
