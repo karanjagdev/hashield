@@ -40,3 +40,4 @@ sec_pri	mapflag	pvp_noparty
 
 //Nightmare Equipment Drops PVP ==========
 sec_pri	mapflag	pvp_nightmaredrop	random,equip,300
+jail	mapflag	nocommand	10
