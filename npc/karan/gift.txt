@@ -38,3 +38,18 @@ getitem 30058,10;
         .size = getarraysize(.Items);
         end;
 }
+
+-	script	jail	,{
+OnPCLoadMapEvent:
+   getmapxy @map$,@x,@y,0;
+else if (@map$ == "jail"){
+if (pl_sd->sc.data[SC_JAILED]){
+end;
+}
+else {
+   sleep2 1000;
+   mes "I don't think you want to stay in jail"
+  charcomamnd "#warp "+strcharinfo(0)+" prontera,156,163";
+   }
+}
+   end;

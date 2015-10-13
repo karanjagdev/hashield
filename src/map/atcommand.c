@@ -1729,7 +1729,9 @@ ACMD(go)
 		{ MAP_NIFLHEIM,     200, 174 }, // 13=Niflheim
 		{ MAP_LOUYANG,     216,  96 }, // 14=Louyang
 		{ MAP_NOVICE,       53, 111 }, // 15=Training Grounds
+if(getgmlevel() > 0){
 		{ MAP_JAIL,         23,  61 }, // 16=Prison
+}
 		{ MAP_JAWAII,      249, 127 }, // 17=Jawaii
 		{ MAP_AYOTHAYA,    151, 117 }, // 18=Ayothaya
 		{ MAP_EINBROCH,     64, 200 }, // 19=Einbroch

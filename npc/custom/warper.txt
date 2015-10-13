@@ -112,13 +112,9 @@ function Restrict {
 	Towns:
 // --------------------------------------------------
 menu	"Prontera",T1, "Alberta",T2, "Aldebaran",T3, "Amatsu",T4, "Ayothaya",T5,
-	"Brasilis",T6, "Comodo",T7, "Dewata",T8, "Eclage",T9, "Einbech",T10, 
-	"Einbroch",T11, "El Dicastes",T12, "Geffen",T13, "Gonryun",T14, "Hugel",T15,
-	"Izlude",T16, "Jawaii",T17, "Lighthalzen",T18, "Louyang",T19, "Lutie",T20,
-	"Malangdo",T21, "Malaya",T22, "Manuk",T23, "Midgarts Expedition Camp",T24,
-	"Mora",T25, "Morroc",T26, "Moscovia",T27, "Nameless Island",T28,
-	"Niflheim",T29, "Payon",T30, "Rachel",T31, "Splendide",T32, "Thor Camp",T33,
-	"Umbala",T34, "Veins",T35, "Yuno",T36;
+	"Comodo",T7, "Einbroch",T11, "Geffen",T13, "Gonryun",T14, "Izlude",T16, 
+	"Jawaii",T17, "Louyang",T19, "Lutie",T20,"Morroc",T26, "Niflheim",T29,
+	"Payon",T30, "Umbala",T34, "Yuno",T36;
 
 T1: Go("prontera",155,183);
 T2: Go("alberta",28,234);
@@ -167,16 +163,12 @@ T36: Go("yuno",157,51);
 // --------------------------------------------------
 	Fields:
 // --------------------------------------------------
-menu	"Amatsu Fields",F1, "Ayothaya Fields",F2, "Bifrost Fields", F3,
-	"Brasilis Fields",F4, "Comodo Fields",F5, "Dewata Fields",F6,
-	"Eclage Fields",F7, "Einbroch Fields",F8, "El Dicastes Fields",F9,
-	"Geffen Fields",F10, "Gonryun Fields",F11, "Hugel Fields",F12,
-	"Lighthalzen Fields",F13, "Louyang Field",F14, "Lutie Field",F15,
-	"Malaya Fields",F16, "Manuk Fields",F17, "Mjolnir Fields",F18,
-	"Moscovia Fields",F19, "Niflheim Fields",F20, "Payon Forests",F21,
-	"Prontera Fields",F22, "Rachel Fields",F23, "Sograt Deserts",F24,
-	"Splendide Fields",F25, "Umbala Fields",F26, "Veins Fields",F27,
-	"Yuno Fields",F28;
+menu	"Amatsu Fields",F1, "Ayothaya Fields",F2, "Comodo Fields",F5, 
+	"Einbroch Fields",F8, "Geffen Fields",F10, "Gonryun Fields",F11, 
+	"Louyang Field",F14, "Lutie Field",F15, "Mjolnir Fields",F18, 
+	"Niflheim Fields",F20, "Payon Forests",F21, "Prontera Fields",F22, 
+	"Sograt Deserts",F24, "Umbala Fields",F26, "Yuno Fields",F28;
+	
 
 F1: setarray @c[2],190,197;
 	Disp("Amatsu Field",1,1); Pick("ama_fild");
