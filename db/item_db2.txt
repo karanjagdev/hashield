@@ -117,7 +117,7 @@
 //--------USABLES
 30056,Gift_Cargo_Free_Ticket,Gift Free Ticket for Kafra Storage,3,1,,0,,,,,,,,,,,,,{},{},{}
 30057,Gift_Megaphone,Gift Megaphone,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ input @megaphone$; announce strcharinfo(0) + ": " + @megaphone$,bc_all,0xFF0000; end; },{},{}
-30058,Gift_Light_White_Pot,Gift Light White Potion,0,1200,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(325,405),0; },{},{}
-30059,Gift_Light_Blue_Pot,Gift Light Blue Potion,0,5000,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 0,rand(40,60); },{},{}
+30058,Gift_Light_White_Pot,Gift Light White Potion,0,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(325,405),0; },{},{}
+30059,Gift_Light_Blue_Pot,Gift Light Blue Potion,0,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 0,rand(40,60); },{},{}
 30060,Gift_Kapra's_Pass,Gift Kafra Pass,3,0,,10,,,,,,,,,,,,,{},{},{}
 //------USABLES END
