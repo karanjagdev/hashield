@@ -2371,7 +2371,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 			if (sd && sd->sc.data[SC_CASH_RECEIVEITEM]) // now rig the drop rate to never be over 90% unless it is originally >90%.
 				drop_rate = max(drop_rate,cap_value((int)(0.5+drop_rate*(sd->sc.data[SC_CASH_RECEIVEITEM]->val1)/100.),0,9000));
 				//--------MODIFIED BY RECTOR
-			if (sd && sd->sc.data[SC_CASH_COSTUMEITEM]) // now rig the drop rate to never be over 90% unless it is originally >90%.
+			else if (sd && sd->sc.data[SC_CASH_COSTUMEITEM]) // now rig the drop rate to never be over 90% unless it is originally >90%.
 				drop_rate = max(drop_rate,cap_value((int)(0.5+drop_rate*(sd->sc.data[SC_CASH_COSTUMEITEM]->val1)/100.),0,9000));
 #ifdef RENEWAL_DROP
 			if( drop_modifier != 100 ) {
